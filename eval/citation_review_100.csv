@@ -1,0 +1,357 @@
+﻿case_id,question,strategy,answer_preview,citation_index,paper,page,section,snippet,llm_support,llm_reason,human_support,human_notes
+p01,RAG 模型由哪两部分记忆组成？,single,RAG 模型由参数化记忆（parametric memory）和非参数化记忆（non-parametric memory）两部分组成：参数化记忆是一个预训练的 seq2seq 模型，非参数化记忆是 Wikipedia 的稠密向量索引（dense vector index），通过预训练的神经检索器访问 [1][2]。其中，参数化记忆具体为 BART、神经检索器具体为 Dense Passage Retriever (DPR)，证据不足，需要进一步核实。,1,rag_lewis_2005.11401,1,Body,"nd non-parametric memory for language generation. We introduce RAG models where the parametric memory is a pre-trained seq2seq model and the non-parametric memory is a dense vector index of Wikipedia, accessed with a pre-trained neural retriever. We compare two RAG formulations, one which conditions",partial,证据支持参数化记忆为预训练seq2seq模型、非参数化记忆为Wikipedia稠密向量索引并由预训练神经检索器访问，但未提及BART或DPR，且claim自身也承认该具体化证据不足。,,
+p01,RAG 模型由哪两部分记忆组成？,single,RAG 模型由参数化记忆（parametric memory）和非参数化记忆（non-parametric memory）两部分组成：参数化记忆是一个预训练的 seq2seq 模型，非参数化记忆是 Wikipedia 的稠密向量索引（dense vector index），通过预训练的神经检索器访问 [1][2]。其中，参数化记忆具体为 BART、神经检索器具体为 Dense Passage Retriever (DPR)，证据不足，需要进一步核实。,2,rag_lewis_2005.11401,2,Body,"-parametric memory through a general-purpose fine-tuning approach which we refer to as retrieval-augmented generation (RAG). We build RAG models where the parametric memory is a pre-trained seq2seq transformer, and the non-parametric memory is a dense vector index of Wikipedia, accessed with a pre-t",partial,证据支持参数化记忆为预训练seq2seq transformer、非参数化记忆为Wikipedia稠密向量索引并由预训练神经检索器访问，但未提及BART或DPR，且claim自身也承认该具体化证据不足。,,
+p02,RAG 在哪些任务上取得了 state-of-the-art？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.20；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",1,rag_lewis_2005.11401,6,Body,".9***|**76.8**|**92.2***|
+|Book|DPR [26]|41.5|**57.9**/ -|41.1|50.6|BART|15.1|19.7|38.2|41.6|64.0|81.1|
+||RAG-Token|44.1|55.2/66.1|**45.5**|50.0|RAG-Tok.|**17.3**|**22.2**|40.1|41.5|725|895|
+||RAG-Seq.|**44.5**|56.8/**68.0**|45.2|**52.2**|RAG-Seq.|14.7|21.4|40.8|44.2|.|.|
+
+to more effective marginal",partial,表格显示部分QA数据集数值，但未明确陈述四个任务均刷新SOTA或TriviaQA显著优于专门预训练方法。,,
+p02,RAG 在哪些任务上取得了 state-of-the-art？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.20；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",2,rag_lewis_2005.11401,6,Body,"the generation, drawing out specific knowledge stored in the parametric memory. 
+
+#### **4.4 Fact Verification** 
+
+Table 2 shows our results on FEVER. For 3-way classification, RAG scores are within 4.3% of state-of-the-art models, which are complex pipeline systems with domain-specific architecture",partial,证据仅支持FEVER与SOTA相差4.3%以内，缺少开放域QA及其他子句的支持。,,
+p03,RAG 的两种 formulation 分别怎么工作？,single,论文中的两种 RAG formulation 是 RAG-Sequence 和 RAG-Token，二者都把检索到的文档当作潜变量并进行边缘化，区别在于对生成序列使用文档的方式不同。RAG-Sequence 对整条输出序列使用同一个检索文档：先检索 top K 文档，生成器为每个文档计算整条输出序列的概率，再对这些概率做边缘化 [1][2]。RAG-Token 则允许每个目标 token 抽取不同的潜文档并分别边缘化；检索 top K 文档后，生成器为每个文档给出下一个输出 token 的分布，再做边缘化，并对后续 token 重复该过程，因此生成器在生成答案时可以从多个文档中选择内容 [3],1,rag_lewis_2005.11401,3,Body,"by _θ_ that generates a current token based on a context of the previous _i −_ 1 tokens _y_ 1: _i−_ 1, the original input _x_ and a retrieved passage _z_ . 
+
+To train the retriever and generator end-to-end, we treat the retrieved document as a latent variable. We propose two models that marginalize ",partial,证据仅说明将检索文档视为潜变量并提出两种边缘化模型，未提及 RAG-Sequence/RAG-Token 名称及具体机制。,,
+p03,RAG 的两种 formulation 分别怎么工作？,single,论文中的两种 RAG formulation 是 RAG-Sequence 和 RAG-Token，二者都把检索到的文档当作潜变量并进行边缘化，区别在于对生成序列使用文档的方式不同。RAG-Sequence 对整条输出序列使用同一个检索文档：先检索 top K 文档，生成器为每个文档计算整条输出序列的概率，再对这些概率做边缘化 [1][2]。RAG-Token 则允许每个目标 token 抽取不同的潜文档并分别边缘化；检索 top K 文档后，生成器为每个文档给出下一个输出 token 的分布，再做边缘化，并对后续 token 重复该过程，因此生成器在生成答案时可以从多个文档中选择内容 [3],2,rag_lewis_2005.11401,3,Body,"raining and decoding procedure. 
+
+#### **2.1 Models** 
+
+**RAG-Sequence Model** The RAG-Sequence model uses the same retrieved document to generate the complete _sequence_ . Technically, it treats the retrieved document as a single latent variable that is marginalized to get the seq2seq probability _",partial,证据支持 RAG-Sequence 使用同一文档生成完整序列并边缘化潜变量，但缺少 top K 检索及 RAG-Token 部分。,,
+p03,RAG 的两种 formulation 分别怎么工作？,single,论文中的两种 RAG formulation 是 RAG-Sequence 和 RAG-Token，二者都把检索到的文档当作潜变量并进行边缘化，区别在于对生成序列使用文档的方式不同。RAG-Sequence 对整条输出序列使用同一个检索文档：先检索 top K 文档，生成器为每个文档计算整条输出序列的概率，再对这些概率做边缘化 [1][2]。RAG-Token 则允许每个目标 token 抽取不同的潜文档并分别边缘化；检索 top K 文档后，生成器为每个文档给出下一个输出 token 的分布，再做边缘化，并对后续 token 重复该过程，因此生成器在生成答案时可以从多个文档中选择内容 [3],3,rag_lewis_2005.11401,3,Body,"!-- End of picture text -->
+
+**RAG-Token Model** In the RAG-Token model we can draw a different latent document for each target _token_ and marginalize accordingly. This allows the generator to choose content from several documents when producing an answer. Concretely, the top K documents are retrie",partial,证据支持 RAG-Token 为每个 token 抽取不同潜文档并边缘化、可从多文档选内容，但缺少 RAG-Sequence 及分类等价部分。,,
+p03,RAG 的两种 formulation 分别怎么工作？,single,论文中的两种 RAG formulation 是 RAG-Sequence 和 RAG-Token，二者都把检索到的文档当作潜变量并进行边缘化，区别在于对生成序列使用文档的方式不同。RAG-Sequence 对整条输出序列使用同一个检索文档：先检索 top K 文档，生成器为每个文档计算整条输出序列的概率，再对这些概率做边缘化 [1][2]。RAG-Token 则允许每个目标 token 抽取不同的潜文档并分别边缘化；检索 top K 文档后，生成器为每个文档给出下一个输出 token 的分布，再做边缘化，并对后续 token 重复该过程，因此生成器在生成答案时可以从多个文档中选择内容 [3],4,rag_lewis_2005.11401,3,Body,"RAG can be used for sequence classification tasks by considering the target class as a target sequence of length one, in which case RAG-Sequence and RAG-Token are equivalent. 
+
+#### **2.2 Retriever: DPR** 
+
+The retrieval component _pη_ ( _z|x_ ) is based on DPR [26]. DPR follows a bi-encoder archite",partial,证据支持序列分类时目标类别为长度1序列且 RAG-Sequence 与 RAG-Token 等价，但缺少两种模型的主要机制描述。,,
+p04,Ragas 是什么框架？,explain,"证据不足，暂不展示生成答案。
+
+引用支持率：0.38；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",1,ragas_2309.15217,1,Body,"provide LLMs with knowledge from a reference textual database, which enables them to act as a natural language layer between a user and textual databases, reducing the risk of hallucinations. Evaluating RAG architectures is, however, challenging because there are several dimensions to consider: the ",partial,证据提到评估RAG有多个维度，但未明确Ragas是自动化评估框架、全称、reference-free、faithfulness/答案相关性或llama-index/Langchain集成。,,
+p04,Ragas 是什么框架？,explain,"证据不足，暂不展示生成答案。
+
+引用支持率：0.38；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",2,ragas_2309.15217,2,Body,"of retrieval augmented generation systems. We focus on settings where reference answers may not be available, and where we want to estimate different proxies for correctness, in addition to the usefulness of the retrieved passages. The Ragas framework provides an integration with both llama-index an",partial,证据支持reference-free设定、正确性代理及与llama-index集成，但未明确全称、自动化评估框架定位、faithfulness/答案相关性维度及Langchain集成。,,
+p04,Ragas 是什么框架？,explain,"证据不足，暂不展示生成答案。
+
+引用支持率：0.38；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",3,ragas_2309.15217,5,Body,"context relevance (i.e. is the retrieved context sufficiently focused). To support the development of such a framework, we have introduced _WikiEval_ , a dataset which human judgements of these three different aspects. Finally, we have also described Ragas, our implementation of the three considered",partial,证据提到context relevance及Ragas实现三个评估方面，支持部分质量维度，但未明确全称、reference-free、faithfulness/答案相关性及llama-index/Langchain集成。,,
+p06,Ragas 的主要特点是什么？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.38；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",1,ragas_2309.15217,2,Body,"of retrieval augmented generation systems. We focus on settings where reference answers may not be available, and where we want to estimate different proxies for correctness, in addition to the usefulness of the retrieved passages. The Ragas framework provides an integration with both llama-index an",partial,证据支持关注无参考答案场景、估计正确性代理指标、评估检索段落有用性及与llama-index集成，但未明确提及无参考自动评估框架、Langchain集成等部分。,,
+p06,Ragas 的主要特点是什么？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.38；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",2,ragas_2309.15217,1,Body,"provide LLMs with knowledge from a reference textual database, which enables them to act as a natural language layer between a user and textual databases, reducing the risk of hallucinations. Evaluating RAG architectures is, however, challenging because there are several dimensions to consider: the ",partial,证据仅提及评估RAG需考虑多个维度，未涉及无参考框架、代理指标、检索段落有用性或集成等主要结论。,,
+p06,Ragas 的主要特点是什么？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.38；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",3,ragas_2309.15217,5,Body,"context relevance (i.e. is the retrieved context sufficiently focused). To support the development of such a framework, we have introduced _WikiEval_ , a dataset which human judgements of these three different aspects. Finally, we have also described Ragas, our implementation of the three considered",partial,证据仅提及WikiEval包含人类对三个方面的判断，未支持预测与人类判断一致或faithfulness/answer relevance的具体结论。,,
+p07,CRAG 如何判断检索质量？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.17；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",1,corrective_rag_2401.15884,5,Body,"|**Algorithm 1:**CRAG Inference|
+|---|
+|**Require :**_E_ (Retrieval Evaluator),_W_ (Query Rewriter),_G_(Generator)|
+|**Input**<br>**:**_x_(Input question),_D_ =_{d_1_, d_2_, ..., dk}_(Retrieved documents)<br>**Output :**_y_(Generated response)|
+|**1** _scorei_=_E_ evaluates the relevance of each pai",partial,证据仅显示评估器对每个（查询，文档）对给出相关性分数，未提及置信度量化、三种取值及CORRECT/INCORRECT对应的知识精炼或网络搜索动作。,,
+p08,CRAG 在检索质量差时会采取什么动作？,single,"当检索结果不准确或质量低时，CRAG 会触发纠正动作：其轻量级检索评估器给出置信度，并据此触发 {Correct, Incorrect, Ambiguous} 三种知识检索动作 [1][2][3]。对于 Incorrect 和 Ambiguous 两种动作，会使用大规模网络搜索来扩展/增强检索结果 [3]。此外，设计了 decompose-then-recompose 算法对检索文档进行筛选，以关注关键信息并过滤无关信息 [3]。关于该算法具体如何与网络搜索结果结合以筛选关键信息、过滤无关信息，证据不足，需要进一步核实。",1,corrective_rag_2401.15884,2,Body,"ve issues, this paper particularly studies the scenarios where the retriever returns inaccurate results. A method named **C** orrective **R** etrieval- **A** ugmented **G** eneration (CRAG) is proposed to self-correct the results of retriever and improve the utilization of documents for augmenting g",partial,证据仅说明CRAG会自我纠正检索结果，未提及轻量级检索评估器、三种动作、网络搜索或decompose-then-recompose算法。,,
+p08,CRAG 在检索质量差时会采取什么动作？,single,"当检索结果不准确或质量低时，CRAG 会触发纠正动作：其轻量级检索评估器给出置信度，并据此触发 {Correct, Incorrect, Ambiguous} 三种知识检索动作 [1][2][3]。对于 Incorrect 和 Ambiguous 两种动作，会使用大规模网络搜索来扩展/增强检索结果 [3]。此外，设计了 decompose-then-recompose 算法对检索文档进行筛选，以关注关键信息并过滤无关信息 [3]。关于该算法具体如何与网络搜索结果结合以筛选关键信息、过滤无关信息，证据不足，需要进一步核实。",2,corrective_rag_2401.15884,1,Body,"gmented generation (RAG) is a practicable complement to LLMs, it relies heavily on the relevance of retrieved documents, raising concerns about how the model behaves if retrieval goes wrong. To this end, we propose the **C** orrective **R** etrieval **A** ugmented **G** eneration (CRAG) to improve t",partial,证据仅说明CRAG旨在改进检索错误场景，未提及评估器置信度、三种动作、网络搜索或decompose-then-recompose算法。,,
+p08,CRAG 在检索质量差时会采取什么动作？,single,"当检索结果不准确或质量低时，CRAG 会触发纠正动作：其轻量级检索评估器给出置信度，并据此触发 {Correct, Incorrect, Ambiguous} 三种知识检索动作 [1][2][3]。对于 Incorrect 和 Ambiguous 两种动作，会使用大规模网络搜索来扩展/增强检索结果 [3]。此外，设计了 decompose-then-recompose 算法对检索文档进行筛选，以关注关键信息并过滤无关信息 [3]。关于该算法具体如何与网络搜索结果结合以筛选关键信息、过滤无关信息，证据不足，需要进一步核实。",3,corrective_rag_2401.15884,1,Body,"augmenting the retrieval results. Besides, a decompose-thenrecompose algorithm is designed for retrieved documents to selectively focus on key information and filter out irrelevant information in them. CRAG is plug-and-play and can be seamlessly coupled with various RAG-based approaches. Experiments",partial,证据支持decompose-then-recompose算法用于筛选关键信息、过滤无关信息，但未提及检索评估器、三种动作、网络搜索及其与网络搜索的结合方式。,,
+p09,CRAG 的实验覆盖哪些任务？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.25；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",1,corrective_rag_2401.15884,6,Body,"conducted experiments to extensively demonstrate CRAG’s adaptability to RAG-based approaches and its generalizability across both shortand long-form generation tasks. 
+
+### **5.1 Tasks, Datasets and Metrics** 
+
+CRAG was evaluated on four datasets, including **PopQA** (Mallen et al., 2023) ( _short_ ",partial,证据确认了四个数据集、PopQA及短/长文本生成任务，但未涉及Biography、PubHealth、Arc-Challenge的具体任务对应关系，claim本身也承认该部分证据不足。,,
+p09,CRAG 的实验覆盖哪些任务？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.25；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",2,corrective_rag_2401.15884,2,Body,"lity across both short- and long-form generation tasks. To facilitate others to reproduce our results, we will publish all source code later. 
+
+In summary, our contributions in this paper are three-fold: 1) This paper studies the scenarios where the retriever returns inaccurate results and, to the b",partial,证据确认了短/长文本生成任务，但未提及四个数据集、PopQA或Biography/PubHealth/Arc-Challenge的对应关系。,,
+p10,GraphRAG 如何构建图索引？,single,根据论文证据，GraphRAG 构建图索引包括两个阶段：首先使用 LLM 从源文档中抽取实体知识图谱，其中节点对应语料中的关键实体，边表示实体之间的关系；然后将该图划分为紧密相关实体的社区层级 [1][2]。此外，论文提到其通过从源数据生成图索引，再应用基于图的社区检测来创建数据的主题划分 [3]。关于用 LLM 自底向上生成社区级摘要、高层摘要递归地整合低层摘要这一说法，证据不足，需要进一步核实。,1,graphrag_2404.16130,1,Abstract,"over private
+ text corpora that scales with both the generality of user questions and the quantity
+ of source text. Our approach uses an LLM to build a graph index in two stages:
+ first, to derive an entity knowledge graph from the source documents, then to pre-
+ generate community summaries for all",partial,证据支持两阶段中的第一阶段（LLM 抽取实体知识图谱）及第二阶段开头（预生成社区摘要），但未明确说明节点/边定义、社区层级划分，也未涉及社区检测主题划分或摘要递归整合。,,
+p10,GraphRAG 如何构建图索引？,single,根据论文证据，GraphRAG 构建图索引包括两个阶段：首先使用 LLM 从源文档中抽取实体知识图谱，其中节点对应语料中的关键实体，边表示实体之间的关系；然后将该图划分为紧密相关实体的社区层级 [1][2]。此外，论文提到其通过从源数据生成图索引，再应用基于图的社区检测来创建数据的主题划分 [3]。关于用 LLM 自底向上生成社区级摘要、高层摘要递归地整合低层摘要这一说法，证据不足，需要进一步核实。,2,graphrag_2404.16130,2,1  Introduction,"ach that enables sensemaking over
+the entirety of a large text corpus. GraphRAG first uses an LLM to construct a knowledge graph,
+where nodes correspond to key entities in the corpus and edges represent relationships between those
+entities. Next, it partitions the graph into a hierarchy of communiti",partial,证据明确支持第一阶段（LLM 构建知识图谱，节点为关键实体、边为关系）和第二阶段开头（划分为社区层级），但缺少社区检测主题划分及摘要递归整合的内容。,,
+p10,GraphRAG 如何构建图索引？,single,根据论文证据，GraphRAG 构建图索引包括两个阶段：首先使用 LLM 从源文档中抽取实体知识图谱，其中节点对应语料中的关键实体，边表示实体之间的关系；然后将该图划分为紧密相关实体的社区层级 [1][2]。此外，论文提到其通过从源数据生成图索引，再应用基于图的社区检测来创建数据的主题划分 [3]。关于用 LLM 自底向上生成社区级摘要、高层摘要递归地整合低层摘要这一说法，证据不足，需要进一步核实。,3,graphrag_2404.16130,3,2  Background,"oaches by generating a graph index from the source data, then applying graph-based
+community detection to create a thematic partitioning of the data.
+
+2.2 Using Knowledge Graphs with LLMs and RAG
+
+Approaches to knowledge graph extraction from natural language text corpora include rule-
+matching, sta",partial,证据支持从源数据生成图索引并应用图社区检测创建主题划分，但未涉及两阶段中 LLM 抽取实体知识图谱的节点/边细节及社区层级划分。,,
+p11,GraphRAG 主要解决 RAG 的什么问题？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.40；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",1,graphrag_2404.16130,1,Abstract,"The use of retrieval-augmented generation (RAG) to retrieve relevant informa-
+ tion from an external knowledge source enables large language models (LLMs)
+ to answer questions over private and/or previously unseen document collections.
+ However, RAG fails on global questions directed at an entire te",partial,证据仅明确支持RAG在全局性问题上失败，未涉及QFS任务性质、vector RAG的sensemaking缺陷及GraphRAG图索引方案。,,
+p11,GraphRAG 主要解决 RAG 的什么问题？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.40；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",2,graphrag_2404.16130,12,6  Discussion,"As a mechanism for question answering over large document collections, there
+are risks to downstream sensemaking and decision-making tasks if the generated answers do not
+accurately represent the source data. System use should be accompanied by clear disclosures of AI
+use and the potential for error",partial,证据支持答案可能错误呈现源数据从而给下游sensemaking与决策带来风险，但未涉及vector RAG或全局摘要。,,
+p11,GraphRAG 主要解决 RAG 的什么问题？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.40；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",3,graphrag_2404.16130,1,Abstract,"over private
+ text corpora that scales with both the generality of user questions and the quantity
+ of source text. Our approach uses an LLM to build a graph index in two stages:
+ first, to derive an entity knowledge graph from the source documents, then to pre-
+ generate community summaries for all",partial,证据支持GraphRAG两阶段构建图索引（实体知识图谱与社区摘要），但未涉及全局性问题缺陷或sensemaking。,,
+p11,GraphRAG 主要解决 RAG 的什么问题？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.40；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",4,graphrag_2404.16130,12,7  Conclusion,"We have presented GraphRAG, a RAG approach that combines knowledge graph generation and
+query-focused summarization (QFS) to support human sensemaking over entire text corpora. Initial
+evaluations show substantial improvements over a vector RAG baseline for both the comprehensive-
+ness and diversity",partial,证据支持GraphRAG结合知识图谱与QFS以支持整语料sensemaking，但未涉及全局性问题缺陷及vector RAG失败。,,
+p12,GraphRAG 在什么规模的数据上评估？,single,GraphRAG 在两个语料上评估：一是播客转录文本（Podcast Transcripts），约 100 万 token，划分为 1669 个 600-token 文本块 [1]；二是新闻文章（News Articles），但新闻文章的具体 token 规模和文本块划分数量证据不足，需要进一步核实。此外，结果表中按不同图社区层级（C0、C1、C2、C3）与文本摘要（TS）列出了单元数，其中播客转录文本的 TS 为 1669 个单元，新闻文章为 3197 个单元 [2]；关于各层级对应的 token 规模，证据不足，需要进一步核实。,1,graphrag_2404.16130,8,2  Background,"podcast featuring
+conversations between Microsoft CTO Kevin Scott and various thought leaders in science and tech-
+nology (Scott, 2024). This corpus was divided into 1669 × 600-token text chunks, with 100-token
+overlaps between chunks (∼1 million tokens).
+
+News articles. A benchmark dataset comprise",partial,证据支持播客转录文本约100万token、1669个600-token文本块，但新闻文章部分仅出现标题开头，未给出token规模或文本块数量；也未涉及TS单元数或C0-C3层级。,,
+p12,GraphRAG 在什么规模的数据上评估？,single,GraphRAG 在两个语料上评估：一是播客转录文本（Podcast Transcripts），约 100 万 token，划分为 1669 个 600-token 文本块 [1]；二是新闻文章（News Articles），但新闻文章的具体 token 规模和文本块划分数量证据不足，需要进一步核实。此外，结果表中按不同图社区层级（C0、C1、C2、C3）与文本摘要（TS）列出了单元数，其中播客转录文本的 TS 为 1669 个单元，新闻文章为 3197 个单元 [2]；关于各层级对应的 token 规模，证据不足，需要进一步核实。,2,graphrag_2404.16130,10,5  Results,"is the most resource-intensive approach requiring the highest number of context tokens.
+Root-level community summaries (C0) require dramatically fewer tokens per query (9x-43x).
+
+ Podcast Transcripts News Articles
+
+ C0 C1 C2 C3 TS C0 C1 C2 C3 TS
+
+ Units 34 367 969 1310 1669 55 555 1797 2142 3197
+
+ T",partial,证据表格明确给出播客TS=1669、新闻文章TS=3197及C0-C3单元数，支持该子句；但未给出各层级对应token规模，也未支持新闻文章token规模与文本块划分。,,
+p13,列出 RAG 的三种范式,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.25；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",1,rag_survey_2312.10997,4,Body,"y consists of three parts: indexing, retrieval and generation. (Middle) Advanced RAG proposes multiple optimization strategies around pre-retrieval and post-retrieval, with a process similar to the Naive RAG, still following a chain-like structure. (Right) Modular RAG inherits and develops from the ",partial,证据明确支持Naive RAG由索引、检索、生成三部分组成，以及Advanced RAG围绕检索前后优化且仍为链式结构；但Modular RAG部分被截断，未完整陈述功能模块可替换、非顺序流程、迭代/自适应检索等主张。,,
+p14,列出 RAG 框架的三个基础组件,single,RAG 框架的三个基础组件是检索（Retrieval）、生成（Generation）和增强（Augmentation）[1]。,1,rag_survey_2312.10997,1,Body,"foundation of RAG frameworks, which includes the retrieval, the generation and the augmentation techniques. The paper highlights the state-of-theart technologies embedded in each of these critical components, providing a profound understanding of the advancements in RAG systems. Furthermore, this pa",yes,证据明确陈述RAG框架基础包括检索、生成和增强三个技术，与claim主要结论一致。,,
+p15,RAG 面临哪些主要挑战？,single,根据给定证据，RAG 面临的主要挑战包括：1）检索挑战：检索阶段常难以兼顾精确率和召回率，导致选中不匹配或不相关的文本块，并遗漏关键信息 [1]；2）生成困难：证据不足，无法确认生成回答时模型可能出现幻觉、产生检索上下文不支持的内容，或输出不相关、有毒或有偏，以及损害回答质量与可靠性 [1]；3）增强障碍：证据不足，无法确认将检索信息与不同任务整合可能很困难，或有时导致输出不连贯或冗余 [1]；4）工程落地挑战：证据不足，无法确认提升检索效率、提高大知识库中的文档召回率、确保数据安全（如防止 LLM 泄露文档来源或元数据）仍是关键工程挑战 [2]。此外，证据提到 RAG 模型参数量仍落后于 L,1,rag_survey_2312.10997,3,Body,"in multi-turn dialogue interactions effectively. 
+
+However, Naive RAG encounters notable drawbacks: 
+
+_Retrieval Challenges_ . The retrieval phase often struggles with precision and recall, leading to the selection of misaligned or irrelevant chunks, and the missing of crucial information. 
+
+_Genera",partial,证据仅明确支持检索挑战（精确率/召回率、选中不相关块、遗漏关键信息）；生成困难部分仅出现“Genera”标题片段，未陈述幻觉等具体内容；增强障碍与工程落地挑战无证据支持；参数量落后与Inverse Scaling Law无证据支持。,,
+p15,RAG 面临哪些主要挑战？,single,根据给定证据，RAG 面临的主要挑战包括：1）检索挑战：检索阶段常难以兼顾精确率和召回率，导致选中不匹配或不相关的文本块，并遗漏关键信息 [1]；2）生成困难：证据不足，无法确认生成回答时模型可能出现幻觉、产生检索上下文不支持的内容，或输出不相关、有毒或有偏，以及损害回答质量与可靠性 [1]；3）增强障碍：证据不足，无法确认将检索信息与不同任务整合可能很困难，或有时导致输出不连贯或冗余 [1]；4）工程落地挑战：证据不足，无法确认提升检索效率、提高大知识库中的文档召回率、确保数据安全（如防止 LLM 泄露文档来源或元数据）仍是关键工程挑战 [2]。此外，证据提到 RAG 模型参数量仍落后于 L,2,rag_survey_2312.10997,15,Body,"s this, yet the parameter count in RAG models still lags behind that of LLMs. The possibility of an Inverse Scaling Law<sup>10</sup> , where smaller models outperform larger ones, is particularly intriguing and merits further investigation. 
+
+## _E. Production-Ready RAG_ 
+
+RAG’s practicality and ali",partial,证据仅支持“RAG模型参数量仍落后于LLM”及Inverse Scaling Law值得研究；检索挑战、生成困难、增强障碍、工程落地挑战均未被该证据陈述。,,
+p16,这篇综述关注 RAG 在什么场景的应用？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.38；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",1,rag_aigc_survey_2402.19473,1,Body,"recently emerged as a paradigm to address such challenges. In particular, RAG introduces the information retrieval process, which enhances the generation process by retrieving relevant objects from available data stores, leading to higher accuracy and better robustness. In this paper, we comprehensi",partial,证据仅泛述RAG检索增强生成，未明确提及AIGC场景应用或按模态分类。,,
+p16,这篇综述关注 RAG 在什么场景的应用？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.38；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",2,rag_aigc_survey_2402.19473,9,Body,"9 
+
+TABLE I: Taxonomy of RAG applications across various modalities. 
+
+<!-- Start of picture text -->
+RAG for Text<br>Question Answering Human-Machine Conversation Neural Machine Translation Summarization Others<br>REALM ‡§ TKEGEN § RIAG ‡ ConceptFlow ‡§ Skeleton-to-Response ‡§<br>NMT-with-Monolingu",partial,证据表格列出文本类任务（问答、人机对话、NMT、摘要），支持按模态分类及文本任务部分，但未涉及AIGC整合或代码任务讨论。,,
+p16,这篇综述关注 RAG 在什么场景的应用？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.38；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",3,rag_aigc_survey_2402.19473,9,Body,"mpt, then revises each thought step by retrieving knowledge from external knowledge base. 
+
+## IV. **APPLICATIONS** 
+
+In this section, we focus on RAG applications spanning various modalities. To echo with the taxonomy of RAG foundations and enhancements, we also demonstrate their utilization across",partial,证据说明应用章节跨模态讨论RAG应用，支持按模态分类，但未明确AIGC场景或文本任务具体列表。,,
+p17,RAG 如何增强 AIGC？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.25；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",1,rag_aigc_survey_2402.19473,3,Body,"## _A._ **_Overview_** 
+
+As shown in Fig. 1, the entire RAG system consists of two core modules: the retriever and the generator, where the retriever searches for relevant information from the data store and the generator produces the required contents. The RAG process unfolds as follows: (i) the re",partial,证据仅支持检索器和生成器两个核心模块及检索器搜索、生成器产出内容，未涉及检索信息在生成不同阶段发挥作用等后续子句。,,
+p17,RAG 如何增强 AIGC？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.25；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",2,rag_aigc_survey_2402.19473,1,Body,"augmented input to the generator [33], [34]; they can join at the middle stage of generation as latent representations [35], [36]; they can contribute to the final generation results in the form of logits [37], [38]; they can even influence or omit certain generation steps [32], [39]. Additionally, ",partial,证据明确支持检索信息可作为增强输入、潜在表示、logits 及影响或省略生成步骤，但未涉及检索器和生成器两模块定义及非参数化记忆、正交性等子句。,,
+p18,论文讨论了哪些 RAG 挑战和方向？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.38；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",1,rag_aigc_survey_2402.19473,16,Body,"slows down the generation process generally. The research advancements in prompt compression [169] and long-context support [349] have partially mitigated these challenges, albeit with a slight trade-off in accuracy or costs. 
+
+## _B._ **_Potential Future Directions_** 
+
+Lastly, we wish to outline s",partial,证据支持生成被拖慢及提示压缩/长上下文部分缓解并有轻微权衡，但未支持[3]的障碍列表和未来方向的具体内容。,,
+p18,论文讨论了哪些 RAG 挑战和方向？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.38；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",2,rag_aigc_survey_2402.19473,1,Body,"recently emerged as a paradigm to address such challenges. In particular, RAG introduces the information retrieval process, which enhances the generation process by retrieving relevant objects from available data stores, leading to higher accuracy and better robustness. In this paper, we comprehensi",partial,证据提到RAG作为应对挑战的范式出现，但未列出更新知识、长尾数据、数据泄漏、高成本等具体障碍。,,
+p18,论文讨论了哪些 RAG 挑战和方向？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.38；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",3,rag_aigc_survey_2402.19473,2,Body,"ted applications. In summary, we list our contributions as follows: 
+
+- We conduct a comprehensive review of RAG, and distill the abstractions of RAG foundations for various retrievers and generators. 
+
+- We investigate the enhancements in the literature of RAG, elaborating the techniques leveraged ",partial,证据支持贡献包括综合综述及基础抽象梳理，但未说明是否讨论局限与未来方向。,,
+p19,LightRAG 的主要目标是什么？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.33；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",1,lightrag_2410.05779,2,1 INTRODUCTION,"and scalable graph-empowered RAG system that efficiently handles varying query volumes is crucial. In this work, we achieve an effective and efficient RAG system by addressing three key challenges: i) **Comprehensive Information Retrieval** . Ensuring comprehensive information retrieval that capture",partial,证据支持“高效、可扩展的图增强RAG系统”及“全面信息检索”挑战，但未明确提及“捕获相互依赖实体的完整上下文”或双层检索系统。,,
+p19,LightRAG 的主要目标是什么？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.33；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",2,lightrag_2410.05779,2,1 INTRODUCTION,"hallenges, we propose LightRAG, a model that seamlessly integrates a graph-based text indexing paradigm with a dual-level retrieval framework. This innovative approach enhances the system’s capacity to capture complex inter-dependencies among entities, resulting in more coherent and contextually ric",partial,证据支持图结构文本索引与双层检索框架，并提及捕获实体间复杂依赖，但未明确“双层检索系统增强全面信息检索能力”的完整表述，也未涉及效率与新数据适应。,,
+p20,LightRAG 如何表示数据？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.33；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",1,lightrag_2410.05779,2,1 INTRODUCTION,"hallenges, we propose LightRAG, a model that seamlessly integrates a graph-based text indexing paradigm with a dual-level retrieval framework. This innovative approach enhances the system’s capacity to capture complex inter-dependencies among entities, resulting in more coherent and contextually ric",partial,证据仅支持“基于图的文本索引范式”这一子句，未涉及节点/边并集合并及键值结构，故为部分支持。,,
+p20,LightRAG 如何表示数据？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.33；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",2,lightrag_2410.05779,4,1 INTRODUCTION,"up> ). Subsequently, LightRAGcombines the new graph data with the original by taking the union of the node sets _V_<sup>ˆ</sup> and _V_<sup>ˆ</sup><sup>_′_</sup> , as well as the edge sets _E_<sup>ˆ</sup> and _E_<sup>ˆ</sup><sup>_′_</sup> . 
+
+Two key objectives guide our approach to fast adaptation ",partial,证据明确支持通过节点集与边集并集合并新旧图数据，但未涉及键值结构或字段格式，故为部分支持。,,
+p21,LightRAG 解决现有 RAG 的什么问题？,single,根据论文证据，LightRAG 主要针对现有 RAG 系统的以下问题：(1) 依赖扁平数据表示且上下文感知不足，导致答案碎片化、无法捕捉复杂相互依赖关系 [1]；(2) 现有基于图结构的方法往往缺乏知识图谱的动态更新与扩展能力，难以有效纳入新信息 [2]。LightRAG 通过将图结构引入文本索引与检索、采用双层检索范式以及增量更新算法来应对这些问题 [1][3][2]。关于“现有方法对每个生成的社区进行暴力搜索，在大规模查询下效率低下”这一说法，证据不足，需要进一步核实。,1,lightrag_2410.05779,1,ABSTRACT,"Retrieval-Augmented Generation (RAG) systems enhance large language models (LLMs) by integrating external knowledge sources, enabling more accurate and contextually relevant responses tailored to user needs. However, existing RAG systems have significant limitations, including reliance on flat data ",partial,证据仅提到现有RAG依赖扁平数据表示，支持第(1)点的一部分，但未提及上下文感知不足、答案碎片化、复杂相互依赖关系，也未涉及第(2)点及LightRAG的解决方案。,,
+p21,LightRAG 解决现有 RAG 的什么问题？,single,根据论文证据，LightRAG 主要针对现有 RAG 系统的以下问题：(1) 依赖扁平数据表示且上下文感知不足，导致答案碎片化、无法捕捉复杂相互依赖关系 [1]；(2) 现有基于图结构的方法往往缺乏知识图谱的动态更新与扩展能力，难以有效纳入新信息 [2]。LightRAG 通过将图结构引入文本索引与检索、采用双层检索范式以及增量更新算法来应对这些问题 [1][3][2]。关于“现有方法对每个生成的社区进行暴力搜索，在大规模查询下效率低下”这一说法，证据不足，需要进一步核实。,2,lightrag_2410.05779,10,5 RELATED WORK,"h structures for knowledge representation, two key limitations persist. First, these approaches often lack the capability for dynamic updates and expansions of the knowledge graph, making it difficult to incorporate new information effectively. In contrast, our proposed model, LightRAG, addresses th",partial,证据明确支持第(2)点关于图结构方法缺乏动态更新与扩展能力，但未涉及第(1)点、LightRAG的具体方法（双层检索、增量更新）及暴力搜索说法。,,
+p21,LightRAG 解决现有 RAG 的什么问题？,single,根据论文证据，LightRAG 主要针对现有 RAG 系统的以下问题：(1) 依赖扁平数据表示且上下文感知不足，导致答案碎片化、无法捕捉复杂相互依赖关系 [1]；(2) 现有基于图结构的方法往往缺乏知识图谱的动态更新与扩展能力，难以有效纳入新信息 [2]。LightRAG 通过将图结构引入文本索引与检索、采用双层检索范式以及增量更新算法来应对这些问题 [1][3][2]。关于“现有方法对每个生成的社区进行暴力搜索，在大规模查询下效率低下”这一说法，证据不足，需要进一步核实。,3,lightrag_2410.05779,2,1 INTRODUCTION,"a nuanced understanding of relationships and enabling coherent, contextually rich responses. 
+
+- **Methodologies** . To enable an efficient and adaptive RAG system, we propose LightRAG, which integrates a dual-level retrieval paradigm with graph-enhanced text indexing. This approach captures both lo",partial,证据提到LightRAG整合双层检索范式与图增强文本索引，支持解决方案的一部分，但未涉及所针对的问题(1)(2)及增量更新算法。,,
+p22,Agentic RAG 的核心特点有哪些？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.33；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",1,Agentic Retrieval-Augmented Generation: A Survey on Agentic RAG,7,Body,"<!-- Start of picture text -->
+User Question Graph<br>Extraction<br>Retrieval<br>Prompt<br>Augmentation Knowledge<br>Answer Graph<br>Question +<br>Vector<br>Context<br>Database<br>Retrieved<br>Content<br><!-- End of picture text -->
+
+Figure 6: Overview of Graph RAG 
+
+Key characteristics of Agentic R",partial,证据仅含图表文字和“Key characteristics of Agentic R”片段，未明确陈述自主决策、迭代优化、工作流优化等核心特点。,,
+p22,Agentic RAG 的核心特点有哪些？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.33；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",2,Agentic Retrieval-Augmented Generation: A Survey on Agentic RAG,9,Body,"particular, Agentic RAG systems reduce latency through optimized workflows and refine outputs iteratively, tackling the very challenges that have historically hindered traditional RAG’s scalability and effectiveness. 
+
+## **3 Core Principles and Background of Agentic Intelligence** 
+
+Agentic Intelli",partial,证据明确支持“降低延迟、迭代改进输出”，但未支持自主决策、动态编排等其余子句。,,
+p23,Agentic RAG 使用哪些设计模式？,single,根据证据，Agentic RAG 使用的设计模式包括反思（reflection）、规划（planning）、工具使用（tool use）和多智能体协作（multi-agent collaboration）[1]。此外，证据中的图示还列出了若干工作流模式，如提示链（Prompt Chaining）、路由（Routing）、编排者-工作者（Orchestrator-workers）、并行化（Parallelization）、评估者-优化者（Evaluator-Optimizer）等 [2]。,1,Agentic Retrieval-Augmented Generation: A Survey on Agentic RAG,1,Body,"these limitations by embedding autonomous AI agents into the RAG pipeline. These agents leverage agentic design patterns reflection, planning, tool use, and multi-agent collaboration to dynamically manage retrieval strategies, iteratively refine contextual understanding, and adapt workflows through ",partial,证据明确支持反思、规划、工具使用和多智能体协作四种设计模式，但未提及提示链、路由、编排者-工作者、并行化、评估者-优化者等工作流模式。,,
+p23,Agentic RAG 使用哪些设计模式？,single,根据证据，Agentic RAG 使用的设计模式包括反思（reflection）、规划（planning）、工具使用（tool use）和多智能体协作（multi-agent collaboration）[1]。此外，证据中的图示还列出了若干工作流模式，如提示链（Prompt Chaining）、路由（Routing）、编排者-工作者（Orchestrator-workers）、并行化（Parallelization）、评估者-优化者（Evaluator-Optimizer）等 [2]。,2,Agentic Retrieval-Augmented Generation: A Survey on Agentic RAG,3,Body,"d RAG Corrective<br>Agentic Workflow Pattern<br>Modular RAG Adaptive<br>Prompt Chaining Routing AgenticRAGTaxonomy<br>Agent-G<br>Graph RAG Orchestrator-workers Parallelization GeAR<br>Evaluator-Optimizer Agentic DocumentWorflow<br><!-- End of picture text -->
+
+Figure 1: An Overview of Agentic RAG 
+
+",partial,证据图示文本列出了提示链、路由、编排者-工作者、并行化、评估者-优化者等工作流模式，但未提及反思、规划、工具使用和多智能体协作四种设计模式。,,
+p24,Agentic RAG 的主要优势是什么？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.40；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",1,Agentic Retrieval-Augmented Generation: A Survey on Agentic RAG,36,Body,"ured view of a fragmented landscape. The analysis demonstrates that no single architecture is universally optimal; effectiveness depends on aligning complexity with task requirements. Agentic RAG offers clear advantages for complex, knowledgeintensive tasks in healthcare, finance, education, and ent",partial,证据仅支持复杂知识密集型任务（医疗、金融、教育）优势，缺少高质量检索基础、受约束自主性、谨慎编排等前提。,,
+p24,Agentic RAG 的主要优势是什么？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.40；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",2,Agentic Retrieval-Augmented Generation: A Survey on Agentic RAG,3,Body,"<!-- Start of picture text -->
+Framework and Stack<br>Langraph Llamalndex AG2 (AutoGen) Semantic Kernel Crew AI Amazon Bedrock Open AI Swarm<br>RAG Challenges & Limitations Agentic RAG Agentic RAG Benefits & Advantages<br>Enhanced Decision-Making<br>Hallucinations & Inaccuracies Agent Multi-Step Rea",partial,证据仅列出增强决策、多步推理等优势标题，未涉及应用层面响应质量、多模态、创造力等完整内容。,,
+p24,Agentic RAG 的主要优势是什么？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.40；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",3,Agentic Retrieval-Augmented Generation: A Survey on Agentic RAG,30,Body,"dynamically retrieved advertiser data, historical campaign performance, and audience demographics to generate detailed ad proposals, significantly boosting operational efficiency. 
+
+### **Key Benefits:** 
+
+- **Improved Response Quality** : Personalized and context-aware replies enhance user engageme",partial,证据支持提升响应质量（Improved Response Quality），但缺少多模态能力、增强创造力等其他子句。,,
+p24,Agentic RAG 的主要优势是什么？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.40；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",4,Agentic Retrieval-Augmented Generation: A Survey on Agentic RAG,31,Body,"rends in eco-friendly products?” generates a detailed report enriched with customer preferences, competitor analysis, and multimedia content. 
+
+### **Key Benefits:** 
+
+- **Multi-Modal Capabilities** : Integrates text, image, and video data for comprehensive outputs. 
+
+- **Enhanced Creativity** : Gen",partial,证据支持多模态能力与增强创造力，但缺少提升响应质量等其他应用层面内容。,,
+p25,描述 HyDE 的核心流程,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.38；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",1,replug_2212.10496,1,Body,"stead, we propose to pivot through Hypothetical Document <u>Embeddings (HyDE). Given a query, HyDE first</u> zero-shot instructs an instruction-following language model (e.g. InstructGPT) to generate a _hypothetical_ document. The document captures relevance patterns but is unreal and may contain fa",partial,证据支持“给定查询后零样本用指令跟随LM生成假设文档，捕捉相关性模式但非真实、可能含虚假细节”，但未涉及编码为嵌入、向量相似度检索、对比编码器f=enc_d=enc_con及内积检索等其余子句。,,
+p25,描述 HyDE 的核心流程,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.38；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",2,replug_2212.10496,3,Body,"!-- Start of picture text -->
+f = enc d = enccon (2)<br><!-- End of picture text -->
+
+This function is also denoted as _f_ for simplicity. This unsupervised contrastive encoder will be shared by all incoming document corpus. 
+
+<!-- Start of picture text -->
+vd = f ( d ) ∀d ∈ D 1 ∪ D 2 ∪ ... ∪ DL (3)",partial,证据给出f=enc_d=enc_con及无监督对比编码器共享于文档语料，支持“对比编码器”子句，但未涉及假设文档生成、检索流程及内积检索等主要结论。,,
+p25,描述 HyDE 的核心流程,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.38；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",3,replug_2212.10496,4,Body,"esis, 
+
+<!-- Start of picture text -->
+N<br>1<br>v ˆ qij = N + 1 [ � f ( d ˆ k ) + f ( qij )] (8)<br>k =1<br><!-- End of picture text -->
+
+Inner product is computed between **v** ˆ _qij_ and the set of all document vectors _{f_ ( _d_ ) _|d ∈ Di}_ . The most similar documents are retrieved. Here the ",partial,证据说明内积在假设查询向量与全部文档向量间计算并检索最相似文档，支持“内积检索”子句，但缺少假设文档生成、对比编码器定义等其余部分。,,
+p26,HyDE 如何生成检索向量？,single,"根据证据，HyDE 的流程可确认如下：由指令跟随语言模型（如 InstructGPT）根据查询生成一个“假设文档”[1]；再用无监督对比学习编码器将该假设文档编码为稠密向量[2][1]。查询向量由假设文档向量与查询向量共同构成，公式为 v̂_qij = 1/(N+1)[Σ_{k=1}^{N} f(d̂_k) + f(qij)]，其中 f 为编码器，d̂_k 为生成的假设文档[3]。随后用该向量与语料库中文档向量做内积并检索最相似的真实文档[3]。
+
+关于“g(q, INST)=InstructLM(q, INST)”这一具体表述，证据不足，需要进一步核实。",1,replug_2212.10496,1,Body,"stead, we propose to pivot through Hypothetical Document <u>Embeddings (HyDE). Given a query, HyDE first</u> zero-shot instructs an instruction-following language model (e.g. InstructGPT) to generate a _hypothetical_ document. The document captures relevance patterns but is unreal and may contain fa",partial,证据仅支持由指令跟随语言模型（如InstructGPT）生成假设文档这一子句，未涉及编码器、组合公式或检索步骤。,,
+p26,HyDE 如何生成检索向量？,single,"根据证据，HyDE 的流程可确认如下：由指令跟随语言模型（如 InstructGPT）根据查询生成一个“假设文档”[1]；再用无监督对比学习编码器将该假设文档编码为稠密向量[2][1]。查询向量由假设文档向量与查询向量共同构成，公式为 v̂_qij = 1/(N+1)[Σ_{k=1}^{N} f(d̂_k) + f(qij)]，其中 f 为编码器，d̂_k 为生成的假设文档[3]。随后用该向量与语料库中文档向量做内积并检索最相似的真实文档[3]。
+
+关于“g(q, INST)=InstructLM(q, INST)”这一具体表述，证据不足，需要进一步核实。",2,replug_2212.10496,3,Body,"!-- Start of picture text -->
+f = enc d = enccon (2)<br><!-- End of picture text -->
+
+This function is also denoted as _f_ for simplicity. This unsupervised contrastive encoder will be shared by all incoming document corpus. 
+
+<!-- Start of picture text -->
+vd = f ( d ) ∀d ∈ D 1 ∪ D 2 ∪ ... ∪ DL (3)",partial,证据仅给出编码器函数f和文档向量公式，未提及InstructGPT生成假设文档、查询向量组合公式或内积检索。,,
+p26,HyDE 如何生成检索向量？,single,"根据证据，HyDE 的流程可确认如下：由指令跟随语言模型（如 InstructGPT）根据查询生成一个“假设文档”[1]；再用无监督对比学习编码器将该假设文档编码为稠密向量[2][1]。查询向量由假设文档向量与查询向量共同构成，公式为 v̂_qij = 1/(N+1)[Σ_{k=1}^{N} f(d̂_k) + f(qij)]，其中 f 为编码器，d̂_k 为生成的假设文档[3]。随后用该向量与语料库中文档向量做内积并检索最相似的真实文档[3]。
+
+关于“g(q, INST)=InstructLM(q, INST)”这一具体表述，证据不足，需要进一步核实。",3,replug_2212.10496,4,Body,"esis, 
+
+<!-- Start of picture text -->
+N<br>1<br>v ˆ qij = N + 1 [ � f ( d ˆ k ) + f ( qij )] (8)<br>k =1<br><!-- End of picture text -->
+
+Inner product is computed between **v** ˆ _qij_ and the set of all document vectors _{f_ ( _d_ ) _|d ∈ Di}_ . The most similar documents are retrieved. Here the ",partial,证据支持查询向量组合公式及内积检索最相似文档，但未提及InstructGPT生成假设文档或无监督对比学习编码器。,,
+p27,HyDE 在哪些任务上评估？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.38；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",1,replug_2212.10496,1,Body,"rect details. Our experiments show that HyDE significantly outperforms the state-of-the-art unsupervised dense retriever Contriever and shows strong performance comparable to fine-tuned retrievers, across various tasks (e.g. web search, QA, fact verification) and languages (e.g. sw, ko, ja).<sup>1</",partial,证据支持 web search、QA、fact verification 及多语言（sw、ko、ja），但未提及 TREC DL19/20、BEIR 低资源任务或 11 个查询数据集。,,
+p27,HyDE 在哪些任务上评估？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.38；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",2,replug_2212.10496,5,Body,"PR|72.7|75.1|21.2|34.2|34.9|21.5|
+|ANCE|81.6|93.7|45.7|58.1|31.9|39.8|
+|Contriever<sup>FT</sup>|94.7|97.7|40.7|**65.6**|**54.1**|49.2|
+
+Table 2: Low resource tasks from BEIR. Best performing w/o relevance and overall system(s) are marked **bold** . 
+
+both precision-oriented and recall metrics. While",partial,证据仅显示 BEIR 低资源任务表格，未明确涉及 TREC DL19/20、11 个数据集或多语言，也未直接陈述 HyDE 在 web search/QA/fact verification 上评估。,,
+p27,HyDE 在哪些任务上评估？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.38；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",3,replug_2212.10496,5,Body,"On DL20, HyDE gets around 10% lower map and ndcg@10 than Contriever<sup>FT</sup> and similar recall@1k. The ANCE model shows better ndcg@10 numbers than HyDE but lower recall, suggesting it may be biased to a subset of queries and/or relevant documents. 
+
+### **4.3 Low Resource Retrieval** 
+
+In Tabl",partial,证据提到 DL20 和低资源检索章节，支持部分实验任务，但缺少 web search/QA/fact verification 的明确列举、11 个数据集及多语言信息。,,
+p30,多模态检索有什么作用？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.17；要求阈值：0.50。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",1,rag_long_context_2407.01219,13,Body,"<!-- Start of picture text -->
+Text2image Retrieval<br>Retrieval<br>A dog is sleeping<br>Retrieval<br>A dog is sleeping<br>Image2text Retrieval<br>Retrieval<br>A dog is sleeping.<br>A dog is drinking water<br>Retrieval User Query<br>Low Similarity<br>High Similarity<br>Image Generation Model<br>A do",partial,证据展示了文本到图像检索和图像到文本检索的工作流程，支持claim中该子句；但未涉及增强视觉问答能力或检索即生成策略。,,

@@ -1,0 +1,12 @@
+[
+  {"id": "2005.11401", "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks", "url": "https://arxiv.org/abs/2005.11401", "file": "rag_lewis_2005.11401.pdf"},
+  {"id": "2309.15217", "title": "Ragas: Automated Evaluation of Retrieval Augmented Generation", "url": "https://arxiv.org/abs/2309.15217", "file": "ragas_2309.15217.pdf"},
+  {"id": "2401.15884", "title": "Corrective Retrieval Augmented Generation", "url": "https://arxiv.org/abs/2401.15884", "file": "corrective_rag_2401.15884.pdf"},
+  {"id": "2404.16130", "title": "From Local to Global: A Graph RAG Approach to Query-Focused Summarization", "url": "https://arxiv.org/abs/2404.16130", "file": "graphrag_2404.16130.pdf"},
+  {"id": "2312.10997", "title": "Retrieval-Augmented Generation for Large Language Models: A Survey", "url": "https://arxiv.org/abs/2312.10997", "file": "rag_survey_2312.10997.pdf"},
+  {"id": "2402.19473", "title": "Retrieval-Augmented Generation for AI-Generated Content: A Survey", "url": "https://arxiv.org/abs/2402.19473", "file": "rag_aigc_survey_2402.19473.pdf"},
+  {"id": "2410.05779", "title": "LightRAG: Simple and Fast Retrieval-Augmented Generation", "url": "https://arxiv.org/abs/2410.05779", "file": "lightrag_2410.05779.pdf"},
+  {"id": "2501.09136", "title": "Agentic Retrieval-Augmented Generation: A Survey on Agentic RAG", "url": "https://arxiv.org/abs/2501.09136", "file": "agentic_rag_2501.09136.pdf"},
+  {"id": "2212.10496", "title": "Precise Zero-Shot Dense Retrieval without Relevance Labels", "url": "https://arxiv.org/abs/2212.10496", "file": "replug_2212.10496.pdf"},
+  {"id": "2407.01219", "title": "Searching for Best Practices in Retrieval-Augmented Generation", "url": "https://arxiv.org/abs/2407.01219", "file": "rag_long_context_2407.01219.pdf"}
+]

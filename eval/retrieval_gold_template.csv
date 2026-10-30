@@ -1,0 +1,61 @@
+﻿id,paper_keys,question,gold_pages,gold_chunk_ids,notes
+s01,sample_paper,What is the main goal of the paper?,1,,
+s02,sample_paper,Which retrieval methods are combined?,1,,
+s03,sample_paper,What does RRF do?,1,,
+s04,sample_paper,What were the results on ten papers?,2,,
+s05,bilingual,这篇论文提到的主要失败模式是什么？,1,,
+s06,sample_paper,What does the cross-encoder do?,1,,
+s07,bilingual,这篇论文研究什么问题？,1,,
+s08,bilingual,系统的方法分为哪几个阶段？,1,,
+s09,bilingual,主要失败模式是什么？,1,,
+s10,sample_paper,What is the paper title?,1,,
+c01,sample_paper|bilingual,比较这两篇论文的方法和结果,,,跨论文对比，无单一 gold 页
+c02,sample_paper|bilingual,这两篇论文有什么共同点？,,,跨论文对比，无单一 gold 页
+c03,sample_paper|bilingual,Compare the conclusions of the two papers.,,,跨论文对比，无单一 gold 页
+c04,sample_paper,比较这篇论文和另一篇论文,,,问题未指定另一篇论文，不可回答
+i01,sample_paper|bilingual,基于这两篇论文，提出几个创新点,,,创新类，无单一 gold 页
+i02,sample_paper|bilingual,这两篇论文还有哪些研究空白？,,,创新类，无单一 gold 页
+i03,sample_paper|bilingual,Propose future work based on these papers.,,,创新类，无单一 gold 页
+m01,sample_paper,总结一下这篇论文,,,总结类，无单一 gold 页
+m02,sample_paper|bilingual,总结这两篇论文,,,总结类，无单一 gold 页
+e01,2026统计建模,LASSO 是什么？,10|20,,LASSO 仅在方法(p10)与模型比较(p20)提及，无 L1 定义
+r01,2026统计建模,这篇论文的题目是什么？,1,,
+r02,2026统计建模,这篇论文要解决的核心问题是什么？,9|10,,
+r03,2026统计建模,论文使用了哪些主要建模方法？,2|10,,
+r04,2026统计建模,论文的数据来源包括哪些？,11|12,,
+r05,2026统计建模,LASSO 模型的 R² 是多少？,20|21,,
+r06,2026统计建模,中介效应分析中，总效应和间接效应分别是多少？,18|19|29|30,,
+r07,2026统计建模,论文建议的最优减排强度是多少？,27|28,,
+r08,2026统计建模,论文提到的研究局限有哪些？,31,,
+r09,2026统计建模|bilingual,比较这两篇论文的方法和适用场景,,,跨论文对比，无单一 gold 页
+r10,2026统计建模,基于这篇论文提出两个可验证的创新点,,,创新类，无单一 gold 页
+p01,rag_lewis_2005.11401,RAG 模型由哪两部分记忆组成？,1|2,,
+p02,rag_lewis_2005.11401,RAG 在哪些任务上取得了 state-of-the-art？,1,,abstract 即给出 SOTA 结论
+p03,rag_lewis_2005.11401,RAG 的两种 formulation 分别怎么工作？,3|4,,RAG-Sequence / RAG-Token 两式在 method
+p04,ragas_2309.15217,Ragas 是什么框架？,1,,
+p05,ragas_2309.15217,Ragas 评估 RAG 的哪两个模块？,1|2,,retrieval + generation 两模块
+p06,ragas_2309.15217,Ragas 的主要特点是什么？,1,,reference-free 特点
+p07,corrective_rag_2401.15884,CRAG 如何判断检索质量？,3|4,,retrieval evaluator
+p08,corrective_rag_2401.15884,CRAG 在检索质量差时会采取什么动作？,4|6,,web search + decompose
+p09,corrective_rag_2401.15884,CRAG 的实验覆盖哪些任务？,6|8,,short/long-form 任务
+p10,graphrag_2404.16130,GraphRAG 如何构建图索引？,8|9,,graph index 构建章节
+p11,graphrag_2404.16130,GraphRAG 主要解决 RAG 的什么问题？,1,,abstract：global/query-focused summarization
+p12,graphrag_2404.16130,GraphRAG 在什么规模的数据上评估？,1|11,,1M token 规模（abstract+实验）
+p13,rag_survey_2312.10997,列出 RAG 的三种范式,3|4,,Naive/Advanced/Modular 范式
+p14,rag_survey_2312.10997,列出 RAG 框架的三个基础组件,2|3,,retrieval/generation/augmentation 三组件
+p15,rag_survey_2312.10997,RAG 面临哪些主要挑战？,7|8,,挑战章节，页码待复核
+p16,rag_aigc_survey_2402.19473,这篇综述关注 RAG 在什么场景的应用？,1,,AIGC 场景（abstract/intro）
+p17,rag_aigc_survey_2402.19473,RAG 如何增强 AIGC？,1|3,,RAG 增强 AIGC 机制
+p18,rag_aigc_survey_2402.19473,论文讨论了哪些 RAG 挑战和方向？,16|17,,挑战与方向章节，页码待复核
+p19,lightrag_2410.05779,LightRAG 的主要目标是什么？,1,,
+p20,lightrag_2410.05779,LightRAG 如何表示数据？,2|4,,graph structure + key-value 检索
+p21,lightrag_2410.05779,LightRAG 解决现有 RAG 的什么问题？,1|2,,flat data/context 局限
+p22,agentic_rag_2501.09136,Agentic RAG 的核心特点有哪些？,7|9,,核心特点章节，页码待复核
+p23,agentic_rag_2501.09136,Agentic RAG 使用哪些设计模式？,9|10,,reflection/planning/tool use 设计模式
+p24,agentic_rag_2501.09136,Agentic RAG 的主要优势是什么？,3|36,,优势章节，页码待复核
+p25,replug_2212.10496,描述 HyDE 的核心流程,2|3,,HyDE 假设文档流程
+p26,replug_2212.10496,HyDE 如何生成检索向量？,3|4,,编码生成检索向量
+p27,replug_2212.10496,HyDE 在哪些任务上评估？,4|5,,web search(TREC) 与 QA(NQ) 评估
+p28,rag_long_context_2407.01219,这篇论文研究什么？,1,,
+p29,rag_long_context_2407.01219,论文建议如何部署 RAG？,1|6,,部署建议
+p30,rag_long_context_2407.01219,多模态检索有什么作用？,12|13,,多模态检索章节

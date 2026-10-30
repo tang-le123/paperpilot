@@ -1,0 +1,158 @@
+﻿case_id,question,strategy,answer_preview,citation_index,paper,page,section,snippet,llm_support,llm_reason,human_support,human_notes
+p01,RAG 模型由哪两部分记忆组成？,single,RAG 模型由参数化记忆（parametric memory）和非参数化记忆（non-parametric memory）两部分组成。其中参数化记忆是一个预训练的 seq2seq 模型，非参数化记忆是 Wikipedia 的稠密向量索引（dense vector index），通过预训练的神经检索器访问 [1][2]。关于参数化记忆具体为 BART、以及神经检索器具体为 Dense Passage Retriever（DPR），证据不足，需要进一步核实。,1,rag_lewis_2005.11401,1,Body,"nd non-parametric memory for language generation. We introduce RAG models where the parametric memory is a pre-trained seq2seq model and the non-parametric memory is a dense vector index of Wikipedia, accessed with a pre-trained neural retriever. We compare two RAG formulations, one which conditions",yes,证据直接说明参数化记忆是预训练seq2seq模型，非参数化记忆是Wikipedia稠密向量索引，通过预训练神经检索器访问，与句子主要结论一致。,,
+p01,RAG 模型由哪两部分记忆组成？,single,RAG 模型由参数化记忆（parametric memory）和非参数化记忆（non-parametric memory）两部分组成。其中参数化记忆是一个预训练的 seq2seq 模型，非参数化记忆是 Wikipedia 的稠密向量索引（dense vector index），通过预训练的神经检索器访问 [1][2]。关于参数化记忆具体为 BART、以及神经检索器具体为 Dense Passage Retriever（DPR），证据不足，需要进一步核实。,2,rag_lewis_2005.11401,2,Body,"-parametric memory through a general-purpose fine-tuning approach which we refer to as retrieval-augmented generation (RAG). We build RAG models where the parametric memory is a pre-trained seq2seq transformer, and the non-parametric memory is a dense vector index of Wikipedia, accessed with a pre-t",yes,证据同样直接支持参数化记忆为预训练seq2seq transformer、非参数化记忆为Wikipedia稠密向量索引并由预训练神经检索器访问。,,
+p02,RAG 在哪些任务上取得了 state-of-the-art？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.30；要求阈值：0.60。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",1,rag_lewis_2005.11401,6,Body,"the generation, drawing out specific knowledge stored in the parametric memory. 
+
+#### **4.4 Fact Verification** 
+
+Table 2 shows our results on FEVER. For 3-way classification, RAG scores are within 4.3% of state-of-the-art models, which are complex pipeline systems with domain-specific architecture",yes,证据直接支持FEVER 3-way分类与SOTA相差4.3%以内、并非达到SOTA的句子。,,
+p02,RAG 在哪些任务上取得了 state-of-the-art？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.30；要求阈值：0.60。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",2,rag_lewis_2005.11401,6,Body,".9***|**76.8**|**92.2***|
+|Book|DPR [26]|41.5|**57.9**/ -|41.1|50.6|BART|15.1|19.7|38.2|41.6|64.0|81.1|
+||RAG-Token|44.1|55.2/66.1|**45.5**|50.0|RAG-Tok.|**17.3**|**22.2**|40.1|41.5|725|895|
+||RAG-Seq.|**44.5**|56.8/**68.0**|45.2|**52.2**|RAG-Seq.|14.7|21.4|40.8|44.2|.|.|
+
+to more effective marginal",partial,表格数值可部分对应QA/NLG结果，但未直接说明开放域QA刷新SOTA或TriviaQA显著优于专门预训练方法。,,
+p03,RAG 的两种 formulation 分别怎么工作？,single,论文提出两种 RAG formulation，区别在于对检索到的潜在文档做边缘化的粒度不同。RAG-Sequence 对整条输出序列使用同一个检索文档：把检索文档视为单个潜在变量，用 top-K 近似做边缘化，先检索 top K 文档，生成器为每个文档给出整条输出序列的概率，再对这些概率加权求和 [1][2]。RAG-Token 允许每个目标 token 使用不同的文档；关于其具体做法（先检索 top K 文档、生成器针对每个文档分别给出下一个输出 token 的分布、再做边缘化并对下一个输出 token 重复该过程），证据不足，需要进一步核实 [3]。此外，对于序列分类任务，目标类别被视为长,1,rag_lewis_2005.11401,3,Body,"by _θ_ that generates a current token based on a context of the previous _i −_ 1 tokens _y_ 1: _i−_ 1, the original input _x_ and a retrieved passage _z_ . 
+
+To train the retriever and generator end-to-end, we treat the retrieved document as a latent variable. We propose two models that marginalize ",partial,证据仅说明将检索文档视为潜在变量并提出两种边缘化模型，未涉及RAG-Sequence的具体top-K近似与加权求和细节。,,
+p03,RAG 的两种 formulation 分别怎么工作？,single,论文提出两种 RAG formulation，区别在于对检索到的潜在文档做边缘化的粒度不同。RAG-Sequence 对整条输出序列使用同一个检索文档：把检索文档视为单个潜在变量，用 top-K 近似做边缘化，先检索 top K 文档，生成器为每个文档给出整条输出序列的概率，再对这些概率加权求和 [1][2]。RAG-Token 允许每个目标 token 使用不同的文档；关于其具体做法（先检索 top K 文档、生成器针对每个文档分别给出下一个输出 token 的分布、再做边缘化并对下一个输出 token 重复该过程），证据不足，需要进一步核实 [3]。此外，对于序列分类任务，目标类别被视为长,2,rag_lewis_2005.11401,3,Body,"raining and decoding procedure. 
+
+#### **2.1 Models** 
+
+**RAG-Sequence Model** The RAG-Sequence model uses the same retrieved document to generate the complete _sequence_ . Technically, it treats the retrieved document as a single latent variable that is marginalized to get the seq2seq probability _",yes,证据直接说明RAG-Sequence对整条序列使用同一检索文档，并将其作为单个潜在变量进行边缘化。,,
+p03,RAG 的两种 formulation 分别怎么工作？,single,论文提出两种 RAG formulation，区别在于对检索到的潜在文档做边缘化的粒度不同。RAG-Sequence 对整条输出序列使用同一个检索文档：把检索文档视为单个潜在变量，用 top-K 近似做边缘化，先检索 top K 文档，生成器为每个文档给出整条输出序列的概率，再对这些概率加权求和 [1][2]。RAG-Token 允许每个目标 token 使用不同的文档；关于其具体做法（先检索 top K 文档、生成器针对每个文档分别给出下一个输出 token 的分布、再做边缘化并对下一个输出 token 重复该过程），证据不足，需要进一步核实 [3]。此外，对于序列分类任务，目标类别被视为长,3,rag_lewis_2005.11401,3,Body,"!-- End of picture text -->
+
+**RAG-Token Model** In the RAG-Token model we can draw a different latent document for each target _token_ and marginalize accordingly. This allows the generator to choose content from several documents when producing an answer. Concretely, the top K documents are retrie",partial,证据支持RAG-Token为每个目标token抽取不同潜在文档并边缘化，但未完整覆盖先检索top K、逐token分布及重复过程的全部细节。,,
+p03,RAG 的两种 formulation 分别怎么工作？,single,论文提出两种 RAG formulation，区别在于对检索到的潜在文档做边缘化的粒度不同。RAG-Sequence 对整条输出序列使用同一个检索文档：把检索文档视为单个潜在变量，用 top-K 近似做边缘化，先检索 top K 文档，生成器为每个文档给出整条输出序列的概率，再对这些概率加权求和 [1][2]。RAG-Token 允许每个目标 token 使用不同的文档；关于其具体做法（先检索 top K 文档、生成器针对每个文档分别给出下一个输出 token 的分布、再做边缘化并对下一个输出 token 重复该过程），证据不足，需要进一步核实 [3]。此外，对于序列分类任务，目标类别被视为长,4,rag_lewis_2005.11401,3,Body,"RAG can be used for sequence classification tasks by considering the target class as a target sequence of length one, in which case RAG-Sequence and RAG-Token are equivalent. 
+
+#### **2.2 Retriever: DPR** 
+
+The retrieval component _pη_ ( _z|x_ ) is based on DPR [26]. DPR follows a bi-encoder archite",yes,证据直接说明序列分类任务中目标类别视为长度为1的目标序列，此时RAG-Sequence与RAG-Token等价。,,
+p04,Ragas 是什么框架？,explain,"## 论文中的用法
+
+在论文中，Ragas 是作者提出的一个**用于 RAG 流水线的自动化评估框架**，全称为 **Retrieval Augmented Generation Assessment**。论文将其定位为面向无参考标准答案场景的评估框架，用于评估 RAG 系统的多个质量维度，包括检索上下文的相关性、生成内容的忠实性和答案相关性等 [1][2]。论文还指出 Ragas 可与 llama-index 和 Langchain 集成 [3]。关于其在 WikiEval 数据集上预测与人类判断较为一致的说法，**证据不足**，需要进一步核实 [4]。
+
+## 术语解释
+
+- **来源：论",1,ragas_2309.15217,1,Body,"# **Ragas: Automated Evaluation of Retrieval Augmented Generation** 
+
+## **Shahul Es**<sup>_†_</sup> **, Jithin James**<sup>_†_</sup> **, Luis Espinosa-Anke**<sup>_∗♢_</sup> **, Steven Schockaert**<sup>_∗_</sup> 
+
+> _†_ Exploding Gradients 
+
+> _∗_ CardiffNLP, Cardiff University, United Kingdom 
+
+> _",partial,证据仅显示论文标题和作者，未直接支持Ragas为自动化评估框架或全称等具体结论。,,
+p04,Ragas 是什么框架？,explain,"## 论文中的用法
+
+在论文中，Ragas 是作者提出的一个**用于 RAG 流水线的自动化评估框架**，全称为 **Retrieval Augmented Generation Assessment**。论文将其定位为面向无参考标准答案场景的评估框架，用于评估 RAG 系统的多个质量维度，包括检索上下文的相关性、生成内容的忠实性和答案相关性等 [1][2]。论文还指出 Ragas 可与 llama-index 和 Langchain 集成 [3]。关于其在 WikiEval 数据集上预测与人类判断较为一致的说法，**证据不足**，需要进一步核实 [4]。
+
+## 术语解释
+
+- **来源：论",2,ragas_2309.15217,1,Body,"provide LLMs with knowledge from a reference textual database, which enables them to act as a natural language layer between a user and textual databases, reducing the risk of hallucinations. Evaluating RAG architectures is, however, challenging because there are several dimensions to consider: the ",partial,证据提到RAG评估具有多个维度，但未明确Ragas名称、无参考标准答案定位或具体维度。,,
+p04,Ragas 是什么框架？,explain,"## 论文中的用法
+
+在论文中，Ragas 是作者提出的一个**用于 RAG 流水线的自动化评估框架**，全称为 **Retrieval Augmented Generation Assessment**。论文将其定位为面向无参考标准答案场景的评估框架，用于评估 RAG 系统的多个质量维度，包括检索上下文的相关性、生成内容的忠实性和答案相关性等 [1][2]。论文还指出 Ragas 可与 llama-index 和 Langchain 集成 [3]。关于其在 WikiEval 数据集上预测与人类判断较为一致的说法，**证据不足**，需要进一步核实 [4]。
+
+## 术语解释
+
+- **来源：论",3,ragas_2309.15217,2,Body,"of retrieval augmented generation systems. We focus on settings where reference answers may not be available, and where we want to estimate different proxies for correctness, in addition to the usefulness of the retrieved passages. The Ragas framework provides an integration with both llama-index an",yes,证据直接支持无参考答案场景、评估正确性代理、与llama-index集成等主要结论。,,
+p04,Ragas 是什么框架？,explain,"## 论文中的用法
+
+在论文中，Ragas 是作者提出的一个**用于 RAG 流水线的自动化评估框架**，全称为 **Retrieval Augmented Generation Assessment**。论文将其定位为面向无参考标准答案场景的评估框架，用于评估 RAG 系统的多个质量维度，包括检索上下文的相关性、生成内容的忠实性和答案相关性等 [1][2]。论文还指出 Ragas 可与 llama-index 和 Langchain 集成 [3]。关于其在 WikiEval 数据集上预测与人类判断较为一致的说法，**证据不足**，需要进一步核实 [4]。
+
+## 术语解释
+
+- **来源：论",4,ragas_2309.15217,5,Body,"context relevance (i.e. is the retrieved context sufficiently focused). To support the development of such a framework, we have introduced _WikiEval_ , a dataset which human judgements of these three different aspects. Finally, we have also described Ragas, our implementation of the three considered",partial,证据提到WikiEval数据集和Ragas实现，但未支持“预测与人类判断一致”或“证据不足”的表述。,,
+p06,Ragas 的主要特点是什么？,single,根据论文证据，Ragas 的主要特点包括：1）是一个面向 RAG（Retrieval Augmented Generation）流程的无参考（reference-free）自动评估框架 [1]；2）关注可能没有参考答案的场景，并估计正确性的不同代理指标以及检索段落的有用性 [2]；3）与 llama-index 和 Langchain 集成，便于开发者接入标准工作流 [2]。关于其提出可在不依赖人工标注真值的情况下评估多个维度的指标（包括检索上下文的相关性/聚焦程度、LLM 对检索段落的忠实利用以及生成质量本身）[3]，证据不足；关于其易于使用、即使没有任何 ground truth 也能为 ,1,ragas_2309.15217,1,Body,"# **Ragas: Automated Evaluation of Retrieval Augmented Generation** 
+
+## **Shahul Es**<sup>_†_</sup> **, Jithin James**<sup>_†_</sup> **, Luis Espinosa-Anke**<sup>_∗♢_</sup> **, Steven Schockaert**<sup>_∗_</sup> 
+
+> _†_ Exploding Gradients 
+
+> _∗_ CardiffNLP, Cardiff University, United Kingdom 
+
+> _",partial,证据仅显示论文标题和作者，未包含RAG、无参考评估等具体内容，无法直接支持该句主要结论。,,
+p06,Ragas 的主要特点是什么？,single,根据论文证据，Ragas 的主要特点包括：1）是一个面向 RAG（Retrieval Augmented Generation）流程的无参考（reference-free）自动评估框架 [1]；2）关注可能没有参考答案的场景，并估计正确性的不同代理指标以及检索段落的有用性 [2]；3）与 llama-index 和 Langchain 集成，便于开发者接入标准工作流 [2]。关于其提出可在不依赖人工标注真值的情况下评估多个维度的指标（包括检索上下文的相关性/聚焦程度、LLM 对检索段落的忠实利用以及生成质量本身）[3]，证据不足；关于其易于使用、即使没有任何 ground truth 也能为 ,2,ragas_2309.15217,2,Body,"of retrieval augmented generation systems. We focus on settings where reference answers may not be available, and where we want to estimate different proxies for correctness, in addition to the usefulness of the retrieved passages. The Ragas framework provides an integration with both llama-index an",yes,证据直接支持关注无参考答案场景、估计正确性代理指标和检索段落有用性，以及与llama-index集成。,,
+p06,Ragas 的主要特点是什么？,single,根据论文证据，Ragas 的主要特点包括：1）是一个面向 RAG（Retrieval Augmented Generation）流程的无参考（reference-free）自动评估框架 [1]；2）关注可能没有参考答案的场景，并估计正确性的不同代理指标以及检索段落的有用性 [2]；3）与 llama-index 和 Langchain 集成，便于开发者接入标准工作流 [2]。关于其提出可在不依赖人工标注真值的情况下评估多个维度的指标（包括检索上下文的相关性/聚焦程度、LLM 对检索段落的忠实利用以及生成质量本身）[3]，证据不足；关于其易于使用、即使没有任何 ground truth 也能为 ,3,ragas_2309.15217,1,Body,"provide LLMs with knowledge from a reference textual database, which enables them to act as a natural language layer between a user and textual databases, reducing the risk of hallucinations. Evaluating RAG architectures is, however, challenging because there are several dimensions to consider: the ",partial,证据提到RAG评估有多个维度需考虑，但未说明Ragas是无参考自动评估框架，仅部分相关。,,
+p06,Ragas 的主要特点是什么？,single,根据论文证据，Ragas 的主要特点包括：1）是一个面向 RAG（Retrieval Augmented Generation）流程的无参考（reference-free）自动评估框架 [1]；2）关注可能没有参考答案的场景，并估计正确性的不同代理指标以及检索段落的有用性 [2]；3）与 llama-index 和 Langchain 集成，便于开发者接入标准工作流 [2]。关于其提出可在不依赖人工标注真值的情况下评估多个维度的指标（包括检索上下文的相关性/聚焦程度、LLM 对检索段落的忠实利用以及生成质量本身）[3]，证据不足；关于其易于使用、即使没有任何 ground truth 也能为 ,4,ragas_2309.15217,5,Body,"context relevance (i.e. is the retrieved context sufficiently focused). To support the development of such a framework, we have introduced _WikiEval_ , a dataset which human judgements of these three different aspects. Finally, we have also described Ragas, our implementation of the three considered",partial,证据提到context relevance和WikiEval人类判断，但未涉及Ragas预测与人类判断一致性的结论。,,
+p07,CRAG 如何判断检索质量？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.25；要求阈值：0.60。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",1,corrective_rag_2401.15884,5,Body,"|**Algorithm 1:**CRAG Inference|
+|---|
+|**Require :**_E_ (Retrieval Evaluator),_W_ (Query Rewriter),_G_(Generator)|
+|**Input**<br>**:**_x_(Input question),_D_ =_{d_1_, d_2_, ..., dk}_(Retrieved documents)<br>**Output :**_y_(Generated response)|
+|**1** _scorei_=_E_ evaluates the relevance of each pai",partial,证据显示检索评估器E对每个查询-文档对计算相关性分数score_i，支持评估器与打分部分；但未提及置信度汇总、CORRECT/INCORRECT/AMBIGUOUS三种判断及对应动作。,,
+p08,CRAG 在检索质量差时会采取什么动作？,single,"当检索结果被判定为不准确时，CRAG 会进行自我修正以改善检索结果，并提升文档在增强生成中的利用[1][2]。此外，针对检索文档设计了 decompose-then-recompose 算法，以选择性关注关键信息并过滤无关信息[3]。关于轻量级检索评估器返回置信度并据此触发 {Correct, Incorrect, Ambiguous} 三类动作，以及仅对 Incorrect 和 Ambiguous 两类使用大规模网络搜索作为扩展，证据不足，需要进一步核实。",1,corrective_rag_2401.15884,2,Body,"ve issues, this paper particularly studies the scenarios where the retriever returns inaccurate results. A method named **C** orrective **R** etrieval- **A** ugmented **G** eneration (CRAG) is proposed to self-correct the results of retriever and improve the utilization of documents for augmenting g",yes,证据直接说明在检索结果不准确时提出CRAG进行自我修正并提升文档利用。,,
+p08,CRAG 在检索质量差时会采取什么动作？,single,"当检索结果被判定为不准确时，CRAG 会进行自我修正以改善检索结果，并提升文档在增强生成中的利用[1][2]。此外，针对检索文档设计了 decompose-then-recompose 算法，以选择性关注关键信息并过滤无关信息[3]。关于轻量级检索评估器返回置信度并据此触发 {Correct, Incorrect, Ambiguous} 三类动作，以及仅对 Incorrect 和 Ambiguous 两类使用大规模网络搜索作为扩展，证据不足，需要进一步核实。",2,corrective_rag_2401.15884,1,Body,"gmented generation (RAG) is a practicable complement to LLMs, it relies heavily on the relevance of retrieved documents, raising concerns about how the model behaves if retrieval goes wrong. To this end, we propose the **C** orrective **R** etrieval **A** ugmented **G** eneration (CRAG) to improve t",partial,证据提到检索出错时提出CRAG以改进，但未明确包含“自我修正”和“提升文档利用”的完整表述。,,
+p08,CRAG 在检索质量差时会采取什么动作？,single,"当检索结果被判定为不准确时，CRAG 会进行自我修正以改善检索结果，并提升文档在增强生成中的利用[1][2]。此外，针对检索文档设计了 decompose-then-recompose 算法，以选择性关注关键信息并过滤无关信息[3]。关于轻量级检索评估器返回置信度并据此触发 {Correct, Incorrect, Ambiguous} 三类动作，以及仅对 Incorrect 和 Ambiguous 两类使用大规模网络搜索作为扩展，证据不足，需要进一步核实。",3,corrective_rag_2401.15884,1,Body,"augmenting the retrieval results. Besides, a decompose-thenrecompose algorithm is designed for retrieved documents to selectively focus on key information and filter out irrelevant information in them. CRAG is plug-and-play and can be seamlessly coupled with various RAG-based approaches. Experiments",yes,证据直接支持decompose-then-recompose算法用于选择性关注关键信息并过滤无关信息。,,
+p09,CRAG 的实验覆盖哪些任务？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.17；要求阈值：0.60。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",1,corrective_rag_2401.15884,6,Body,"conducted experiments to extensively demonstrate CRAG’s adaptability to RAG-based approaches and its generalizability across both shortand long-form generation tasks. 
+
+### **5.1 Tasks, Datasets and Metrics** 
+
+CRAG was evaluated on four datasets, including **PopQA** (Mallen et al., 2023) ( _short_ ",partial,证据支持PopQA为短文本任务及覆盖短/长文本生成，但未提及Biography、PubHealth、Arc-Challenge的具体任务类型，该部分需额外核实。,,
+p10,GraphRAG 如何构建图索引？,single,根据论文证据，GraphRAG 构建图索引分为两个阶段：首先使用 LLM 从源文档中提取实体知识图谱，其中节点对应语料中的关键实体，边表示实体之间的关系；然后将图划分为紧密相关实体的社区层级 [1][2]。关于使用 LLM 自底向上生成社区级摘要、高层摘要递归地整合低层摘要的说法，证据不足，需要进一步核实。此外，GraphRAG 通过从源数据生成图索引，再应用基于图的社区检测来创建数据的主题划分 [3]。,1,graphrag_2404.16130,1,Abstract,"over private
+ text corpora that scales with both the generality of user questions and the quantity
+ of source text. Our approach uses an LLM to build a graph index in two stages:
+ first, to derive an entity knowledge graph from the source documents, then to pre-
+ generate community summaries for all",partial,证据仅支持两阶段中的第一阶段（LLM构建实体知识图谱），未提及社区层级划分，也未涉及社区摘要或主题划分。,,
+p10,GraphRAG 如何构建图索引？,single,根据论文证据，GraphRAG 构建图索引分为两个阶段：首先使用 LLM 从源文档中提取实体知识图谱，其中节点对应语料中的关键实体，边表示实体之间的关系；然后将图划分为紧密相关实体的社区层级 [1][2]。关于使用 LLM 自底向上生成社区级摘要、高层摘要递归地整合低层摘要的说法，证据不足，需要进一步核实。此外，GraphRAG 通过从源数据生成图索引，再应用基于图的社区检测来创建数据的主题划分 [3]。,2,graphrag_2404.16130,2,1  Introduction,"ach that enables sensemaking over
+the entirety of a large text corpus. GraphRAG first uses an LLM to construct a knowledge graph,
+where nodes correspond to key entities in the corpus and edges represent relationships between those
+entities. Next, it partitions the graph into a hierarchy of communiti",yes,证据直接支持两阶段：LLM构建节点为关键实体、边为关系的知识图谱，并将图划分为社区层级。,,
+p10,GraphRAG 如何构建图索引？,single,根据论文证据，GraphRAG 构建图索引分为两个阶段：首先使用 LLM 从源文档中提取实体知识图谱，其中节点对应语料中的关键实体，边表示实体之间的关系；然后将图划分为紧密相关实体的社区层级 [1][2]。关于使用 LLM 自底向上生成社区级摘要、高层摘要递归地整合低层摘要的说法，证据不足，需要进一步核实。此外，GraphRAG 通过从源数据生成图索引，再应用基于图的社区检测来创建数据的主题划分 [3]。,3,graphrag_2404.16130,3,2  Background,"oaches by generating a graph index from the source data, then applying graph-based
+community detection to create a thematic partitioning of the data.
+
+2.2 Using Knowledge Graphs with LLMs and RAG
+
+Approaches to knowledge graph extraction from natural language text corpora include rule-
+matching, sta",yes,证据直接支持从源数据生成图索引并应用基于图的社区检测进行主题划分。,,
+p11,GraphRAG 主要解决 RAG 的什么问题？,single,GraphRAG 主要解决传统 RAG（尤其是 vector RAG）无法应对“全局性问题”的缺陷：这类问题针对整个文本语料，例如“数据集的主要主题是什么？”，本质上属于 query-focused summarization（QFS）任务而非显式检索任务，RAG 在此类问题上会失败 [1]。GraphRAG 通过构建图索引（实体知识图谱与社区摘要）来支持对整篇语料的全局性问答与总结 [2]。关于 vector RAG 无法支持对整个语料的 sensemaking 、GraphRAG 在全面性和多样性上相较 vector RAG 有显著提升 [3]，以及它能缓解全局性问题被“检索事实样本误作全,1,graphrag_2404.16130,1,Abstract,"The use of retrieval-augmented generation (RAG) to retrieve relevant informa-
+ tion from an external knowledge source enables large language models (LLMs)
+ to answer questions over private and/or previously unseen document collections.
+ However, RAG fails on global questions directed at an entire te",partial,证据仅提到RAG在全局问题上失败，未涉及QFS任务性质及GraphRAG图索引内容,,
+p11,GraphRAG 主要解决 RAG 的什么问题？,single,GraphRAG 主要解决传统 RAG（尤其是 vector RAG）无法应对“全局性问题”的缺陷：这类问题针对整个文本语料，例如“数据集的主要主题是什么？”，本质上属于 query-focused summarization（QFS）任务而非显式检索任务，RAG 在此类问题上会失败 [1]。GraphRAG 通过构建图索引（实体知识图谱与社区摘要）来支持对整篇语料的全局性问答与总结 [2]。关于 vector RAG 无法支持对整个语料的 sensemaking 、GraphRAG 在全面性和多样性上相较 vector RAG 有显著提升 [3]，以及它能缓解全局性问题被“检索事实样本误作全,2,graphrag_2404.16130,1,Abstract,"over private
+ text corpora that scales with both the generality of user questions and the quantity
+ of source text. Our approach uses an LLM to build a graph index in two stages:
+ first, to derive an entity knowledge graph from the source documents, then to pre-
+ generate community summaries for all",yes,证据直接说明用LLM构建图索引，先提取实体知识图谱再生成社区摘要,,
+p11,GraphRAG 主要解决 RAG 的什么问题？,single,GraphRAG 主要解决传统 RAG（尤其是 vector RAG）无法应对“全局性问题”的缺陷：这类问题针对整个文本语料，例如“数据集的主要主题是什么？”，本质上属于 query-focused summarization（QFS）任务而非显式检索任务，RAG 在此类问题上会失败 [1]。GraphRAG 通过构建图索引（实体知识图谱与社区摘要）来支持对整篇语料的全局性问答与总结 [2]。关于 vector RAG 无法支持对整个语料的 sensemaking 、GraphRAG 在全面性和多样性上相较 vector RAG 有显著提升 [3]，以及它能缓解全局性问题被“检索事实样本误作全,3,graphrag_2404.16130,12,7  Conclusion,"We have presented GraphRAG, a RAG approach that combines knowledge graph generation and
+query-focused summarization (QFS) to support human sensemaking over entire text corpora. Initial
+evaluations show substantial improvements over a vector RAG baseline for both the comprehensive-
+ness and diversity",yes,证据直接支持GraphRAG结合知识图谱与QFS支持整语料sensemaking，并在全面性和多样性上优于vector RAG,,
+p11,GraphRAG 主要解决 RAG 的什么问题？,single,GraphRAG 主要解决传统 RAG（尤其是 vector RAG）无法应对“全局性问题”的缺陷：这类问题针对整个文本语料，例如“数据集的主要主题是什么？”，本质上属于 query-focused summarization（QFS）任务而非显式检索任务，RAG 在此类问题上会失败 [1]。GraphRAG 通过构建图索引（实体知识图谱与社区摘要）来支持对整篇语料的全局性问答与总结 [2]。关于 vector RAG 无法支持对整个语料的 sensemaking 、GraphRAG 在全面性和多样性上相较 vector RAG 有显著提升 [3]，以及它能缓解全局性问题被“检索事实样本误作全,4,graphrag_2404.16130,12,6  Discussion,"As a mechanism for question answering over large document collections, there
+are risks to downstream sensemaking and decision-making tasks if the generated answers do not
+accurately represent the source data. System use should be accompanied by clear disclosures of AI
+use and the potential for error",partial,证据仅泛泛提及下游sensemaking风险，未明确支持“检索事实样本误作全局摘要”的具体风险,,
+p12,GraphRAG 在什么规模的数据上评估？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.50；要求阈值：0.60。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",1,graphrag_2404.16130,8,2  Background,"podcast featuring
+conversations between Microsoft CTO Kevin Scott and various thought leaders in science and tech-
+nology (Scott, 2024). This corpus was divided into 1669 × 600-token text chunks, with 100-token
+overlaps between chunks (∼1 million tokens).
+
+News articles. A benchmark dataset comprise",partial,证据支持播客转录文本约100万token、1669个600-token块及100-token重叠，但新闻文章部分被截断，未显示3197块等细节。,,
+p12,GraphRAG 在什么规模的数据上评估？,single,"证据不足，暂不展示生成答案。
+
+引用支持率：0.50；要求阈值：0.60。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",2,graphrag_2404.16130,10,5  Results,"is the most resource-intensive approach requiring the highest number of context tokens.
+Root-level community summaries (C0) require dramatically fewer tokens per query (9x-43x).
+
+ Podcast Transcripts News Articles
+
+ C0 C1 C2 C3 TS C0 C1 C2 C3 TS
+
+ Units 34 367 969 1310 1669 55 555 1797 2142 3197
+
+ T",partial,"证据表显示播客Units含1669、新闻含3197，但未给出claim中的token规模数值1,014,611和1,707,694，需额外推断。",,

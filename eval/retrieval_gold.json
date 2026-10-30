@@ -1,0 +1,622 @@
+[
+  {
+    "id": "s01",
+    "paper_keys": [
+      "sample_paper"
+    ],
+    "question": "What is the main goal of the paper?",
+    "gold_pages": [
+      1
+    ],
+    "gold_chunk_ids": [],
+    "notes": ""
+  },
+  {
+    "id": "s02",
+    "paper_keys": [
+      "sample_paper"
+    ],
+    "question": "Which retrieval methods are combined?",
+    "gold_pages": [
+      1
+    ],
+    "gold_chunk_ids": [],
+    "notes": ""
+  },
+  {
+    "id": "s03",
+    "paper_keys": [
+      "sample_paper"
+    ],
+    "question": "What does RRF do?",
+    "gold_pages": [
+      1
+    ],
+    "gold_chunk_ids": [],
+    "notes": ""
+  },
+  {
+    "id": "s04",
+    "paper_keys": [
+      "sample_paper"
+    ],
+    "question": "What were the results on ten papers?",
+    "gold_pages": [
+      2
+    ],
+    "gold_chunk_ids": [],
+    "notes": ""
+  },
+  {
+    "id": "s05",
+    "paper_keys": [
+      "bilingual"
+    ],
+    "question": "这篇论文提到的主要失败模式是什么？",
+    "gold_pages": [
+      1
+    ],
+    "gold_chunk_ids": [],
+    "notes": ""
+  },
+  {
+    "id": "s06",
+    "paper_keys": [
+      "sample_paper"
+    ],
+    "question": "What does the cross-encoder do?",
+    "gold_pages": [
+      1
+    ],
+    "gold_chunk_ids": [],
+    "notes": ""
+  },
+  {
+    "id": "s07",
+    "paper_keys": [
+      "bilingual"
+    ],
+    "question": "这篇论文研究什么问题？",
+    "gold_pages": [
+      1
+    ],
+    "gold_chunk_ids": [],
+    "notes": ""
+  },
+  {
+    "id": "s08",
+    "paper_keys": [
+      "bilingual"
+    ],
+    "question": "系统的方法分为哪几个阶段？",
+    "gold_pages": [
+      1
+    ],
+    "gold_chunk_ids": [],
+    "notes": ""
+  },
+  {
+    "id": "s09",
+    "paper_keys": [
+      "bilingual"
+    ],
+    "question": "主要失败模式是什么？",
+    "gold_pages": [
+      1
+    ],
+    "gold_chunk_ids": [],
+    "notes": ""
+  },
+  {
+    "id": "s10",
+    "paper_keys": [
+      "sample_paper"
+    ],
+    "question": "What is the paper title?",
+    "gold_pages": [
+      1
+    ],
+    "gold_chunk_ids": [],
+    "notes": ""
+  },
+  {
+    "id": "e01",
+    "paper_keys": [
+      "2026统计建模"
+    ],
+    "question": "LASSO 是什么？",
+    "gold_pages": [
+      10,
+      20
+    ],
+    "gold_chunk_ids": [],
+    "notes": "LASSO 仅在方法(p10)与模型比较(p20)提及，无 L1 定义"
+  },
+  {
+    "id": "r01",
+    "paper_keys": [
+      "2026统计建模"
+    ],
+    "question": "这篇论文的题目是什么？",
+    "gold_pages": [
+      1
+    ],
+    "gold_chunk_ids": [],
+    "notes": ""
+  },
+  {
+    "id": "r02",
+    "paper_keys": [
+      "2026统计建模"
+    ],
+    "question": "这篇论文要解决的核心问题是什么？",
+    "gold_pages": [
+      9,
+      10
+    ],
+    "gold_chunk_ids": [],
+    "notes": ""
+  },
+  {
+    "id": "r03",
+    "paper_keys": [
+      "2026统计建模"
+    ],
+    "question": "论文使用了哪些主要建模方法？",
+    "gold_pages": [
+      2,
+      10
+    ],
+    "gold_chunk_ids": [],
+    "notes": ""
+  },
+  {
+    "id": "r04",
+    "paper_keys": [
+      "2026统计建模"
+    ],
+    "question": "论文的数据来源包括哪些？",
+    "gold_pages": [
+      11,
+      12
+    ],
+    "gold_chunk_ids": [],
+    "notes": ""
+  },
+  {
+    "id": "r05",
+    "paper_keys": [
+      "2026统计建模"
+    ],
+    "question": "LASSO 模型的 R² 是多少？",
+    "gold_pages": [
+      20,
+      21
+    ],
+    "gold_chunk_ids": [],
+    "notes": ""
+  },
+  {
+    "id": "r06",
+    "paper_keys": [
+      "2026统计建模"
+    ],
+    "question": "中介效应分析中，总效应和间接效应分别是多少？",
+    "gold_pages": [
+      18,
+      19,
+      29,
+      30
+    ],
+    "gold_chunk_ids": [],
+    "notes": ""
+  },
+  {
+    "id": "r07",
+    "paper_keys": [
+      "2026统计建模"
+    ],
+    "question": "论文建议的最优减排强度是多少？",
+    "gold_pages": [
+      27,
+      28
+    ],
+    "gold_chunk_ids": [],
+    "notes": ""
+  },
+  {
+    "id": "r08",
+    "paper_keys": [
+      "2026统计建模"
+    ],
+    "question": "论文提到的研究局限有哪些？",
+    "gold_pages": [
+      31
+    ],
+    "gold_chunk_ids": [],
+    "notes": ""
+  },
+  {
+    "id": "p01",
+    "paper_keys": [
+      "rag_lewis_2005.11401"
+    ],
+    "question": "RAG 模型由哪两部分记忆组成？",
+    "gold_pages": [
+      1,
+      2
+    ],
+    "gold_chunk_ids": [],
+    "notes": ""
+  },
+  {
+    "id": "p02",
+    "paper_keys": [
+      "rag_lewis_2005.11401"
+    ],
+    "question": "RAG 在哪些任务上取得了 state-of-the-art？",
+    "gold_pages": [
+      1
+    ],
+    "gold_chunk_ids": [],
+    "notes": "abstract 即给出 SOTA 结论"
+  },
+  {
+    "id": "p03",
+    "paper_keys": [
+      "rag_lewis_2005.11401"
+    ],
+    "question": "RAG 的两种 formulation 分别怎么工作？",
+    "gold_pages": [
+      3,
+      4
+    ],
+    "gold_chunk_ids": [],
+    "notes": "RAG-Sequence / RAG-Token 两式在 method"
+  },
+  {
+    "id": "p04",
+    "paper_keys": [
+      "ragas_2309.15217"
+    ],
+    "question": "Ragas 是什么框架？",
+    "gold_pages": [
+      1
+    ],
+    "gold_chunk_ids": [],
+    "notes": ""
+  },
+  {
+    "id": "p05",
+    "paper_keys": [
+      "ragas_2309.15217"
+    ],
+    "question": "Ragas 评估 RAG 的哪两个模块？",
+    "gold_pages": [
+      1,
+      2
+    ],
+    "gold_chunk_ids": [],
+    "notes": "retrieval + generation 两模块"
+  },
+  {
+    "id": "p06",
+    "paper_keys": [
+      "ragas_2309.15217"
+    ],
+    "question": "Ragas 的主要特点是什么？",
+    "gold_pages": [
+      1
+    ],
+    "gold_chunk_ids": [],
+    "notes": "reference-free 特点"
+  },
+  {
+    "id": "p07",
+    "paper_keys": [
+      "corrective_rag_2401.15884"
+    ],
+    "question": "CRAG 如何判断检索质量？",
+    "gold_pages": [
+      3,
+      4
+    ],
+    "gold_chunk_ids": [],
+    "notes": "retrieval evaluator"
+  },
+  {
+    "id": "p08",
+    "paper_keys": [
+      "corrective_rag_2401.15884"
+    ],
+    "question": "CRAG 在检索质量差时会采取什么动作？",
+    "gold_pages": [
+      4,
+      6
+    ],
+    "gold_chunk_ids": [],
+    "notes": "web search + decompose"
+  },
+  {
+    "id": "p09",
+    "paper_keys": [
+      "corrective_rag_2401.15884"
+    ],
+    "question": "CRAG 的实验覆盖哪些任务？",
+    "gold_pages": [
+      6,
+      8
+    ],
+    "gold_chunk_ids": [],
+    "notes": "short/long-form 任务"
+  },
+  {
+    "id": "p10",
+    "paper_keys": [
+      "graphrag_2404.16130"
+    ],
+    "question": "GraphRAG 如何构建图索引？",
+    "gold_pages": [
+      8,
+      9
+    ],
+    "gold_chunk_ids": [],
+    "notes": "graph index 构建章节"
+  },
+  {
+    "id": "p11",
+    "paper_keys": [
+      "graphrag_2404.16130"
+    ],
+    "question": "GraphRAG 主要解决 RAG 的什么问题？",
+    "gold_pages": [
+      1
+    ],
+    "gold_chunk_ids": [],
+    "notes": "abstract：global/query-focused summarization"
+  },
+  {
+    "id": "p12",
+    "paper_keys": [
+      "graphrag_2404.16130"
+    ],
+    "question": "GraphRAG 在什么规模的数据上评估？",
+    "gold_pages": [
+      1,
+      11
+    ],
+    "gold_chunk_ids": [],
+    "notes": "1M token 规模（abstract+实验）"
+  },
+  {
+    "id": "p13",
+    "paper_keys": [
+      "rag_survey_2312.10997"
+    ],
+    "question": "列出 RAG 的三种范式",
+    "gold_pages": [
+      3,
+      4
+    ],
+    "gold_chunk_ids": [],
+    "notes": "Naive/Advanced/Modular 范式"
+  },
+  {
+    "id": "p14",
+    "paper_keys": [
+      "rag_survey_2312.10997"
+    ],
+    "question": "列出 RAG 框架的三个基础组件",
+    "gold_pages": [
+      2,
+      3
+    ],
+    "gold_chunk_ids": [],
+    "notes": "retrieval/generation/augmentation 三组件"
+  },
+  {
+    "id": "p15",
+    "paper_keys": [
+      "rag_survey_2312.10997"
+    ],
+    "question": "RAG 面临哪些主要挑战？",
+    "gold_pages": [
+      7,
+      8
+    ],
+    "gold_chunk_ids": [],
+    "notes": "挑战章节，页码待复核"
+  },
+  {
+    "id": "p16",
+    "paper_keys": [
+      "rag_aigc_survey_2402.19473"
+    ],
+    "question": "这篇综述关注 RAG 在什么场景的应用？",
+    "gold_pages": [
+      1
+    ],
+    "gold_chunk_ids": [],
+    "notes": "AIGC 场景（abstract/intro）"
+  },
+  {
+    "id": "p17",
+    "paper_keys": [
+      "rag_aigc_survey_2402.19473"
+    ],
+    "question": "RAG 如何增强 AIGC？",
+    "gold_pages": [
+      1,
+      3
+    ],
+    "gold_chunk_ids": [],
+    "notes": "RAG 增强 AIGC 机制"
+  },
+  {
+    "id": "p18",
+    "paper_keys": [
+      "rag_aigc_survey_2402.19473"
+    ],
+    "question": "论文讨论了哪些 RAG 挑战和方向？",
+    "gold_pages": [
+      16,
+      17
+    ],
+    "gold_chunk_ids": [],
+    "notes": "挑战与方向章节，页码待复核"
+  },
+  {
+    "id": "p19",
+    "paper_keys": [
+      "lightrag_2410.05779"
+    ],
+    "question": "LightRAG 的主要目标是什么？",
+    "gold_pages": [
+      1
+    ],
+    "gold_chunk_ids": [],
+    "notes": ""
+  },
+  {
+    "id": "p20",
+    "paper_keys": [
+      "lightrag_2410.05779"
+    ],
+    "question": "LightRAG 如何表示数据？",
+    "gold_pages": [
+      2,
+      4
+    ],
+    "gold_chunk_ids": [],
+    "notes": "graph structure + key-value 检索"
+  },
+  {
+    "id": "p21",
+    "paper_keys": [
+      "lightrag_2410.05779"
+    ],
+    "question": "LightRAG 解决现有 RAG 的什么问题？",
+    "gold_pages": [
+      1,
+      2
+    ],
+    "gold_chunk_ids": [],
+    "notes": "flat data/context 局限"
+  },
+  {
+    "id": "p22",
+    "paper_keys": [
+      "agentic_rag_2501.09136"
+    ],
+    "question": "Agentic RAG 的核心特点有哪些？",
+    "gold_pages": [
+      7,
+      9
+    ],
+    "gold_chunk_ids": [],
+    "notes": "核心特点章节，页码待复核"
+  },
+  {
+    "id": "p23",
+    "paper_keys": [
+      "agentic_rag_2501.09136"
+    ],
+    "question": "Agentic RAG 使用哪些设计模式？",
+    "gold_pages": [
+      9,
+      10
+    ],
+    "gold_chunk_ids": [],
+    "notes": "reflection/planning/tool use 设计模式"
+  },
+  {
+    "id": "p24",
+    "paper_keys": [
+      "agentic_rag_2501.09136"
+    ],
+    "question": "Agentic RAG 的主要优势是什么？",
+    "gold_pages": [
+      3,
+      36
+    ],
+    "gold_chunk_ids": [],
+    "notes": "优势章节，页码待复核"
+  },
+  {
+    "id": "p25",
+    "paper_keys": [
+      "replug_2212.10496"
+    ],
+    "question": "描述 HyDE 的核心流程",
+    "gold_pages": [
+      2,
+      3
+    ],
+    "gold_chunk_ids": [],
+    "notes": "HyDE 假设文档流程"
+  },
+  {
+    "id": "p26",
+    "paper_keys": [
+      "replug_2212.10496"
+    ],
+    "question": "HyDE 如何生成检索向量？",
+    "gold_pages": [
+      3,
+      4
+    ],
+    "gold_chunk_ids": [],
+    "notes": "编码生成检索向量"
+  },
+  {
+    "id": "p27",
+    "paper_keys": [
+      "replug_2212.10496"
+    ],
+    "question": "HyDE 在哪些任务上评估？",
+    "gold_pages": [
+      4,
+      5
+    ],
+    "gold_chunk_ids": [],
+    "notes": "web search(TREC) 与 QA(NQ) 评估"
+  },
+  {
+    "id": "p28",
+    "paper_keys": [
+      "rag_long_context_2407.01219"
+    ],
+    "question": "这篇论文研究什么？",
+    "gold_pages": [
+      1
+    ],
+    "gold_chunk_ids": [],
+    "notes": ""
+  },
+  {
+    "id": "p29",
+    "paper_keys": [
+      "rag_long_context_2407.01219"
+    ],
+    "question": "论文建议如何部署 RAG？",
+    "gold_pages": [
+      1,
+      6
+    ],
+    "gold_chunk_ids": [],
+    "notes": "部署建议"
+  },
+  {
+    "id": "p30",
+    "paper_keys": [
+      "rag_long_context_2407.01219"
+    ],
+    "question": "多模态检索有什么作用？",
+    "gold_pages": [
+      12,
+      13
+    ],
+    "gold_chunk_ids": [],
+    "notes": "多模态检索章节"
+  }
+]

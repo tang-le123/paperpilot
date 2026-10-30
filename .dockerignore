@@ -1,0 +1,13 @@
+.venv
+__pycache__
+*.pyc
+.git
+.pytest_cache
+data/uploads
+data/chroma
+data/papers.db
+data/samples/papers
+data/samples/*.pdf
+node_modules
+frontend_react/dist
+.env

@@ -1,0 +1,49 @@
+{
+  "total": 6,
+  "correct": 6,
+  "accuracy": 1.0,
+  "results": [
+    {
+      "id": "p02_c1",
+      "expected": "no",
+      "actual": "no",
+      "ok": true,
+      "reason": "证据仅说明三分类任务中RAG与SOTA相差4.3%，未支持开放域QA达到SOTA。"
+    },
+    {
+      "id": "p04_c1",
+      "expected": "no",
+      "actual": "no",
+      "ok": true,
+      "reason": "证据仅为论文标题和作者，按规则1不能作为定义或结论证据。"
+    },
+    {
+      "id": "p04_c3",
+      "expected": "partial",
+      "actual": "partial",
+      "ok": true,
+      "reason": "证据明确说明参考答案可能不可用（无参考）并提及与llama-index的集成，覆盖claim两个子句。；claim 含多个动作，未能证明全部动作"
+    },
+    {
+      "id": "p06_c1",
+      "expected": "no",
+      "actual": "no",
+      "ok": true,
+      "reason": "证据仅为论文标题和作者，未陈述 reference-free 或框架定义，不能作为结论证据。"
+    },
+    {
+      "id": "p08_c1",
+      "expected": "partial",
+      "actual": "partial",
+      "ok": true,
+      "reason": "证据仅支持自我修正检索结果，未提及decompose-then-recompose或三类动作。"
+    },
+    {
+      "id": "p11_c4",
+      "expected": "no",
+      "actual": "no",
+      "ok": true,
+      "reason": "证据仅泛泛提及答案不准确会影响下游任务，未提及GraphRAG或全局问题被误作全局摘要的风险。"
+    }
+  ]
+}

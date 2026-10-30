@@ -1,0 +1,221 @@
+﻿case_id,question,paper_keys,answer_preview,citations,suppressed,annotator,answer_correct,citation_support,should_answer,notes
+s01,What is the main goal of the paper?,sample_paper,"The main goal is to study adaptive retrieval for scientific question answering, combining BM25 and dense retrieval with RRF fusion and page-level citations.",[1] p1 yes,0,A,1,yes,1,
+s01,What is the main goal of the paper?,sample_paper,"The main goal is to study adaptive retrieval for scientific question answering, combining BM25 and dense retrieval with RRF fusion and page-level citations.",[1] p1 yes,0,B,1,yes,1,
+s02,Which retrieval methods are combined?,sample_paper,The system combines BM25 (sparse) and dense retrieval.,[1] p1 yes,0,A,1,yes,1,
+s02,Which retrieval methods are combined?,sample_paper,The system combines BM25 (sparse) and dense retrieval.,[1] p1 yes,0,B,1,yes,1,
+s03,What does RRF do?,sample_paper,RRF (reciprocal rank fusion) fuses the BM25 and dense rankings into one list.,[1] p1 yes,0,A,1,yes,1,
+s03,What does RRF do?,sample_paper,RRF (reciprocal rank fusion) fuses the BM25 and dense rankings into one list.,[1] p1 yes,0,B,1,yes,1,
+s04,What were the results on ten papers?,sample_paper,"On a pilot set of ten papers, hybrid retrieval found the correct page in the top three results for most questions.",[1] p2 yes,0,A,1,yes,1,
+s04,What were the results on ten papers?,sample_paper,"On a pilot set of ten papers, hybrid retrieval found the correct page in the top three results for most questions.",[1] p2 yes,0,B,1,yes,1,
+s05,这篇论文提到的主要失败模式是什么？,bilingual,主要失败模式是双栏排版和数学公式的 PDF 解析问题。,[1] p1 yes,0,A,1,yes,1,
+s05,这篇论文提到的主要失败模式是什么？,bilingual,主要失败模式是双栏排版和数学公式的 PDF 解析问题。,[1] p1 yes,0,B,1,yes,1,
+s06,What does the cross-encoder do?,sample_paper,The cross-encoder reranks the hybrid-search candidates before answer generation.,[1] p1 yes,0,A,1,yes,1,
+s06,What does the cross-encoder do?,sample_paper,The cross-encoder reranks the hybrid-search candidates before answer generation.,[1] p1 yes,0,B,1,yes,1,
+s07,这篇论文研究什么问题？,bilingual,这篇论文研究如何用检索增强生成帮助研究者阅读长篇科学论文。,[1] p1 yes,0,A,1,yes,1,
+s07,这篇论文研究什么问题？,bilingual,这篇论文研究如何用检索增强生成帮助研究者阅读长篇科学论文。,[1] p1 yes,0,B,1,yes,1,
+s08,系统的方法分为哪几个阶段？,bilingual,分为三个阶段：解析文档并按章节切块；建立 BM25 与多语言向量的混合索引；用 RRF 和 Cross-Encoder 选择证据。,[1] p1 yes,0,A,1,yes,1,
+s08,系统的方法分为哪几个阶段？,bilingual,分为三个阶段：解析文档并按章节切块；建立 BM25 与多语言向量的混合索引；用 RRF 和 Cross-Encoder 选择证据。,[1] p1 yes,0,B,1,yes,1,
+s09,主要失败模式是什么？,bilingual,主要失败模式是双栏排版和数学公式的 PDF 解析。,[1] p1 yes,0,A,1,yes,1,
+s09,主要失败模式是什么？,bilingual,主要失败模式是双栏排版和数学公式的 PDF 解析。,[1] p1 yes,0,B,1,yes,1,
+s10,What is the paper title?,sample_paper,"The paper title is ""A Small Paper on Adaptive Retrieval"".",[1] p1 yes,0,A,1,yes,1,
+s10,What is the paper title?,sample_paper,"The paper title is ""A Small Paper on Adaptive Retrieval"".",[1] p1 yes,0,B,1,yes,1,
+c01,比较这两篇论文的方法和结果,sample_paper|bilingual,两篇论文都结合 BM25 与稠密检索并用 RRF/重排：sample_paper 关注自适应检索与页码引用，bilingual 关注多语言阅读与解析可靠性。,[1] p1 partial | [2] p1 partial,0,A,1,partial,1,跨论文对比，引用只覆盖部分结论
+c01,比较这两篇论文的方法和结果,sample_paper|bilingual,两篇论文都结合 BM25 与稠密检索并用 RRF/重排：sample_paper 关注自适应检索与页码引用，bilingual 关注多语言阅读与解析可靠性。,[1] p1 partial | [2] p1 partial,0,B,1,partial,1,跨论文对比，引用只覆盖部分结论
+c02,这两篇论文有什么共同点？,sample_paper|bilingual,共同点：都结合 BM25 与稠密向量检索、RRF 融合与 cross-encoder 重排，都返回页码引用。,[1] p1 partial | [2] p1 partial,0,A,1,partial,1,跨论文对比
+c02,这两篇论文有什么共同点？,sample_paper|bilingual,共同点：都结合 BM25 与稠密向量检索、RRF 融合与 cross-encoder 重排，都返回页码引用。,[1] p1 partial | [2] p1 partial,0,B,1,partial,1,跨论文对比
+c03,Compare the conclusions of the two papers.,sample_paper|bilingual,Both conclude that reliable parsing and page-level citations matter more than a larger model; bilingual additionally emphasizes language control.,[1] p2 partial | [2] p1 partial,0,A,1,partial,1,跨论文对比
+c03,Compare the conclusions of the two papers.,sample_paper|bilingual,Both conclude that reliable parsing and page-level citations matter more than a larger model; bilingual additionally emphasizes language control.,[1] p2 partial | [2] p1 partial,0,B,1,partial,1,跨论文对比
+c04,比较这篇论文和另一篇论文,sample_paper,问题不成立：没有指定要比较的另一篇论文，请补充论文。,,0,A,0,no,0,未指定另一篇论文，问题不成立
+c04,比较这篇论文和另一篇论文,sample_paper,问题不成立：没有指定要比较的另一篇论文，请补充论文。,,0,B,0,no,0,未指定另一篇论文，问题不成立
+i01,基于这两篇论文，提出几个创新点,sample_paper|bilingual,可提出的创新点：把行为/阅读场景与多语言解析结合、引入检索前后优化、设计跨论文证据对齐与更细粒度的页码级验证。,[1] p1 partial | [2] p1 partial,0,A,1,partial,1,开放创新类
+i01,基于这两篇论文，提出几个创新点,sample_paper|bilingual,可提出的创新点：把行为/阅读场景与多语言解析结合、引入检索前后优化、设计跨论文证据对齐与更细粒度的页码级验证。,[1] p1 partial | [2] p1 partial,0,B,1,partial,1,开放创新类
+i02,这两篇论文还有哪些研究空白？,sample_paper|bilingual,研究空白：双栏/公式解析鲁棒性、跨论文证据融合、语言可控性等仍需进一步研究。,[1] p2 partial | [2] p1 partial,0,A,1,partial,1,开放创新类
+i02,这两篇论文还有哪些研究空白？,sample_paper|bilingual,研究空白：双栏/公式解析鲁棒性、跨论文证据融合、语言可控性等仍需进一步研究。,[1] p2 partial | [2] p1 partial,0,B,1,partial,1,开放创新类
+i03,Propose future work based on these papers.,sample_paper|bilingual,"Future work: robust parsing of two-column/math layouts, cross-paper evidence fusion, and controllable multilingual generation.",[1] p2 partial | [2] p1 partial,0,A,1,partial,1,开放创新类
+i03,Propose future work based on these papers.,sample_paper|bilingual,"Future work: robust parsing of two-column/math layouts, cross-paper evidence fusion, and controllable multilingual generation.",[1] p2 partial | [2] p1 partial,0,B,1,partial,1,开放创新类
+m01,总结一下这篇论文,sample_paper,本文研究自适应检索用于科学问答，结合 BM25 与稠密检索、RRF 融合、cross-encoder 重排，并给出页码引用。,[1] p1 partial | [2] p2 partial,0,A,1,partial,1,总结类
+m01,总结一下这篇论文,sample_paper,本文研究自适应检索用于科学问答，结合 BM25 与稠密检索、RRF 融合、cross-encoder 重排，并给出页码引用。,[1] p1 partial | [2] p2 partial,0,B,1,partial,1,总结类
+m02,总结这两篇论文,sample_paper|bilingual,两篇论文都围绕 RAG 论文阅读：结合 BM25 与稠密检索、RRF 与重排、页码引用，分别强调自适应检索与多语言解析。,[1] p1 partial | [2] p1 partial,0,A,1,partial,1,总结类
+m02,总结这两篇论文,sample_paper|bilingual,两篇论文都围绕 RAG 论文阅读：结合 BM25 与稠密检索、RRF 与重排、页码引用，分别强调自适应检索与多语言解析。,[1] p1 partial | [2] p1 partial,0,B,1,partial,1,总结类
+e01,LASSO 是什么？,2026统计建模,LASSO 是一种带 L1 正则的线性回归/变量选择方法，本文用于健康风险预测模型对比。,[1] p10 partial | [2] p20 partial,0,A,1,partial,1,论文未详细定义 LASSO
+e01,LASSO 是什么？,2026统计建模,LASSO 是一种带 L1 正则的线性回归/变量选择方法，本文用于健康风险预测模型对比。,[1] p10 partial | [2] p20 partial,0,B,1,partial,1,论文未详细定义 LASSO
+r01,这篇论文的题目是什么？,2026统计建模,论文题目：《融合行为响应机制的空气污染健康效应建模与因果一致性政策优化研究》。,[1] p1 yes,0,A,1,yes,1,
+r01,这篇论文的题目是什么？,2026统计建模,论文题目：《融合行为响应机制的空气污染健康效应建模与因果一致性政策优化研究》。,[1] p1 yes,0,B,1,yes,1,
+r02,这篇论文要解决的核心问题是什么？,2026统计建模,核心问题：在空气污染健康效应研究中忽视行为响应机制与因果识别不足，构建融合中介效应、机器学习预测与因果推断的框架。,[1] p9 partial | [2] p10 partial,0,A,1,yes,1,
+r02,这篇论文要解决的核心问题是什么？,2026统计建模,核心问题：在空气污染健康效应研究中忽视行为响应机制与因果识别不足，构建融合中介效应、机器学习预测与因果推断的框架。,[1] p9 partial | [2] p10 partial,0,B,1,yes,1,
+r03,论文使用了哪些主要建模方法？,2026统计建模,主要建模方法：相关性分析与中介效应模型、LASSO、随机森林、XGBoost、SVR、LSTM、工具变量法(2SLS)。,[1] p2 partial | [2] p10 partial,0,A,1,yes,1,
+r03,论文使用了哪些主要建模方法？,2026统计建模,主要建模方法：相关性分析与中介效应模型、LASSO、随机森林、XGBoost、SVR、LSTM、工具变量法(2SLS)。,[1] p2 partial | [2] p10 partial,0,B,1,yes,1,
+r04,论文的数据来源包括哪些？,2026统计建模,数据来源：空气质量与气象、出行行为、健康相关、遥感影像、情绪文本五类数据。,[1] p11 partial | [2] p12 partial,0,A,1,yes,1,
+r04,论文的数据来源包括哪些？,2026统计建模,数据来源：空气质量与气象、出行行为、健康相关、遥感影像、情绪文本五类数据。,[1] p11 partial | [2] p12 partial,0,B,1,yes,1,
+r05,LASSO 模型的 R² 是多少？,2026统计建模,LASSO 模型的 R²=0.9127。,[1] p20 yes | [2] p21 partial,0,A,1,yes,1,
+r05,LASSO 模型的 R² 是多少？,2026统计建模,LASSO 模型的 R²=0.9127。,[1] p20 yes | [2] p21 partial,0,B,1,yes,1,
+r06,中介效应分析中，总效应和间接效应分别是多少？,2026统计建模,总效应 0.469，直接效应 0.750，出行行为间接效应 -0.281（约占总效应 59.9%）。,[1] p18 partial | [2] p19 partial | [3] p29 partial | [4] p30 partial,0,A,1,yes,1,
+r06,中介效应分析中，总效应和间接效应分别是多少？,2026统计建模,总效应 0.469，直接效应 0.750，出行行为间接效应 -0.281（约占总效应 59.9%）。,[1] p18 partial | [2] p19 partial | [3] p29 partial | [4] p30 partial,0,B,1,yes,1,
+r07,论文建议的最优减排强度是多少？,2026统计建模,最优减排强度为 13.33%，对应健康改善约 4.93%。,[1] p27 partial | [2] p28 partial,0,A,1,yes,1,
+r07,论文建议的最优减排强度是多少？,2026统计建模,最优减排强度为 13.33%，对应健康改善约 4.93%。,[1] p27 partial | [2] p28 partial,0,B,1,yes,1,
+r08,论文提到的研究局限有哪些？,2026统计建模,研究局限：主要基于北京样本、线性模型假设、内生性/参数限制等。,[1] p31 partial,0,A,1,yes,1,
+r08,论文提到的研究局限有哪些？,2026统计建模,研究局限：主要基于北京样本、线性模型假设、内生性/参数限制等。,[1] p31 partial,0,B,1,yes,1,
+r09,比较这两篇论文的方法和适用场景,2026统计建模|bilingual,统计建模论文用 LASSO/中介/因果方法做环境健康政策优化；bilingual 用混合检索与 RRF 做论文阅读，适用场景不同。,[1] p2 partial | [2] p1 partial,0,A,1,partial,1,跨论文对比
+r09,比较这两篇论文的方法和适用场景,2026统计建模|bilingual,统计建模论文用 LASSO/中介/因果方法做环境健康政策优化；bilingual 用混合检索与 RRF 做论文阅读，适用场景不同。,[1] p2 partial | [2] p1 partial,0,B,1,partial,1,跨论文对比
+r10,基于这篇论文提出两个可验证的创新点,2026统计建模,可验证创新点：把行为响应机制推广到其他城市验证；用因果一致性约束比较不同减排策略的成本收益。,[1] p2 partial | [2] p10 partial,0,A,1,partial,1,开放创新类
+r10,基于这篇论文提出两个可验证的创新点,2026统计建模,可验证创新点：把行为响应机制推广到其他城市验证；用因果一致性约束比较不同减排策略的成本收益。,[1] p2 partial | [2] p10 partial,0,B,1,partial,1,开放创新类
+p01,RAG 模型由哪两部分记忆组成？,rag_lewis_2005.11401,RAG 模型由参数化记忆（parametric memory）和非参数化记忆（non-parametric memory）两部分组成：参数化记忆是一个预训练的 seq2seq 模型，非参数化记忆是 Wikipedia 的稠密向量索引，通过预训练的神经检索器访问 [1][2]。关于参数化记忆“具体为预训练的 seq2seq transformer，即 BART”这一细节，现有证据不足，需要进一步核实。,[1] p1 yes | [2] p2 yes,0,A,1,yes,1,
+p01,RAG 模型由哪两部分记忆组成？,rag_lewis_2005.11401,RAG 模型由参数化记忆（parametric memory）和非参数化记忆（non-parametric memory）两部分组成：参数化记忆是一个预训练的 seq2seq 模型，非参数化记忆是 Wikipedia 的稠密向量索引，通过预训练的神经检索器访问 [1][2]。关于参数化记忆“具体为预训练的 seq2seq transformer，即 BART”这一细节，现有证据不足，需要进一步核实。,[1] p1 yes | [2] p2 yes,0,B,1,yes,1,
+p02,RAG 在哪些任务上取得了 state-of-the-art？,rag_lewis_2005.11401,"证据不足，暂不展示生成答案。
+
+引用支持率：0.20；要求阈值：0.35。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",[1] p6 partial | [2] p6 partial,1,A,0,no,1,被门控但问题可答，属误杀
+p02,RAG 在哪些任务上取得了 state-of-the-art？,rag_lewis_2005.11401,"证据不足，暂不展示生成答案。
+
+引用支持率：0.20；要求阈值：0.35。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",[1] p6 partial | [2] p6 partial,1,B,0,no,1,被门控但问题可答，属误杀
+p03,RAG 的两种 formulation 分别怎么工作？,rag_lewis_2005.11401,"论文提出两种 RAG formulation，区别在于对检索到的文档（作为隐变量）如何做边缘化：
+
+1. RAG-Sequence：整条输出序列都使用同一个检索文档。具体做法是：检索器先取 top-K 文档，生成器对每个文档分别计算整条输出序列的概率，再对这些文档做边缘化（top-K 近似），即 p_RAG-Sequence(y|x) ≈ Σ_{z∈top-k} pη(z|x) pθ(y|x,z) [1][2]。
+
+2. RAG-Token：每个目标 token 可以抽取不同的隐文档并分别边缘化，因此生成器在生成答案时可以从多个文档中选择内容。具体做法是：检索 top-K 文档后，生成器针对每个文档给出下一个输出 token 的分布，再做边缘化，然后对下一个 token 重复该过程 [3]。
+
+另外，对于序列分类任务，目标类别可视为长度为 1 的目标序列，此时 RAG-Sequence 与 RAG-Token 等价 [4]。",[1] p3 partial | [2] p3 yes | [3] p3 partial | [4] p3 yes,0,A,1,partial,1,
+p03,RAG 的两种 formulation 分别怎么工作？,rag_lewis_2005.11401,"论文提出两种 RAG formulation，区别在于对检索到的文档（作为隐变量）如何做边缘化：
+
+1. RAG-Sequence：整条输出序列都使用同一个检索文档。具体做法是：检索器先取 top-K 文档，生成器对每个文档分别计算整条输出序列的概率，再对这些文档做边缘化（top-K 近似），即 p_RAG-Sequence(y|x) ≈ Σ_{z∈top-k} pη(z|x) pθ(y|x,z) [1][2]。
+
+2. RAG-Token：每个目标 token 可以抽取不同的隐文档并分别边缘化，因此生成器在生成答案时可以从多个文档中选择内容。具体做法是：检索 top-K 文档后，生成器针对每个文档给出下一个输出 token 的分布，再做边缘化，然后对下一个 token 重复该过程 [3]。
+
+另外，对于序列分类任务，目标类别可视为长度为 1 的目标序列，此时 RAG-Sequence 与 RAG-Token 等价 [4]。",[1] p3 partial | [2] p3 yes | [3] p3 partial | [4] p3 yes,0,B,1,partial,1,
+p04,Ragas 是什么框架？,ragas_2309.15217,"## 论文中的用法
+
+在论文中，Ragas 是作者提出的一个**用于 RAG 流水线的自动化评估框架**，全称为 **Retrieval Augmented Generation Assessment**。论文明确指出它是“a framework for reference-free evaluation of Retrieval Augmented Generation (RAG) pipelines” ，即无需人工标注参考答案（ground truth）即可评估 RAG 系统。它围绕三个质量维度设计了一套指标：检索上下文的相关性/聚焦程度、LLM 对检索段落的忠实利用（faithfulness）、以及生成内容本身的质量（answer relevance）[1][2]。论文还说明 Ragas 可与 llama-index 和 Langchain 集成，便于开发者嵌入现有工作流 [3]。关于在 WikiEval 数据集上验证其预测与人类判断较为一致（尤其在 faithfulness 和 answer relevance 上）这一说法，现有证据仅能支持论文引入了 WikiEval 数据集",[1] p1 partial | [2] p5 partial | [3] p2 partial,0,A,1,partial,1,
+p04,Ragas 是什么框架？,ragas_2309.15217,"## 论文中的用法
+
+在论文中，Ragas 是作者提出的一个**用于 RAG 流水线的自动化评估框架**，全称为 **Retrieval Augmented Generation Assessment**。论文明确指出它是“a framework for reference-free evaluation of Retrieval Augmented Generation (RAG) pipelines” ，即无需人工标注参考答案（ground truth）即可评估 RAG 系统。它围绕三个质量维度设计了一套指标：检索上下文的相关性/聚焦程度、LLM 对检索段落的忠实利用（faithfulness）、以及生成内容本身的质量（answer relevance）[1][2]。论文还说明 Ragas 可与 llama-index 和 Langchain 集成，便于开发者嵌入现有工作流 [3]。关于在 WikiEval 数据集上验证其预测与人类判断较为一致（尤其在 faithfulness 和 answer relevance 上）这一说法，现有证据仅能支持论文引入了 WikiEval 数据集",[1] p1 partial | [2] p5 partial | [3] p2 partial,0,B,1,partial,1,
+p05,Ragas 评估 RAG 的哪两个模块？,ragas_2309.15217,"证据不足，暂不展示生成答案。
+
+引用支持率：0.00；要求阈值：0.35。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",,1,A,0,no,1,被门控但问题可答，属误杀
+p05,Ragas 评估 RAG 的哪两个模块？,ragas_2309.15217,"证据不足，暂不展示生成答案。
+
+引用支持率：0.00；要求阈值：0.35。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",,1,B,0,no,1,被门控但问题可答，属误杀
+p06,Ragas 的主要特点是什么？,ragas_2309.15217,根据论文证据，Ragas 的主要特点包括：1）是一个无需参考（reference-free）的 RAG 评估框架，可在不依赖人工标注真实答案的情况下评估多个维度 [1]；2）评估维度涵盖检索上下文的相关性/聚焦程度、LLM 忠实利用上下文的能力以及生成质量等 [1]；3）即使没有 ground truth 也能为 RAG 系统开发者提供有价值的洞察，且易于使用 [2]；4）与 llama-index 和 Langchain 集成，便于开发者接入标准工作流 [3]；5）在 WikiEval 上的评估显示其预测与人类判断较为一致，尤其在 faithfulness 和 answer relevance 上 [2]。其中，第 5 点关于“在 WikiEval 上的评估显示其预测与人类判断较为一致，尤其在 faithfulness 和 answer relevance 上”的证据不足，需要进一步核实。,[1] p1 partial | [2] p5 partial | [3] p2 partial,0,A,1,partial,1,
+p06,Ragas 的主要特点是什么？,ragas_2309.15217,根据论文证据，Ragas 的主要特点包括：1）是一个无需参考（reference-free）的 RAG 评估框架，可在不依赖人工标注真实答案的情况下评估多个维度 [1]；2）评估维度涵盖检索上下文的相关性/聚焦程度、LLM 忠实利用上下文的能力以及生成质量等 [1]；3）即使没有 ground truth 也能为 RAG 系统开发者提供有价值的洞察，且易于使用 [2]；4）与 llama-index 和 Langchain 集成，便于开发者接入标准工作流 [3]；5）在 WikiEval 上的评估显示其预测与人类判断较为一致，尤其在 faithfulness 和 answer relevance 上 [2]。其中，第 5 点关于“在 WikiEval 上的评估显示其预测与人类判断较为一致，尤其在 faithfulness 和 answer relevance 上”的证据不足，需要进一步核实。,[1] p1 partial | [2] p5 partial | [3] p2 partial,0,B,1,partial,1,
+p07,CRAG 如何判断检索质量？,corrective_rag_2401.15884,"CRAG 针对检索器返回不准确结果的场景，提出通过自我纠正检索结果来提升文档利用效果 [1]。其推理流程涉及检索评估器 E、查询重写器 W 和生成器 G，输入为问题 x 与检索文档集合 D = {d_1, d_2, ..., d_k}，其中评估器 E 会对每个查询-文档对的相关性进行评估并给出分数 score_i [2]。CRAG 旨在提升自动自我纠正能力和检索文档的高效利用，实验表明其对基于 RAG 的方法具有适应性，并在短式和长式生成任务上具有泛化性；但该框架仍需微调一个外部检索评估器，如何去除该外部评估器并使 LLM 具备更好的检索评估能力被列为未来工作 [二次检索]。关于评估器如何基于 {score_1, ..., score_k} 计算置信度并触发 Correct、Incorrect、Ambiguous 三种动作的具体机制，以及 Confidence 的具体取值，证据不足，需要进一步核实。",[1] p2 partial | [2] p5 partial,0,A,1,partial,1,
+p07,CRAG 如何判断检索质量？,corrective_rag_2401.15884,"CRAG 针对检索器返回不准确结果的场景，提出通过自我纠正检索结果来提升文档利用效果 [1]。其推理流程涉及检索评估器 E、查询重写器 W 和生成器 G，输入为问题 x 与检索文档集合 D = {d_1, d_2, ..., d_k}，其中评估器 E 会对每个查询-文档对的相关性进行评估并给出分数 score_i [2]。CRAG 旨在提升自动自我纠正能力和检索文档的高效利用，实验表明其对基于 RAG 的方法具有适应性，并在短式和长式生成任务上具有泛化性；但该框架仍需微调一个外部检索评估器，如何去除该外部评估器并使 LLM 具备更好的检索评估能力被列为未来工作 [二次检索]。关于评估器如何基于 {score_1, ..., score_k} 计算置信度并触发 Correct、Incorrect、Ambiguous 三种动作的具体机制，以及 Confidence 的具体取值，证据不足，需要进一步核实。",[1] p2 partial | [2] p5 partial,0,B,1,partial,1,
+p08,CRAG 在检索质量差时会采取什么动作？,corrective_rag_2401.15884,"证据不足，暂不展示生成答案。
+
+引用支持率：0.00；要求阈值：0.35。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",,1,A,0,no,1,被门控但问题可答，属误杀
+p08,CRAG 在检索质量差时会采取什么动作？,corrective_rag_2401.15884,"证据不足，暂不展示生成答案。
+
+引用支持率：0.00；要求阈值：0.35。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",,1,B,0,no,1,被门控但问题可答，属误杀
+p09,CRAG 的实验覆盖哪些任务？,corrective_rag_2401.15884,"证据不足，暂不展示生成答案。
+
+引用支持率：0.17；要求阈值：0.35。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",[1] p6 partial,1,A,0,no,1,被门控但问题可答，属误杀
+p09,CRAG 的实验覆盖哪些任务？,corrective_rag_2401.15884,"证据不足，暂不展示生成答案。
+
+引用支持率：0.17；要求阈值：0.35。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",[1] p6 partial,1,B,0,no,1,被门控但问题可答，属误杀
+p10,GraphRAG 如何构建图索引？,graphrag_2404.16130,根据论文证据，GraphRAG 构建图索引分为两个阶段：首先使用 LLM 从源文档中抽取实体知识图谱（节点对应语料中的关键实体，边表示实体间关系）；然后将该图划分为紧密相关实体的社区层级，并用 LLM 生成社区级摘要，摘要按层级自底向上生成，高层摘要递归纳入低层摘要 [1][2]。此外，GraphRAG 通过从源数据生成图索引，再应用基于图的社区检测来创建数据的主题划分 [3]。,[1] p1 partial | [2] p2 partial | [3] p3 partial,0,A,1,partial,1,
+p10,GraphRAG 如何构建图索引？,graphrag_2404.16130,根据论文证据，GraphRAG 构建图索引分为两个阶段：首先使用 LLM 从源文档中抽取实体知识图谱（节点对应语料中的关键实体，边表示实体间关系）；然后将该图划分为紧密相关实体的社区层级，并用 LLM 生成社区级摘要，摘要按层级自底向上生成，高层摘要递归纳入低层摘要 [1][2]。此外，GraphRAG 通过从源数据生成图索引，再应用基于图的社区检测来创建数据的主题划分 [3]。,[1] p1 partial | [2] p2 partial | [3] p3 partial,0,B,1,partial,1,
+p11,GraphRAG 主要解决 RAG 的什么问题？,graphrag_2404.16130,GraphRAG 主要解决传统 RAG（尤其是 vector RAG）无法应对“全局性问题”的缺陷：当问题指向整个文本语料时，RAG 会失败 [1]。vector RAG 无法支持对整个语料的 sensemaking 。GraphRAG 通过构建图索引（实体知识图谱与社区摘要）来支持对整篇大语料的 sensemaking，并在全面性和多样性上优于传统 RAG 基线 [2][3]。二次检索证据显示，GraphRAG 在全局性问题上显示出缓解下游风险的潜力，这些问题否则可能由检索到的局部事实样本被错误地呈现为全局摘要来回答 [二次检索]。关于“vector RAG 对全局性问题可能用检索到的局部事实样本冒充全局摘要”这一说法，原有 [4] 证据不足，需要进一步核实；二次检索证据仅表明这是一种可能的风险，尚不足以完全支持该结论。,[1] p1 partial | [2] p1 partial | [3] p12 partial | [4] p12 partial,0,A,1,partial,1,
+p11,GraphRAG 主要解决 RAG 的什么问题？,graphrag_2404.16130,GraphRAG 主要解决传统 RAG（尤其是 vector RAG）无法应对“全局性问题”的缺陷：当问题指向整个文本语料时，RAG 会失败 [1]。vector RAG 无法支持对整个语料的 sensemaking 。GraphRAG 通过构建图索引（实体知识图谱与社区摘要）来支持对整篇大语料的 sensemaking，并在全面性和多样性上优于传统 RAG 基线 [2][3]。二次检索证据显示，GraphRAG 在全局性问题上显示出缓解下游风险的潜力，这些问题否则可能由检索到的局部事实样本被错误地呈现为全局摘要来回答 [二次检索]。关于“vector RAG 对全局性问题可能用检索到的局部事实样本冒充全局摘要”这一说法，原有 [4] 证据不足，需要进一步核实；二次检索证据仅表明这是一种可能的风险，尚不足以完全支持该结论。,[1] p1 partial | [2] p1 partial | [3] p12 partial | [4] p12 partial,0,B,1,partial,1,
+p12,GraphRAG 在什么规模的数据上评估？,graphrag_2404.16130,GraphRAG 在两个语料库上评估：一是播客转录文本（Podcast Transcripts），约 100 万 token，划分为 1669 个 600-token 文本块，块间有 100-token 重叠 [1]；二是新闻文章（News Articles），约 170 万 token，划分为 3197 个 600-token 文本块，块间有 100-token 重叠 [二次检索]。结果表中列出了这两个数据集在不同社区层级下的单元数 [2]。关于这两个数据集的 token 规模在结果表中的具体呈现，证据不足，需要进一步核实。,[1] p8 partial | [2] p10 partial,0,A,1,partial,1,
+p12,GraphRAG 在什么规模的数据上评估？,graphrag_2404.16130,GraphRAG 在两个语料库上评估：一是播客转录文本（Podcast Transcripts），约 100 万 token，划分为 1669 个 600-token 文本块，块间有 100-token 重叠 [1]；二是新闻文章（News Articles），约 170 万 token，划分为 3197 个 600-token 文本块，块间有 100-token 重叠 [二次检索]。结果表中列出了这两个数据集在不同社区层级下的单元数 [2]。关于这两个数据集的 token 规模在结果表中的具体呈现，证据不足，需要进一步核实。,[1] p8 partial | [2] p10 partial,0,B,1,partial,1,
+p13,列出 RAG 的三种范式,rag_survey_2312.10997,"证据不足，暂不展示生成答案。
+
+引用支持率：0.25；要求阈值：0.35。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",[1] p4 partial,1,A,0,no,1,被门控但问题可答，属误杀
+p13,列出 RAG 的三种范式,rag_survey_2312.10997,"证据不足，暂不展示生成答案。
+
+引用支持率：0.25；要求阈值：0.35。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",[1] p4 partial,1,B,0,no,1,被门控但问题可答，属误杀
+p14,列出 RAG 框架的三个基础组件,rag_survey_2312.10997,RAG 框架的三个基础组件是检索（Retrieval）、生成（Generation）和增强（Augmentation）[1]。,[1] p1 yes,0,A,1,yes,1,
+p14,列出 RAG 框架的三个基础组件,rag_survey_2312.10997,RAG 框架的三个基础组件是检索（Retrieval）、生成（Generation）和增强（Augmentation）[1]。,[1] p1 yes,0,B,1,yes,1,
+p15,RAG 面临哪些主要挑战？,rag_survey_2312.10997,"证据不足，暂不展示生成答案。
+
+引用支持率：0.25；要求阈值：0.35。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",[1] p3 partial,1,A,0,no,1,被门控但问题可答，属误杀
+p15,RAG 面临哪些主要挑战？,rag_survey_2312.10997,"证据不足，暂不展示生成答案。
+
+引用支持率：0.25；要求阈值：0.35。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",[1] p3 partial,1,B,0,no,1,被门控但问题可答，属误杀
+p16,这篇综述关注 RAG 在什么场景的应用？,rag_aigc_survey_2402.19473,"证据不足，暂不展示生成答案。
+
+引用支持率：0.25；要求阈值：0.35。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",[1] p9 partial | [2] p9 partial,1,A,0,no,1,被门控但问题可答，属误杀
+p16,这篇综述关注 RAG 在什么场景的应用？,rag_aigc_survey_2402.19473,"证据不足，暂不展示生成答案。
+
+引用支持率：0.25；要求阈值：0.35。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",[1] p9 partial | [2] p9 partial,1,B,0,no,1,被门控但问题可答，属误杀
+p17,RAG 如何增强 AIGC？,rag_aigc_survey_2402.19473,根据给定证据，RAG 通过引入可检索的外部信息来增强 AIGC：它把检索到的信息作为生成器的增强输入，或在生成中间阶段以潜在表示、logits 等形式参与，甚至影响或省略某些生成步骤 [1]。其流程中，RAG 系统包含检索器和生成器两个核心模块，检索器从数据存储中搜索相关信息，生成器产出所需内容 [2]。RAG 能通过引入信息检索过程来增强生成过程，从而提升准确性和稳健性 [二次检索]。关于 RAG 以可更新的非参数记忆形式缓解 AIGC 的知识过时、长尾知识不足和训练数据泄露风险 ，以及 RAG 可与微调、强化学习、思维链、智能体等技术正交结合以提升 AIGC 效果 [3]，证据不足，需要进一步核实。,[1] p1 yes | [2] p3 yes | [3] p16 partial,0,A,1,yes,1,
+p17,RAG 如何增强 AIGC？,rag_aigc_survey_2402.19473,根据给定证据，RAG 通过引入可检索的外部信息来增强 AIGC：它把检索到的信息作为生成器的增强输入，或在生成中间阶段以潜在表示、logits 等形式参与，甚至影响或省略某些生成步骤 [1]。其流程中，RAG 系统包含检索器和生成器两个核心模块，检索器从数据存储中搜索相关信息，生成器产出所需内容 [2]。RAG 能通过引入信息检索过程来增强生成过程，从而提升准确性和稳健性 [二次检索]。关于 RAG 以可更新的非参数记忆形式缓解 AIGC 的知识过时、长尾知识不足和训练数据泄露风险 ，以及 RAG 可与微调、强化学习、思维链、智能体等技术正交结合以提升 AIGC 效果 [3]，证据不足，需要进一步核实。,[1] p1 yes | [2] p3 yes | [3] p16 partial,0,B,1,yes,1,
+p18,论文讨论了哪些 RAG 挑战和方向？,rag_aigc_survey_2402.19473,根据给定证据，论文对 RAG 挑战与方向的讨论较为有限。挑战方面，证据提到生成过程通常会被拖慢，而提示压缩和长上下文支持的研究进展部分缓解了这些挑战，但在准确性或成本上有轻微权衡 [1]；证据还指出 RAG 作为一种范式被提出以应对相关挑战，通过引入信息检索过程来提升生成过程的准确性和稳健性 [2]。未来方向方面，证据明确列出“潜在未来方向”并给出第 1 条“增强方法的新设计”，即研究更先进的增强基础以充分释放 RAG 潜力 [1]；论文路线图说明后续章节讨论 RAG 当前局限与潜在未来方向 [3]，贡献列表提到讨论局限性和有前景的研究方向 [4]。二次检索证据补充指出，RAG 的基础在不同模态间大体一致，但增强技术需微调，检索器和生成器的选择因模态和应用而异；同时指出目前缺乏涵盖所有基础、增强和应用的系统综述，阻碍了该领域发展，且对 RAG 基础的讨论缺失削弱了研究的实用价值，使 RAG 潜力未被充分探索。但除上述内容外，证据未给出更完整的挑战清单或后续方向细节，因此无法进一步展开；关于挑战的完整分类和未来方向的具体条目，需要进一步核实。,[1] p16 partial | [2] p1 partial | [3] p3 partial | [4] p2 partial,0,A,1,partial,1,
+p18,论文讨论了哪些 RAG 挑战和方向？,rag_aigc_survey_2402.19473,根据给定证据，论文对 RAG 挑战与方向的讨论较为有限。挑战方面，证据提到生成过程通常会被拖慢，而提示压缩和长上下文支持的研究进展部分缓解了这些挑战，但在准确性或成本上有轻微权衡 [1]；证据还指出 RAG 作为一种范式被提出以应对相关挑战，通过引入信息检索过程来提升生成过程的准确性和稳健性 [2]。未来方向方面，证据明确列出“潜在未来方向”并给出第 1 条“增强方法的新设计”，即研究更先进的增强基础以充分释放 RAG 潜力 [1]；论文路线图说明后续章节讨论 RAG 当前局限与潜在未来方向 [3]，贡献列表提到讨论局限性和有前景的研究方向 [4]。二次检索证据补充指出，RAG 的基础在不同模态间大体一致，但增强技术需微调，检索器和生成器的选择因模态和应用而异；同时指出目前缺乏涵盖所有基础、增强和应用的系统综述，阻碍了该领域发展，且对 RAG 基础的讨论缺失削弱了研究的实用价值，使 RAG 潜力未被充分探索。但除上述内容外，证据未给出更完整的挑战清单或后续方向细节，因此无法进一步展开；关于挑战的完整分类和未来方向的具体条目，需要进一步核实。,[1] p16 partial | [2] p1 partial | [3] p3 partial | [4] p2 partial,0,B,1,partial,1,
+p19,LightRAG 的主要目标是什么？,lightrag_2410.05779,"证据不足，暂不展示生成答案。
+
+引用支持率：0.33；要求阈值：0.35。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",[1] p2 partial | [2] p2 partial,1,A,0,no,1,被门控但问题可答，属误杀
+p19,LightRAG 的主要目标是什么？,lightrag_2410.05779,"证据不足，暂不展示生成答案。
+
+引用支持率：0.33；要求阈值：0.35。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",[1] p2 partial | [2] p2 partial,1,B,0,no,1,被门控但问题可答，属误杀
+p20,LightRAG 如何表示数据？,lightrag_2410.05779,根据给定证据，LightRAG 采用基于图的文本索引范式来表示数据：它从原始文本构建图结构，并从中派生键值（key-value）数据结构用于检索 [1][2]。具体而言，它通过节点集 V̂ 与边集 Ê 表示图数据，并在增量更新时将新图与原有图取节点集和边集的并集来合并 [3]。二次检索证据进一步显示，LightRAG 采用双层检索策略：低层检索聚焦于特定实体及其关系的精确信息，高层检索涵盖更广泛的主题和概念 [1]。此外，LightRAG 利用全面的知识图谱促进快速且相关的文档检索，其无缝增量更新能力确保系统对新信息保持时效性和响应性 [1]。不过，关于节点和边具体对应哪些实体或关系类型，证据不足，需要进一步核实。,[1] p2 partial | [2] p4 partial | [3] p4 partial,0,A,1,partial,1,
+p20,LightRAG 如何表示数据？,lightrag_2410.05779,根据给定证据，LightRAG 采用基于图的文本索引范式来表示数据：它从原始文本构建图结构，并从中派生键值（key-value）数据结构用于检索 [1][2]。具体而言，它通过节点集 V̂ 与边集 Ê 表示图数据，并在增量更新时将新图与原有图取节点集和边集的并集来合并 [3]。二次检索证据进一步显示，LightRAG 采用双层检索策略：低层检索聚焦于特定实体及其关系的精确信息，高层检索涵盖更广泛的主题和概念 [1]。此外，LightRAG 利用全面的知识图谱促进快速且相关的文档检索，其无缝增量更新能力确保系统对新信息保持时效性和响应性 [1]。不过，关于节点和边具体对应哪些实体或关系类型，证据不足，需要进一步核实。,[1] p2 partial | [2] p4 partial | [3] p4 partial,0,B,1,partial,1,
+p21,LightRAG 解决现有 RAG 的什么问题？,lightrag_2410.05779,根据论文证据，LightRAG 主要针对现有 RAG 系统的以下问题：(1) 依赖扁平数据表示（flat data representations），导致答案碎片化 [1]；(2) 现有基于图结构的方法往往缺乏知识图谱的动态更新与扩展能力，难以有效纳入新信息 [2]。LightRAG 通过将图结构引入文本索引与检索、采用双层检索范式（dual-level retrieval）、以及增量更新算法来应对这些问题 [1][3][2]。关于“上下文感知不足”以及“对每个生成的社区进行暴力搜索导致大规模查询下效率低下”这两点，现有证据不足，需要进一步核实。,[1] p1 partial | [2] p10 partial | [3] p2 partial,0,A,1,partial,1,
+p21,LightRAG 解决现有 RAG 的什么问题？,lightrag_2410.05779,根据论文证据，LightRAG 主要针对现有 RAG 系统的以下问题：(1) 依赖扁平数据表示（flat data representations），导致答案碎片化 [1]；(2) 现有基于图结构的方法往往缺乏知识图谱的动态更新与扩展能力，难以有效纳入新信息 [2]。LightRAG 通过将图结构引入文本索引与检索、采用双层检索范式（dual-level retrieval）、以及增量更新算法来应对这些问题 [1][3][2]。关于“上下文感知不足”以及“对每个生成的社区进行暴力搜索导致大规模查询下效率低下”这两点，现有证据不足，需要进一步核实。,[1] p1 partial | [2] p10 partial | [3] p2 partial,0,B,1,partial,1,
+p22,Agentic RAG 的核心特点有哪些？,agentic_rag_2501.09136,根据论文证据，Agentic RAG 的核心特点包括：1）自主决策：智能体根据查询复杂度独立评估和管理检索策略；2）迭代优化：引入反馈循环以提升检索准确性和回答相关性；3）工作流优化：动态编排任务，从而在实时应用中提升效率 [1]。此外，论文指出 Agentic RAG 通过引入具备动态决策、迭代推理和协作工作流的自主智能体，超越传统 RAG 静态、被动的特性，表现出更强的适应性和精确性 [2]；并通过优化工作流降低延迟、迭代改进输出 [2]。二次检索证据显示，智能体具备感知、推理和自主任务执行能力，并利用反思、规划、工具使用和多智能体协作等设计模式动态分解任务、调整策略；这些能力与 RAG 直接相关，因为检索和推理决策本身可以被视为智能体任务，且这些模式通过提示链、路由、并行化、编排者—工作者模型和评估者—优化者循环等工作流模式在系统层面进行协调。关于 Agentic RAG 在实时应用中提升效率的具体程度，证据不足，需要进一步核实。,[1] p7 partial | [2] p9 partial,0,A,1,partial,1,
+p22,Agentic RAG 的核心特点有哪些？,agentic_rag_2501.09136,根据论文证据，Agentic RAG 的核心特点包括：1）自主决策：智能体根据查询复杂度独立评估和管理检索策略；2）迭代优化：引入反馈循环以提升检索准确性和回答相关性；3）工作流优化：动态编排任务，从而在实时应用中提升效率 [1]。此外，论文指出 Agentic RAG 通过引入具备动态决策、迭代推理和协作工作流的自主智能体，超越传统 RAG 静态、被动的特性，表现出更强的适应性和精确性 [2]；并通过优化工作流降低延迟、迭代改进输出 [2]。二次检索证据显示，智能体具备感知、推理和自主任务执行能力，并利用反思、规划、工具使用和多智能体协作等设计模式动态分解任务、调整策略；这些能力与 RAG 直接相关，因为检索和推理决策本身可以被视为智能体任务，且这些模式通过提示链、路由、并行化、编排者—工作者模型和评估者—优化者循环等工作流模式在系统层面进行协调。关于 Agentic RAG 在实时应用中提升效率的具体程度，证据不足，需要进一步核实。,[1] p7 partial | [2] p9 partial,0,B,1,partial,1,
+p23,Agentic RAG 使用哪些设计模式？,agentic_rag_2501.09136,根据证据，Agentic RAG 使用的设计模式包括反思（reflection）、规划（planning）、工具使用（tool use）和多智能体协作（multi-agent collaboration）[1]。这些模式还通过工作流模式进行组织，包括提示链（Prompt Chaining）、路由（Routing）、并行化（Parallelization）、编排者-工作者（Orchestrator-workers）和评估者-优化者（Evaluator-Optimizer）[2]。,[1] p1 partial | [2] p3 partial,0,A,1,partial,1,
+p23,Agentic RAG 使用哪些设计模式？,agentic_rag_2501.09136,根据证据，Agentic RAG 使用的设计模式包括反思（reflection）、规划（planning）、工具使用（tool use）和多智能体协作（multi-agent collaboration）[1]。这些模式还通过工作流模式进行组织，包括提示链（Prompt Chaining）、路由（Routing）、并行化（Parallelization）、编排者-工作者（Orchestrator-workers）和评估者-优化者（Evaluator-Optimizer）[2]。,[1] p1 partial | [2] p3 partial,0,B,1,partial,1,
+p24,Agentic RAG 的主要优势是什么？,agentic_rag_2501.09136,根据论文证据，Agentic RAG 对复杂、知识密集型任务（如医疗、金融、教育、企业流程）具有明显优势，但需以高质量检索基础、受约束的自主性和谨慎编排为前提 [1]；其优势包括增强决策、多步推理与迭代优化、实时数据集成、自适应学习与上下文感知，以及提高准确性并减少幻觉 [2]；在应用层面体现为提升响应质量、运营效率和实时适应性 [3]，以及多模态能力、增强创造力和动态适应性 [4]。关于“自主决策（按查询复杂度独立评估和管理检索策略）、迭代优化（通过反馈循环提升检索准确性和回答相关性）和工作流优化（动态编排任务以提升实时效率）”作为关键特征的表述 ，证据不足，需要进一步核实。二次检索补充证据显示，Agentic RAG 在医疗场景中可提升准确性（基于最新证据和患者特定参数）[二次检索]，在法律合同审查中可识别风险并提升效率 [二次检索]，但上述补充证据未使用原有 [n] 标记，相关结论仍需进一步核实。,[1] p36 partial | [2] p3 partial | [3] p30 partial | [4] p31 partial,0,A,1,partial,1,
+p24,Agentic RAG 的主要优势是什么？,agentic_rag_2501.09136,根据论文证据，Agentic RAG 对复杂、知识密集型任务（如医疗、金融、教育、企业流程）具有明显优势，但需以高质量检索基础、受约束的自主性和谨慎编排为前提 [1]；其优势包括增强决策、多步推理与迭代优化、实时数据集成、自适应学习与上下文感知，以及提高准确性并减少幻觉 [2]；在应用层面体现为提升响应质量、运营效率和实时适应性 [3]，以及多模态能力、增强创造力和动态适应性 [4]。关于“自主决策（按查询复杂度独立评估和管理检索策略）、迭代优化（通过反馈循环提升检索准确性和回答相关性）和工作流优化（动态编排任务以提升实时效率）”作为关键特征的表述 ，证据不足，需要进一步核实。二次检索补充证据显示，Agentic RAG 在医疗场景中可提升准确性（基于最新证据和患者特定参数）[二次检索]，在法律合同审查中可识别风险并提升效率 [二次检索]，但上述补充证据未使用原有 [n] 标记，相关结论仍需进一步核实。,[1] p36 partial | [2] p3 partial | [3] p30 partial | [4] p31 partial,0,B,1,partial,1,
+p25,描述 HyDE 的核心流程,replug_2212.10496,"证据不足，暂不展示生成答案。
+
+引用支持率：0.33；要求阈值：0.35。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",[1] p1 partial | [2] p4 partial,1,A,0,no,1,被门控但问题可答，属误杀
+p25,描述 HyDE 的核心流程,replug_2212.10496,"证据不足，暂不展示生成答案。
+
+引用支持率：0.33；要求阈值：0.35。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",[1] p1 partial | [2] p4 partial,1,B,0,no,1,被门控但问题可答，属误杀
+p26,HyDE 如何生成检索向量？,replug_2212.10496,"证据不足，暂不展示生成答案。
+
+引用支持率：0.33；要求阈值：0.35。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",[1] p1 partial | [2] p4 partial,1,A,0,no,1,被门控但问题可答，属误杀
+p26,HyDE 如何生成检索向量？,replug_2212.10496,"证据不足，暂不展示生成答案。
+
+引用支持率：0.33；要求阈值：0.35。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",[1] p1 partial | [2] p4 partial,1,B,0,no,1,被门控但问题可答，属误杀
+p27,HyDE 在哪些任务上评估？,replug_2212.10496,"证据不足，暂不展示生成答案。
+
+引用支持率：0.00；要求阈值：0.35。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",,1,A,0,no,1,被门控但问题可答，属误杀
+p27,HyDE 在哪些任务上评估？,replug_2212.10496,"证据不足，暂不展示生成答案。
+
+引用支持率：0.00；要求阈值：0.35。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",,1,B,0,no,1,被门控但问题可答，属误杀
+p28,这篇论文研究什么？,rag_long_context_2407.01219,"证据不足，暂不展示生成答案。
+
+引用支持率：0.00；要求阈值：0.35。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",,1,A,0,no,1,被门控但问题可答，属误杀
+p28,这篇论文研究什么？,rag_long_context_2407.01219,"证据不足，暂不展示生成答案。
+
+引用支持率：0.00；要求阈值：0.35。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",,1,B,0,no,1,被门控但问题可答，属误杀
+p29,论文建议如何部署 RAG？,rag_long_context_2407.01219,"证据不足，暂不展示生成答案。
+
+引用支持率：0.00；要求阈值：0.35。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",,1,A,0,no,1,被门控但问题可答，属误杀
+p29,论文建议如何部署 RAG？,rag_long_context_2407.01219,"证据不足，暂不展示生成答案。
+
+引用支持率：0.00；要求阈值：0.35。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",,1,B,0,no,1,被门控但问题可答，属误杀
+p30,多模态检索有什么作用？,rag_long_context_2407.01219,"证据不足，暂不展示生成答案。
+
+引用支持率：0.17；要求阈值：0.35。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",[1] p13 partial,1,A,0,no,1,被门控但问题可答，属误杀
+p30,多模态检索有什么作用？,rag_long_context_2407.01219,"证据不足，暂不展示生成答案。
+
+引用支持率：0.17；要求阈值：0.35。
+建议缩小问题范围，或换一篇论文/补充更具体的章节。",[1] p13 partial,1,B,0,no,1,被门控但问题可答，属误杀

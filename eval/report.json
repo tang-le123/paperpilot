@@ -1,0 +1,2450 @@
+{
+  "summary": {
+    "total": 30,
+    "passed": 15,
+    "accuracy": 0.5,
+    "by_strategy": {
+      "single": {
+        "total": 29,
+        "passed": 14
+      },
+      "explain": {
+        "total": 1,
+        "passed": 1
+      }
+    },
+    "citation_support_rate": 0.37,
+    "claim_support_rate": 0.387,
+    "suppressed": 14,
+    "suppression_rate": 0.467
+  },
+  "results": [
+    {
+      "id": "p01",
+      "paper_keys": [
+        "rag_lewis_2005.11401"
+      ],
+      "question": "RAG 模型由哪两部分记忆组成？",
+      "strategy": "single",
+      "language": "zh",
+      "pages": [],
+      "keywords": [
+        "parametric",
+        "non-parametric"
+      ],
+      "paper_ids": [
+        16
+      ],
+      "route_reason": "默认单篇/多篇内容问答",
+      "latency_s": 18.87,
+      "citations": [
+        {
+          "chunk_id": "p16_c0002",
+          "paper_id": 16,
+          "title": "rag_lewis_2005.11401",
+          "page": 1,
+          "section": "Body",
+          "snippet": "nd non-parametric memory for language generation. We introduce RAG models where the parametric memory is a pre-trained seq2seq model and the non-parametric memory is a dense vector index of Wikipedia, accessed with a pre-trained neural retriever. We compare two RAG formulations, one which conditions",
+          "support": "yes",
+          "support_reason": "证据明确陈述参数化记忆是预训练seq2seq模型，非参数化记忆是Wikipedia稠密向量索引并由预训练神经检索器访问，与claim主要结论一致；claim中关于BART细节的保留不影响该部分。"
+        },
+        {
+          "chunk_id": "p16_c0007",
+          "paper_id": 16,
+          "title": "rag_lewis_2005.11401",
+          "page": 2,
+          "section": "Body",
+          "snippet": "-parametric memory through a general-purpose fine-tuning approach which we refer to as retrieval-augmented generation (RAG). We build RAG models where the parametric memory is a pre-trained seq2seq transformer, and the non-parametric memory is a dense vector index of Wikipedia, accessed with a pre-t",
+          "support": "yes",
+          "support_reason": "证据明确陈述参数化记忆是预训练seq2seq transformer，非参数化记忆是Wikipedia稠密向量索引并由预训练检索器访问，与claim主要结论一致；claim中关于BART细节的保留不影响该部分。"
+        }
+      ],
+      "answer_preview": "RAG 模型由参数化记忆（parametric memory）和非参数化记忆（non-parametric memory）两部分组成：参数化记忆是一个预训练的 seq2seq 模型，非参数化记忆是 Wikipedia 的稠密向量索引，通过预训练的神经检索器访问 [1][2]。关于参数化记忆“具体为预训练的 seq2seq transformer，即 BART”这一细节，现有证据不足，需要进一步核实。",
+      "checks": {
+        "strategy": true,
+        "page": true,
+        "keyword": true,
+        "paper_coverage": true
+      },
+      "citation_support": [
+        {
+          "index": 1,
+          "score": 0.171,
+          "supported": true
+        },
+        {
+          "index": 2,
+          "score": 0.189,
+          "supported": true
+        }
+      ],
+      "citation_support_rate": 1.0,
+      "claim_support_rate": 0.5,
+      "claims": [
+        {
+          "claim": "RAG 模型由参数化记忆（parametric memory）和非参数化记忆（non-parametric memory）两部分组成：参数化记忆是一个预训练的 seq2seq 模型，非参数化记忆是 Wikipedia 的稠密向量索引，通过预训练的神经检索器访问 [1][2]。",
+          "citations": [
+            1,
+            2
+          ],
+          "support": "yes",
+          "reason": "所有引用均支持"
+        },
+        {
+          "claim": "关于参数化记忆“具体为预训练的 seq2seq transformer，即 BART”这一细节，现有证据不足，需要进一步核实。",
+          "citations": [],
+          "support": "uncited",
+          "reason": "该句没有引用"
+        }
+      ],
+      "answer_suppressed": false,
+      "citation_support_threshold": 0.35,
+      "passed": true
+    },
+    {
+      "id": "p02",
+      "paper_keys": [
+        "rag_lewis_2005.11401"
+      ],
+      "question": "RAG 在哪些任务上取得了 state-of-the-art？",
+      "strategy": "single",
+      "language": "zh",
+      "pages": [],
+      "keywords": [
+        "open domain",
+        "QA"
+      ],
+      "paper_ids": [
+        16
+      ],
+      "route_reason": "默认单篇/多篇内容问答",
+      "latency_s": 23.54,
+      "citations": [
+        {
+          "chunk_id": "p16_c0033",
+          "paper_id": 16,
+          "title": "rag_lewis_2005.11401",
+          "page": 6,
+          "section": "Body",
+          "snippet": ".9***|**76.8**|**92.2***|\n|Book|DPR [26]|41.5|**57.9**/ -|41.1|50.6|BART|15.1|19.7|38.2|41.6|64.0|81.1|\n||RAG-Token|44.1|55.2/66.1|**45.5**|50.0|RAG-Tok.|**17.3**|**22.2**|40.1|41.5|725|895|\n||RAG-Seq.|**44.5**|56.8/**68.0**|45.2|**52.2**|RAG-Seq.|14.7|21.4|40.8|44.2|.|.|\n\nto more effective marginal",
+          "support": "partial",
+          "support_reason": "表格数值涉及QA结果，但未明确陈述四个任务刷新SOTA或TriviaQA显著优于近期方法等结论。"
+        },
+        {
+          "chunk_id": "p16_c0038",
+          "paper_id": 16,
+          "title": "rag_lewis_2005.11401",
+          "page": 6,
+          "section": "Body",
+          "snippet": "the generation, drawing out specific knowledge stored in the parametric memory. \n\n#### **4.4 Fact Verification** \n\nTable 2 shows our results on FEVER. For 3-way classification, RAG scores are within 4.3% of state-of-the-art models, which are complex pipeline systems with domain-specific architecture",
+          "support": "partial",
+          "support_reason": "证据仅支持FEVER 3分类与SOTA相差4.3%以内，未支持开放域QA的SOTA声明。"
+        }
+      ],
+      "answer_preview": "证据不足，暂不展示生成答案。\n\n引用支持率：0.20；要求阈值：0.35。\n建议缩小问题范围，或换一篇论文/补充更具体的章节。",
+      "checks": {
+        "strategy": true,
+        "page": true,
+        "keyword": false,
+        "paper_coverage": true
+      },
+      "citation_support": [
+        {
+          "index": 1,
+          "score": 0.0,
+          "supported": false
+        },
+        {
+          "index": 2,
+          "score": 0.0,
+          "supported": false
+        }
+      ],
+      "citation_support_rate": 0.2,
+      "claim_support_rate": null,
+      "claims": [],
+      "answer_suppressed": true,
+      "citation_support_threshold": 0.35,
+      "passed": false
+    },
+    {
+      "id": "p03",
+      "paper_keys": [
+        "rag_lewis_2005.11401"
+      ],
+      "question": "RAG 的两种 formulation 分别怎么工作？",
+      "strategy": "single",
+      "language": "zh",
+      "pages": [],
+      "keywords": [
+        "passages",
+        "token"
+      ],
+      "paper_ids": [
+        16
+      ],
+      "route_reason": "默认单篇/多篇内容问答",
+      "latency_s": 18.61,
+      "citations": [
+        {
+          "chunk_id": "p16_c0012",
+          "paper_id": 16,
+          "title": "rag_lewis_2005.11401",
+          "page": 3,
+          "section": "Body",
+          "snippet": "by _θ_ that generates a current token based on a context of the previous _i −_ 1 tokens _y_ 1: _i−_ 1, the original input _x_ and a retrieved passage _z_ . \n\nTo train the retriever and generator end-to-end, we treat the retrieved document as a latent variable. We propose two models that marginalize ",
+          "support": "partial",
+          "support_reason": "证据提到将检索文档作为隐变量并边缘化，但未明确给出top-K、整条序列同一文档及具体公式。"
+        },
+        {
+          "chunk_id": "p16_c0013",
+          "paper_id": 16,
+          "title": "rag_lewis_2005.11401",
+          "page": 3,
+          "section": "Body",
+          "snippet": "raining and decoding procedure. \n\n#### **2.1 Models** \n\n**RAG-Sequence Model** The RAG-Sequence model uses the same retrieved document to generate the complete _sequence_ . Technically, it treats the retrieved document as a single latent variable that is marginalized to get the seq2seq probability _",
+          "support": "yes",
+          "support_reason": "证据明确说明RAG-Sequence使用同一检索文档生成完整序列，并将其作为单一隐变量边缘化。"
+        },
+        {
+          "chunk_id": "p16_c0014",
+          "paper_id": 16,
+          "title": "rag_lewis_2005.11401",
+          "page": 3,
+          "section": "Body",
+          "snippet": "!-- End of picture text -->\n\n**RAG-Token Model** In the RAG-Token model we can draw a different latent document for each target _token_ and marginalize accordingly. This allows the generator to choose content from several documents when producing an answer. Concretely, the top K documents are retrie",
+          "support": "partial",
+          "support_reason": "证据支持每个token可抽取不同隐文档并边缘化、可从多文档选择内容，但未完整给出top-K后逐token分布再边缘化的具体步骤。"
+        },
+        {
+          "chunk_id": "p16_c0015",
+          "paper_id": 16,
+          "title": "rag_lewis_2005.11401",
+          "page": 3,
+          "section": "Body",
+          "snippet": "RAG can be used for sequence classification tasks by considering the target class as a target sequence of length one, in which case RAG-Sequence and RAG-Token are equivalent. \n\n#### **2.2 Retriever: DPR** \n\nThe retrieval component _pη_ ( _z|x_ ) is based on DPR [26]. DPR follows a bi-encoder archite",
+          "support": "yes",
+          "support_reason": "证据明确陈述序列分类任务中目标类别视为长度1序列时RAG-Sequence与RAG-Token等价。"
+        }
+      ],
+      "answer_preview": "论文提出两种 RAG formulation，区别在于对检索到的文档（作为隐变量）如何做边缘化：\n\n1. RAG-Sequence：整条输出序列都使用同一个检索文档。具体做法是：检索器先取 top-K 文档，生成器对每个文档分别计算整条输出序列的概率，再对这些文档做边缘化（top-K 近似），即 p_RAG-Sequence(y|x) ≈ Σ_{z∈top-k} pη(z|x) pθ(y|x,z) [1][2]。\n\n2. RAG-Token：每个目标 token 可以抽取不同的隐文档并分别边缘化，因此生成器在生成答案时可以从多个文档中选择内容。具体做法是：检索 top-K 文档后，生成器针对每个文档给出下一个输出 token 的分布，再做边缘化，然后对下一个 token 重复该过程 [3]。\n\n另外，对于序列分类任务，目标类别可视为长度为 1 的目标序列，此时 RAG-Sequence 与 RAG-Token 等价 [4]。",
+      "checks": {
+        "strategy": true,
+        "page": true,
+        "keyword": true,
+        "paper_coverage": true
+      },
+      "citation_support": [
+        {
+          "index": 1,
+          "score": 0.132,
+          "supported": true
+        },
+        {
+          "index": 2,
+          "score": 0.125,
+          "supported": true
+        },
+        {
+          "index": 3,
+          "score": 0.1,
+          "supported": false
+        },
+        {
+          "index": 4,
+          "score": 0.073,
+          "supported": false
+        }
+      ],
+      "citation_support_rate": 0.75,
+      "claim_support_rate": 0.333,
+      "claims": [
+        {
+          "claim": "论文提出两种 RAG formulation，区别在于对检索到的文档（作为隐变量）如何做边缘化：",
+          "citations": [],
+          "support": "uncited",
+          "reason": "该句没有引用"
+        },
+        {
+          "claim": "RAG-Sequence：整条输出序列都使用同一个检索文档。",
+          "citations": [],
+          "support": "uncited",
+          "reason": "该句没有引用"
+        },
+        {
+          "claim": "具体做法是：检索器先取 top-K 文档，生成器对每个文档分别计算整条输出序列的概率，再对这些文档做边缘化（top-K 近似），即 p_RAG-Sequence(y|x) ≈ Σ_{z∈top-k} pη(z|x) pθ(y|x,z) [1][2]。",
+          "citations": [
+            1,
+            2
+          ],
+          "support": "partial",
+          "reason": "引用只支持部分内容"
+        },
+        {
+          "claim": "RAG-Token：每个目标 token 可以抽取不同的隐文档并分别边缘化，因此生成器在生成答案时可以从多个文档中选择内容。",
+          "citations": [],
+          "support": "uncited",
+          "reason": "该句没有引用"
+        },
+        {
+          "claim": "具体做法是：检索 top-K 文档后，生成器针对每个文档给出下一个输出 token 的分布，再做边缘化，然后对下一个 token 重复该过程 [3]。",
+          "citations": [
+            3
+          ],
+          "support": "partial",
+          "reason": "引用只支持部分内容"
+        },
+        {
+          "claim": "另外，对于序列分类任务，目标类别可视为长度为 1 的目标序列，此时 RAG-Sequence 与 RAG-Token 等价 [4]。",
+          "citations": [
+            4
+          ],
+          "support": "yes",
+          "reason": "所有引用均支持"
+        }
+      ],
+      "answer_suppressed": false,
+      "citation_support_threshold": 0.35,
+      "passed": true
+    },
+    {
+      "id": "p04",
+      "paper_keys": [
+        "ragas_2309.15217"
+      ],
+      "question": "Ragas 是什么框架？",
+      "strategy": "explain",
+      "language": "zh",
+      "pages": [],
+      "keywords": [
+        "reference-free",
+        "evaluation"
+      ],
+      "paper_ids": [
+        19
+      ],
+      "route_reason": "检测到术语解释线索",
+      "latency_s": 21.51,
+      "citations": [
+        {
+          "chunk_id": "p19_c0001",
+          "paper_id": 19,
+          "title": "ragas_2309.15217",
+          "page": 1,
+          "section": "Body",
+          "snippet": "provide LLMs with knowledge from a reference textual database, which enables them to act as a natural language layer between a user and textual databases, reducing the risk of hallucinations. Evaluating RAG architectures is, however, challenging because there are several dimensions to consider: the ",
+          "support": "partial",
+          "support_reason": "证据提到RAG评估有多个维度，但未明确陈述Ragas是自动化评估框架、全称、无参考评估或三个具体指标等主要结论。"
+        },
+        {
+          "chunk_id": "p19_c0032",
+          "paper_id": 19,
+          "title": "ragas_2309.15217",
+          "page": 5,
+          "section": "Body",
+          "snippet": "context relevance (i.e. is the retrieved context sufficiently focused). To support the development of such a framework, we have introduced _WikiEval_ , a dataset which human judgements of these three different aspects. Finally, we have also described Ragas, our implementation of the three considered",
+          "support": "partial",
+          "support_reason": "证据支持WikiEval数据集包含三个维度的人类判断及context relevance维度，但缺少Ragas定义、全称、无参考评估、faithfulness/answer relevance指标及集成等部分。"
+        },
+        {
+          "chunk_id": "p19_c0007",
+          "paper_id": 19,
+          "title": "ragas_2309.15217",
+          "page": 2,
+          "section": "Body",
+          "snippet": "of retrieval augmented generation systems. We focus on settings where reference answers may not be available, and where we want to estimate different proxies for correctness, in addition to the usefulness of the retrieved passages. The Ragas framework provides an integration with both llama-index an",
+          "support": "partial",
+          "support_reason": "证据支持无参考答案设置及与llama-index集成，但缺少Ragas全称、三个质量维度指标及WikiEval等主要结论。"
+        }
+      ],
+      "answer_preview": "## 论文中的用法\n\n在论文中，Ragas 是作者提出的一个**用于 RAG 流水线的自动化评估框架**，全称为 **Retrieval Augmented Generation Assessment**。论文明确指出它是“a framework for reference-free evaluation of Retrieval Augmented Generation (RAG) pipelines” ，即无需人工标注参考答案（ground truth）即可评估 RAG 系统。它围绕三个质量维度设计了一套指标：检索上下文的相关性/聚焦程度、LLM 对检索段落的忠实利用（faithfulness）、以及生成内容本身的质量（answer relevance）[1][2]。论文还说明 Ragas 可与 llama-index 和 Langchain 集成，便于开发者嵌入现有工作流 [3]。关于在 WikiEval 数据集上验证其预测与人类判断较为一致（尤其在 faithfulness 和 answer relevance 上）这一说法，现有证据仅能支持论文引入了 WikiEval 数据集",
+      "checks": {
+        "strategy": true,
+        "page": true,
+        "keyword": true,
+        "paper_coverage": true
+      },
+      "citation_support": [
+        {
+          "index": 1,
+          "score": 0.051,
+          "supported": false
+        },
+        {
+          "index": 2,
+          "score": 0.086,
+          "supported": false
+        },
+        {
+          "index": 3,
+          "score": 0.077,
+          "supported": false
+        }
+      ],
+      "citation_support_rate": 0.375,
+      "claim_support_rate": 0.25,
+      "claims": [
+        {
+          "claim": "在论文中，Ragas 是作者提出的一个**用于 RAG 流水线的自动化评估框架**，全称为 **Retrieval Augmented Generation Assessment**。",
+          "citations": [],
+          "support": "uncited",
+          "reason": "该句没有引用"
+        },
+        {
+          "claim": "论文明确指出它是“a framework for reference-free evaluation of Retrieval Augmented Generation (RAG) pipelines” ，即无需人工标注参考答案（ground truth）即可评估 RAG 系统。",
+          "citations": [],
+          "support": "uncited",
+          "reason": "该句没有引用"
+        },
+        {
+          "claim": "它围绕三个质量维度设计了一套指标：检索上下文的相关性/聚焦程度、LLM 对检索段落的忠实利用（faithfulness）、以及生成内容本身的质量（answer relevance）[1][2]。",
+          "citations": [
+            1,
+            2
+          ],
+          "support": "partial",
+          "reason": "引用只支持部分内容"
+        },
+        {
+          "claim": "论文还说明 Ragas 可与 llama-index 和 Langchain 集成，便于开发者嵌入现有工作流 [3]。",
+          "citations": [
+            3
+          ],
+          "support": "partial",
+          "reason": "引用只支持部分内容"
+        },
+        {
+          "claim": "关于在 WikiEval 数据集上验证其预测与人类判断较为一致（尤其在 faithfulness 和 answer relevance 上）这一说法，现有证据仅能支持论文引入了 WikiEval 数据集并包含对三个维度的人类判断[2]，但“预测与人类判断较为一致”的具体结论**需要进一步核实**。",
+          "citations": [
+            2
+          ],
+          "support": "partial",
+          "reason": "引用只支持部分内容"
+        },
+        {
+          "claim": "来源：论文**：Ragas（Retrieval Augmented Generation Assessment）是论文提出的一个面向 RAG 流水线的无参考评估框架，提供一套指标来评估检索与生成的不同维度，且不依赖人工标注的真实答案 [1]。",
+          "citations": [
+            1
+          ],
+          "support": "partial",
+          "reason": "引用只支持部分内容"
+        },
+        {
+          "claim": "本地术语库中收录的是 **RAG（Retrieval-Augmented Generation，检索增强生成）** 的定义，而非 Ragas 框架本身；Ragas 是评估 RAG 系统的框架，二者不是同一概念。",
+          "citations": [],
+          "support": "uncited",
+          "reason": "该句没有引用"
+        },
+        {
+          "claim": "来源：本地术语库（仅适用于 RAG 部分）。",
+          "citations": [],
+          "support": "uncited",
+          "reason": "该句没有引用"
+        },
+        {
+          "claim": "Ragas 是本文的核心贡献物：论文提出了该评估框架，并配套构建了 WikiEval 数据集[2]。",
+          "citations": [
+            2
+          ],
+          "support": "partial",
+          "reason": "引用只支持部分内容"
+        },
+        {
+          "claim": "至于“用实验说明 Ragas 的自动评估结果与人类判断高度一致，从而支撑‘无需 ground truth 也能有效评估 RAG 系统’这一主张”，现有证据**不足**，**需要进一步核实**。",
+          "citations": [],
+          "support": "uncited",
+          "reason": "该句没有引用"
+        }
+      ],
+      "answer_suppressed": false,
+      "citation_support_threshold": 0.35,
+      "passed": true
+    },
+    {
+      "id": "p05",
+      "paper_keys": [
+        "ragas_2309.15217"
+      ],
+      "question": "Ragas 评估 RAG 的哪两个模块？",
+      "strategy": "single",
+      "language": "zh",
+      "pages": [],
+      "keywords": [
+        "retrieval",
+        "generation"
+      ],
+      "paper_ids": [
+        19
+      ],
+      "route_reason": "默认单篇/多篇内容问答",
+      "latency_s": 4.96,
+      "citations": [],
+      "answer_preview": "证据不足，暂不展示生成答案。\n\n引用支持率：0.00；要求阈值：0.35。\n建议缩小问题范围，或换一篇论文/补充更具体的章节。",
+      "checks": {
+        "strategy": true,
+        "page": true,
+        "keyword": false,
+        "paper_coverage": true
+      },
+      "citation_support": [],
+      "citation_support_rate": 0.0,
+      "claim_support_rate": null,
+      "claims": [],
+      "answer_suppressed": true,
+      "citation_support_threshold": 0.35,
+      "passed": false
+    },
+    {
+      "id": "p06",
+      "paper_keys": [
+        "ragas_2309.15217"
+      ],
+      "question": "Ragas 的主要特点是什么？",
+      "strategy": "single",
+      "language": "zh",
+      "pages": [],
+      "keywords": [
+        "reference-free"
+      ],
+      "paper_ids": [
+        19
+      ],
+      "route_reason": "默认单篇/多篇内容问答",
+      "latency_s": 21.31,
+      "citations": [
+        {
+          "chunk_id": "p19_c0001",
+          "paper_id": 19,
+          "title": "ragas_2309.15217",
+          "page": 1,
+          "section": "Body",
+          "snippet": "provide LLMs with knowledge from a reference textual database, which enables them to act as a natural language layer between a user and textual databases, reducing the risk of hallucinations. Evaluating RAG architectures is, however, challenging because there are several dimensions to consider: the ",
+          "support": "partial",
+          "support_reason": "证据提到评估RAG需考虑多个维度，支持“多维度评估”部分，但未明确说明reference-free、具体维度或集成等。"
+        },
+        {
+          "chunk_id": "p19_c0032",
+          "paper_id": 19,
+          "title": "ragas_2309.15217",
+          "page": 5,
+          "section": "Body",
+          "snippet": "context relevance (i.e. is the retrieved context sufficiently focused). To support the development of such a framework, we have introduced _WikiEval_ , a dataset which human judgements of these three different aspects. Finally, we have also described Ragas, our implementation of the three considered",
+          "support": "partial",
+          "support_reason": "证据提到context relevance和WikiEval数据集，支持部分评估维度及WikiEval，但未说明reference-free、集成或与人类判断一致性结论。"
+        },
+        {
+          "chunk_id": "p19_c0007",
+          "paper_id": 19,
+          "title": "ragas_2309.15217",
+          "page": 2,
+          "section": "Body",
+          "snippet": "of retrieval augmented generation systems. We focus on settings where reference answers may not be available, and where we want to estimate different proxies for correctness, in addition to the usefulness of the retrieved passages. The Ragas framework provides an integration with both llama-index an",
+          "support": "partial",
+          "support_reason": "证据明确提到reference answers不可用及与llama-index集成，支持无需参考和集成部分，但缺少具体维度、易用性及WikiEval一致性结论。"
+        }
+      ],
+      "answer_preview": "根据论文证据，Ragas 的主要特点包括：1）是一个无需参考（reference-free）的 RAG 评估框架，可在不依赖人工标注真实答案的情况下评估多个维度 [1]；2）评估维度涵盖检索上下文的相关性/聚焦程度、LLM 忠实利用上下文的能力以及生成质量等 [1]；3）即使没有 ground truth 也能为 RAG 系统开发者提供有价值的洞察，且易于使用 [2]；4）与 llama-index 和 Langchain 集成，便于开发者接入标准工作流 [3]；5）在 WikiEval 上的评估显示其预测与人类判断较为一致，尤其在 faithfulness 和 answer relevance 上 [2]。其中，第 5 点关于“在 WikiEval 上的评估显示其预测与人类判断较为一致，尤其在 faithfulness 和 answer relevance 上”的证据不足，需要进一步核实。",
+      "checks": {
+        "strategy": true,
+        "page": true,
+        "keyword": true,
+        "paper_coverage": true
+      },
+      "citation_support": [
+        {
+          "index": 1,
+          "score": 0.051,
+          "supported": false
+        },
+        {
+          "index": 2,
+          "score": 0.086,
+          "supported": false
+        },
+        {
+          "index": 3,
+          "score": 0.051,
+          "supported": false
+        }
+      ],
+      "citation_support_rate": 0.375,
+      "claim_support_rate": 0.25,
+      "claims": [
+        {
+          "claim": "根据论文证据，Ragas 的主要特点包括：1）是一个无需参考（reference-free）的 RAG 评估框架，可在不依赖人工标注真实答案的情况下评估多个维度 [1]；2）评估维度涵盖检索上下文的相关性/聚焦程度、LLM 忠实利用上下文的能力以及生成质量等 [1]；3）即使没有 ground truth 也能为 RAG 系统开发者提供有价值的洞察，且易于使用 [2]；4）与 llama-index 和 Langchain 集成，便于开发者接入标准工作流 [3]；5）在 WikiEval 上的评估显示其预测与人类判断较为一致，尤其在 faithfulness 和 answer relevance 上 [2]。",
+          "citations": [
+            1,
+            2,
+            3
+          ],
+          "support": "partial",
+          "reason": "引用只支持部分内容"
+        },
+        {
+          "claim": "其中，第 5 点关于“在 WikiEval 上的评估显示其预测与人类判断较为一致，尤其在 faithfulness 和 answer relevance 上”的证据不足，需要进一步核实。",
+          "citations": [],
+          "support": "uncited",
+          "reason": "该句没有引用"
+        }
+      ],
+      "answer_suppressed": false,
+      "citation_support_threshold": 0.35,
+      "passed": true
+    },
+    {
+      "id": "p07",
+      "paper_keys": [
+        "corrective_rag_2401.15884"
+      ],
+      "question": "CRAG 如何判断检索质量？",
+      "strategy": "single",
+      "language": "zh",
+      "pages": [],
+      "keywords": [
+        "retrieval evaluator",
+        "confidence"
+      ],
+      "paper_ids": [
+        12
+      ],
+      "route_reason": "默认单篇/多篇内容问答",
+      "latency_s": 19.47,
+      "citations": [
+        {
+          "chunk_id": "p12_c0007",
+          "paper_id": 12,
+          "title": "corrective_rag_2401.15884",
+          "page": 2,
+          "section": "Body",
+          "snippet": "ve issues, this paper particularly studies the scenarios where the retriever returns inaccurate results. A method named **C** orrective **R** etrieval- **A** ugmented **G** eneration (CRAG) is proposed to self-correct the results of retriever and improve the utilization of documents for augmenting g",
+          "support": "partial",
+          "support_reason": "证据仅支持CRAG针对检索器返回不准确结果并自我纠正检索结果以提升文档利用，未涉及评估器E、查询重写器W、生成器G、输入输出、置信度机制、实验泛化性及未来工作等其余子句。"
+        },
+        {
+          "chunk_id": "p12_c0025",
+          "paper_id": 12,
+          "title": "corrective_rag_2401.15884",
+          "page": 5,
+          "section": "Body",
+          "snippet": "|**Algorithm 1:**CRAG Inference|\n|---|\n|**Require :**_E_ (Retrieval Evaluator),_W_ (Query Rewriter),_G_(Generator)|\n|**Input**<br>**:**_x_(Input question),_D_ =_{d_1_, d_2_, ..., dk}_(Retrieved documents)<br>**Output :**_y_(Generated response)|\n|**1** _scorei_=_E_ evaluates the relevance of each pai",
+          "support": "partial",
+          "support_reason": "证据支持推理流程涉及E、W、G，输入为问题x与检索文档集合D，且E对每个查询-文档对评估相关性给出score_i；但未涉及自我纠正提升文档利用、置信度计算与三种动作、实验泛化性及未来工作等子句。"
+        }
+      ],
+      "answer_preview": "CRAG 针对检索器返回不准确结果的场景，提出通过自我纠正检索结果来提升文档利用效果 [1]。其推理流程涉及检索评估器 E、查询重写器 W 和生成器 G，输入为问题 x 与检索文档集合 D = {d_1, d_2, ..., d_k}，其中评估器 E 会对每个查询-文档对的相关性进行评估并给出分数 score_i [2]。CRAG 旨在提升自动自我纠正能力和检索文档的高效利用，实验表明其对基于 RAG 的方法具有适应性，并在短式和长式生成任务上具有泛化性；但该框架仍需微调一个外部检索评估器，如何去除该外部评估器并使 LLM 具备更好的检索评估能力被列为未来工作 [二次检索]。关于评估器如何基于 {score_1, ..., score_k} 计算置信度并触发 Correct、Incorrect、Ambiguous 三种动作的具体机制，以及 Confidence 的具体取值，证据不足，需要进一步核实。",
+      "checks": {
+        "strategy": true,
+        "page": true,
+        "keyword": true,
+        "paper_coverage": true
+      },
+      "citation_support": [
+        {
+          "index": 1,
+          "score": 0.056,
+          "supported": false
+        },
+        {
+          "index": 2,
+          "score": 0.242,
+          "supported": true
+        }
+      ],
+      "citation_support_rate": 0.5,
+      "claim_support_rate": 0.25,
+      "claims": [
+        {
+          "claim": "CRAG 针对检索器返回不准确结果的场景，提出通过自我纠正检索结果来提升文档利用效果 [1]。",
+          "citations": [
+            1
+          ],
+          "support": "partial",
+          "reason": "引用只支持部分内容"
+        },
+        {
+          "claim": "其推理流程涉及检索评估器 E、查询重写器 W 和生成器 G，输入为问题 x 与检索文档集合 D = {d_1, d_2, ..., d_k}，其中评估器 E 会对每个查询-文档对的相关性进行评估并给出分数 score_i [2]。",
+          "citations": [
+            2
+          ],
+          "support": "partial",
+          "reason": "引用只支持部分内容"
+        },
+        {
+          "claim": "CRAG 旨在提升自动自我纠正能力和检索文档的高效利用，实验表明其对基于 RAG 的方法具有适应性，并在短式和长式生成任务上具有泛化性；但该框架仍需微调一个外部检索评估器，如何去除该外部评估器并使 LLM 具备更好的检索评估能力被列为未来工作 [二次检索]。",
+          "citations": [],
+          "support": "uncited",
+          "reason": "该句没有引用"
+        },
+        {
+          "claim": "关于评估器如何基于 {score_1, ..., score_k} 计算置信度并触发 Correct、Incorrect、Ambiguous 三种动作的具体机制，以及 Confidence 的具体取值，证据不足，需要进一步核实。",
+          "citations": [],
+          "support": "uncited",
+          "reason": "该句没有引用"
+        }
+      ],
+      "answer_suppressed": false,
+      "citation_support_threshold": 0.35,
+      "passed": true
+    },
+    {
+      "id": "p08",
+      "paper_keys": [
+        "corrective_rag_2401.15884"
+      ],
+      "question": "CRAG 在检索质量差时会采取什么动作？",
+      "strategy": "single",
+      "language": "zh",
+      "pages": [],
+      "keywords": [
+        "web search",
+        "decompose"
+      ],
+      "paper_ids": [
+        12
+      ],
+      "route_reason": "默认单篇/多篇内容问答",
+      "latency_s": 6.45,
+      "citations": [],
+      "answer_preview": "证据不足，暂不展示生成答案。\n\n引用支持率：0.00；要求阈值：0.35。\n建议缩小问题范围，或换一篇论文/补充更具体的章节。",
+      "checks": {
+        "strategy": true,
+        "page": true,
+        "keyword": false,
+        "paper_coverage": true
+      },
+      "citation_support": [],
+      "citation_support_rate": 0.0,
+      "claim_support_rate": null,
+      "claims": [],
+      "answer_suppressed": true,
+      "citation_support_threshold": 0.35,
+      "passed": false
+    },
+    {
+      "id": "p09",
+      "paper_keys": [
+        "corrective_rag_2401.15884"
+      ],
+      "question": "CRAG 的实验覆盖哪些任务？",
+      "strategy": "single",
+      "language": "zh",
+      "pages": [],
+      "keywords": [
+        "short-form",
+        "long-form"
+      ],
+      "paper_ids": [
+        12
+      ],
+      "route_reason": "默认单篇/多篇内容问答",
+      "latency_s": 12.96,
+      "citations": [
+        {
+          "chunk_id": "p12_c0035",
+          "paper_id": 12,
+          "title": "corrective_rag_2401.15884",
+          "page": 6,
+          "section": "Body",
+          "snippet": "conducted experiments to extensively demonstrate CRAG’s adaptability to RAG-based approaches and its generalizability across both shortand long-form generation tasks. \n\n### **5.1 Tasks, Datasets and Metrics** \n\nCRAG was evaluated on four datasets, including **PopQA** (Mallen et al., 2023) ( _short_ ",
+          "support": "partial",
+          "support_reason": "证据明确支持四个数据集、短式和长式生成任务、PopQA对应短式生成，但未提及其余三个数据集名称及任务对应关系。"
+        }
+      ],
+      "answer_preview": "证据不足，暂不展示生成答案。\n\n引用支持率：0.17；要求阈值：0.35。\n建议缩小问题范围，或换一篇论文/补充更具体的章节。",
+      "checks": {
+        "strategy": true,
+        "page": true,
+        "keyword": false,
+        "paper_coverage": true
+      },
+      "citation_support": [
+        {
+          "index": 1,
+          "score": 0.0,
+          "supported": false
+        }
+      ],
+      "citation_support_rate": 0.167,
+      "claim_support_rate": null,
+      "claims": [],
+      "answer_suppressed": true,
+      "citation_support_threshold": 0.35,
+      "passed": false
+    },
+    {
+      "id": "p10",
+      "paper_keys": [
+        "graphrag_2404.16130"
+      ],
+      "question": "GraphRAG 如何构建图索引？",
+      "strategy": "single",
+      "language": "zh",
+      "pages": [],
+      "keywords": [
+        "知识图谱",
+        "社区摘要"
+      ],
+      "paper_ids": [
+        13
+      ],
+      "route_reason": "默认单篇/多篇内容问答",
+      "latency_s": 19.08,
+      "citations": [
+        {
+          "chunk_id": "p13_c0002",
+          "paper_id": 13,
+          "title": "graphrag_2404.16130",
+          "page": 1,
+          "section": "Abstract",
+          "snippet": "over private\n text corpora that scales with both the generality of user questions and the quantity\n of source text. Our approach uses an LLM to build a graph index in two stages:\n first, to derive an entity knowledge graph from the source documents, then to pre-\n generate community summaries for all",
+          "support": "partial",
+          "support_reason": "证据仅说明两阶段：抽取实体知识图谱和预生成社区摘要，未提及社区层级划分、自底向上递归摘要及社区检测主题划分等细节。"
+        },
+        {
+          "chunk_id": "p13_c0006",
+          "paper_id": 13,
+          "title": "graphrag_2404.16130",
+          "page": 2,
+          "section": "1  Introduction",
+          "snippet": "ach that enables sensemaking over\nthe entirety of a large text corpus. GraphRAG first uses an LLM to construct a knowledge graph,\nwhere nodes correspond to key entities in the corpus and edges represent relationships between those\nentities. Next, it partitions the graph into a hierarchy of communiti",
+          "support": "partial",
+          "support_reason": "证据支持第一阶段（LLM构建知识图谱，节点为关键实体、边为关系）及开始划分社区层级，但缺少社区摘要生成、自底向上递归和社区检测主题划分等内容。"
+        },
+        {
+          "chunk_id": "p13_c0012",
+          "paper_id": 13,
+          "title": "graphrag_2404.16130",
+          "page": 3,
+          "section": "2  Background",
+          "snippet": "oaches by generating a graph index from the source data, then applying graph-based\ncommunity detection to create a thematic partitioning of the data.\n\n2.2 Using Knowledge Graphs with LLMs and RAG\n\nApproaches to knowledge graph extraction from natural language text corpora include rule-\nmatching, sta",
+          "support": "partial",
+          "support_reason": "证据仅支持从源数据生成图索引并应用图社区检测创建主题划分，缺少两阶段抽取与社区摘要等主要部分。"
+        }
+      ],
+      "answer_preview": "根据论文证据，GraphRAG 构建图索引分为两个阶段：首先使用 LLM 从源文档中抽取实体知识图谱（节点对应语料中的关键实体，边表示实体间关系）；然后将该图划分为紧密相关实体的社区层级，并用 LLM 生成社区级摘要，摘要按层级自底向上生成，高层摘要递归纳入低层摘要 [1][2]。此外，GraphRAG 通过从源数据生成图索引，再应用基于图的社区检测来创建数据的主题划分 [3]。",
+      "checks": {
+        "strategy": true,
+        "page": true,
+        "keyword": true,
+        "paper_coverage": true
+      },
+      "citation_support": [
+        {
+          "index": 1,
+          "score": 0.024,
+          "supported": false
+        },
+        {
+          "index": 2,
+          "score": 0.051,
+          "supported": false
+        },
+        {
+          "index": 3,
+          "score": 0.026,
+          "supported": false
+        }
+      ],
+      "citation_support_rate": 0.5,
+      "claim_support_rate": 0.5,
+      "claims": [
+        {
+          "claim": "根据论文证据，GraphRAG 构建图索引分为两个阶段：首先使用 LLM 从源文档中抽取实体知识图谱（节点对应语料中的关键实体，边表示实体间关系）；然后将该图划分为紧密相关实体的社区层级，并用 LLM 生成社区级摘要，摘要按层级自底向上生成，高层摘要递归纳入低层摘要 [1][2]。",
+          "citations": [
+            1,
+            2
+          ],
+          "support": "partial",
+          "reason": "引用只支持部分内容"
+        },
+        {
+          "claim": "此外，GraphRAG 通过从源数据生成图索引，再应用基于图的社区检测来创建数据的主题划分 [3]。",
+          "citations": [
+            3
+          ],
+          "support": "partial",
+          "reason": "引用只支持部分内容"
+        }
+      ],
+      "answer_suppressed": false,
+      "citation_support_threshold": 0.35,
+      "passed": true
+    },
+    {
+      "id": "p11",
+      "paper_keys": [
+        "graphrag_2404.16130"
+      ],
+      "question": "GraphRAG 主要解决 RAG 的什么问题？",
+      "strategy": "single",
+      "language": "zh",
+      "pages": [],
+      "keywords": [
+        "global questions",
+        "query-focused summarization"
+      ],
+      "paper_ids": [
+        13
+      ],
+      "route_reason": "默认单篇/多篇内容问答",
+      "latency_s": 20.47,
+      "citations": [
+        {
+          "chunk_id": "p13_c0001",
+          "paper_id": 13,
+          "title": "graphrag_2404.16130",
+          "page": 1,
+          "section": "Abstract",
+          "snippet": "The use of retrieval-augmented generation (RAG) to retrieve relevant informa-\n tion from an external knowledge source enables large language models (LLMs)\n to answer questions over private and/or previously unseen document collections.\n However, RAG fails on global questions directed at an entire te",
+          "support": "partial",
+          "support_reason": "证据仅明确支持“RAG 在全局性问题上失败”这一子句，未涉及 vector RAG 无法 sensemaking、图索引构建、全面性/多样性优于基线及二次检索风险等其余部分。"
+        },
+        {
+          "chunk_id": "p13_c0002",
+          "paper_id": 13,
+          "title": "graphrag_2404.16130",
+          "page": 1,
+          "section": "Abstract",
+          "snippet": "over private\n text corpora that scales with both the generality of user questions and the quantity\n of source text. Our approach uses an LLM to build a graph index in two stages:\n first, to derive an entity knowledge graph from the source documents, then to pre-\n generate community summaries for all",
+          "support": "partial",
+          "support_reason": "证据支持 GraphRAG 用 LLM 两阶段构建图索引（实体知识图谱与社区摘要），但未涉及全局性问题失败、sensemaking 及全面性/多样性优于基线等其余子句。"
+        },
+        {
+          "chunk_id": "p13_c0068",
+          "paper_id": 13,
+          "title": "graphrag_2404.16130",
+          "page": 12,
+          "section": "7  Conclusion",
+          "snippet": "We have presented GraphRAG, a RAG approach that combines knowledge graph generation and\nquery-focused summarization (QFS) to support human sensemaking over entire text corpora. Initial\nevaluations show substantial improvements over a vector RAG baseline for both the comprehensive-\nness and diversity",
+          "support": "partial",
+          "support_reason": "证据支持 GraphRAG 结合知识图谱与 QFS 支持对整个语料的 sensemaking，并在全面性和多样性上优于 vector RAG 基线，但未涉及全局性问题失败及二次检索风险等其余部分。"
+        },
+        {
+          "chunk_id": "p13_c0067",
+          "paper_id": 13,
+          "title": "graphrag_2404.16130",
+          "page": 12,
+          "section": "6  Discussion",
+          "snippet": "As a mechanism for question answering over large document collections, there\nare risks to downstream sensemaking and decision-making tasks if the generated answers do not\naccurately represent the source data. System use should be accompanied by clear disclosures of AI\nuse and the potential for error",
+          "support": "partial",
+          "support_reason": "证据仅说明答案不准确会带来下游 sensemaking 风险，未支持 GraphRAG 缓解该风险或局部事实冒充全局摘要的具体说法。"
+        }
+      ],
+      "answer_preview": "GraphRAG 主要解决传统 RAG（尤其是 vector RAG）无法应对“全局性问题”的缺陷：当问题指向整个文本语料时，RAG 会失败 [1]。vector RAG 无法支持对整个语料的 sensemaking 。GraphRAG 通过构建图索引（实体知识图谱与社区摘要）来支持对整篇大语料的 sensemaking，并在全面性和多样性上优于传统 RAG 基线 [2][3]。二次检索证据显示，GraphRAG 在全局性问题上显示出缓解下游风险的潜力，这些问题否则可能由检索到的局部事实样本被错误地呈现为全局摘要来回答 [二次检索]。关于“vector RAG 对全局性问题可能用检索到的局部事实样本冒充全局摘要”这一说法，原有 [4] 证据不足，需要进一步核实；二次检索证据仅表明这是一种可能的风险，尚不足以完全支持该结论。",
+      "checks": {
+        "strategy": true,
+        "page": true,
+        "keyword": false,
+        "paper_coverage": true
+      },
+      "citation_support": [
+        {
+          "index": 1,
+          "score": 0.025,
+          "supported": false
+        },
+        {
+          "index": 2,
+          "score": 0.0,
+          "supported": false
+        },
+        {
+          "index": 3,
+          "score": 0.105,
+          "supported": false
+        },
+        {
+          "index": 4,
+          "score": 0.024,
+          "supported": false
+        }
+      ],
+      "citation_support_rate": 0.4,
+      "claim_support_rate": 0.3,
+      "claims": [
+        {
+          "claim": "GraphRAG 主要解决传统 RAG（尤其是 vector RAG）无法应对“全局性问题”的缺陷：当问题指向整个文本语料时，RAG 会失败 [1]。",
+          "citations": [
+            1
+          ],
+          "support": "partial",
+          "reason": "引用只支持部分内容"
+        },
+        {
+          "claim": "vector RAG 无法支持对整个语料的 sensemaking 。",
+          "citations": [],
+          "support": "uncited",
+          "reason": "该句没有引用"
+        },
+        {
+          "claim": "GraphRAG 通过构建图索引（实体知识图谱与社区摘要）来支持对整篇大语料的 sensemaking，并在全面性和多样性上优于传统 RAG 基线 [2][3]。",
+          "citations": [
+            2,
+            3
+          ],
+          "support": "partial",
+          "reason": "引用只支持部分内容"
+        },
+        {
+          "claim": "二次检索证据显示，GraphRAG 在全局性问题上显示出缓解下游风险的潜力，这些问题否则可能由检索到的局部事实样本被错误地呈现为全局摘要来回答 [二次检索]。",
+          "citations": [],
+          "support": "uncited",
+          "reason": "该句没有引用"
+        },
+        {
+          "claim": "关于“vector RAG 对全局性问题可能用检索到的局部事实样本冒充全局摘要”这一说法，原有 [4] 证据不足，需要进一步核实；二次检索证据仅表明这是一种可能的风险，尚不足以完全支持该结论。",
+          "citations": [
+            4
+          ],
+          "support": "partial",
+          "reason": "引用只支持部分内容"
+        }
+      ],
+      "answer_suppressed": false,
+      "citation_support_threshold": 0.35,
+      "passed": false
+    },
+    {
+      "id": "p12",
+      "paper_keys": [
+        "graphrag_2404.16130"
+      ],
+      "question": "GraphRAG 在什么规模的数据上评估？",
+      "strategy": "single",
+      "language": "zh",
+      "pages": [],
+      "keywords": [
+        "100 万 token"
+      ],
+      "paper_ids": [
+        13
+      ],
+      "route_reason": "默认单篇/多篇内容问答",
+      "latency_s": 14.76,
+      "citations": [
+        {
+          "chunk_id": "p13_c0043",
+          "paper_id": 13,
+          "title": "graphrag_2404.16130",
+          "page": 8,
+          "section": "2  Background",
+          "snippet": "podcast featuring\nconversations between Microsoft CTO Kevin Scott and various thought leaders in science and tech-\nnology (Scott, 2024). This corpus was divided into 1669 × 600-token text chunks, with 100-token\noverlaps between chunks (∼1 million tokens).\n\nNews articles. A benchmark dataset comprise",
+          "support": "partial",
+          "support_reason": "证据支持播客语料约100万token、1669个600-token块、100-token重叠，但未提及新闻文章的具体划分（170万token、3197块）及结果表单元数。"
+        },
+        {
+          "chunk_id": "p13_c0056",
+          "paper_id": 13,
+          "title": "graphrag_2404.16130",
+          "page": 10,
+          "section": "5  Results",
+          "snippet": "is the most resource-intensive approach requiring the highest number of context tokens.\nRoot-level community summaries (C0) require dramatically fewer tokens per query (9x-43x).\n\n Podcast Transcripts News Articles\n\n C0 C1 C2 C3 TS C0 C1 C2 C3 TS\n\n Units 34 367 969 1310 1669 55 555 1797 2142 3197\n\n T",
+          "support": "partial",
+          "support_reason": "证据表格显示两数据集在不同社区层级（C0-C3,TS）的单元数，支持结果表列出单元数，但未明确token规模在表中的呈现，且新闻文章划分细节缺失。"
+        }
+      ],
+      "answer_preview": "GraphRAG 在两个语料库上评估：一是播客转录文本（Podcast Transcripts），约 100 万 token，划分为 1669 个 600-token 文本块，块间有 100-token 重叠 [1]；二是新闻文章（News Articles），约 170 万 token，划分为 3197 个 600-token 文本块，块间有 100-token 重叠 [二次检索]。结果表中列出了这两个数据集在不同社区层级下的单元数 [2]。关于这两个数据集的 token 规模在结果表中的具体呈现，证据不足，需要进一步核实。",
+      "checks": {
+        "strategy": true,
+        "page": true,
+        "keyword": true,
+        "paper_coverage": true
+      },
+      "citation_support": [
+        {
+          "index": 1,
+          "score": 0.205,
+          "supported": true
+        },
+        {
+          "index": 2,
+          "score": 0.091,
+          "supported": false
+        }
+      ],
+      "citation_support_rate": 0.5,
+      "claim_support_rate": 0.333,
+      "claims": [
+        {
+          "claim": "GraphRAG 在两个语料库上评估：一是播客转录文本（Podcast Transcripts），约 100 万 token，划分为 1669 个 600-token 文本块，块间有 100-token 重叠 [1]；二是新闻文章（News Articles），约 170 万 token，划分为 3197 个 600-token 文本块，块间有 100-token 重叠 [二次检索]。",
+          "citations": [
+            1
+          ],
+          "support": "partial",
+          "reason": "引用只支持部分内容"
+        },
+        {
+          "claim": "结果表中列出了这两个数据集在不同社区层级下的单元数 [2]。",
+          "citations": [
+            2
+          ],
+          "support": "partial",
+          "reason": "引用只支持部分内容"
+        },
+        {
+          "claim": "关于这两个数据集的 token 规模在结果表中的具体呈现，证据不足，需要进一步核实。",
+          "citations": [],
+          "support": "uncited",
+          "reason": "该句没有引用"
+        }
+      ],
+      "answer_suppressed": false,
+      "citation_support_threshold": 0.35,
+      "passed": true
+    },
+    {
+      "id": "p13",
+      "paper_keys": [
+        "rag_survey_2312.10997"
+      ],
+      "question": "列出 RAG 的三种范式",
+      "strategy": "single",
+      "language": "zh",
+      "pages": [],
+      "keywords": [
+        "Naive",
+        "Advanced",
+        "Modular"
+      ],
+      "paper_ids": [
+        18
+      ],
+      "route_reason": "默认单篇/多篇内容问答",
+      "latency_s": 13.28,
+      "citations": [
+        {
+          "chunk_id": "p18_c0023",
+          "paper_id": 18,
+          "title": "rag_survey_2312.10997",
+          "page": 4,
+          "section": "Body",
+          "snippet": "y consists of three parts: indexing, retrieval and generation. (Middle) Advanced RAG proposes multiple optimization strategies around pre-retrieval and post-retrieval, with a process similar to the Naive RAG, still following a chain-like structure. (Right) Modular RAG inherits and develops from the ",
+          "support": "partial",
+          "support_reason": "证据明确支持Naive RAG由索引、检索、生成三部分组成，以及Advanced RAG围绕预检索/后检索优化且保持链式结构；但未涉及三种范式总述及Modular RAG的具体模块、可替换、迭代检索和自适应检索等内容。"
+        }
+      ],
+      "answer_preview": "证据不足，暂不展示生成答案。\n\n引用支持率：0.25；要求阈值：0.35。\n建议缩小问题范围，或换一篇论文/补充更具体的章节。",
+      "checks": {
+        "strategy": true,
+        "page": true,
+        "keyword": false,
+        "paper_coverage": true
+      },
+      "citation_support": [
+        {
+          "index": 1,
+          "score": 0.0,
+          "supported": false
+        }
+      ],
+      "citation_support_rate": 0.25,
+      "claim_support_rate": null,
+      "claims": [],
+      "answer_suppressed": true,
+      "citation_support_threshold": 0.35,
+      "passed": false
+    },
+    {
+      "id": "p14",
+      "paper_keys": [
+        "rag_survey_2312.10997"
+      ],
+      "question": "列出 RAG 框架的三个基础组件",
+      "strategy": "single",
+      "language": "zh",
+      "pages": [],
+      "keywords": [
+        "retrieval",
+        "generation",
+        "augmentation"
+      ],
+      "paper_ids": [
+        18
+      ],
+      "route_reason": "默认单篇/多篇内容问答",
+      "latency_s": 6.4,
+      "citations": [
+        {
+          "chunk_id": "p18_c0002",
+          "paper_id": 18,
+          "title": "rag_survey_2312.10997",
+          "page": 1,
+          "section": "Body",
+          "snippet": "foundation of RAG frameworks, which includes the retrieval, the generation and the augmentation techniques. The paper highlights the state-of-theart technologies embedded in each of these critical components, providing a profound understanding of the advancements in RAG systems. Furthermore, this pa",
+          "support": "yes",
+          "support_reason": "证据明确陈述RAG框架基础包含retrieval、generation和augmentation三个技术，与claim一致。"
+        }
+      ],
+      "answer_preview": "RAG 框架的三个基础组件是检索（Retrieval）、生成（Generation）和增强（Augmentation）[1]。",
+      "checks": {
+        "strategy": true,
+        "page": true,
+        "keyword": true,
+        "paper_coverage": true
+      },
+      "citation_support": [
+        {
+          "index": 1,
+          "score": 0.211,
+          "supported": true
+        }
+      ],
+      "citation_support_rate": 1.0,
+      "claim_support_rate": 1.0,
+      "claims": [
+        {
+          "claim": "RAG 框架的三个基础组件是检索（Retrieval）、生成（Generation）和增强（Augmentation）[1]。",
+          "citations": [
+            1
+          ],
+          "support": "yes",
+          "reason": "所有引用均支持"
+        }
+      ],
+      "answer_suppressed": false,
+      "citation_support_threshold": 0.35,
+      "passed": true
+    },
+    {
+      "id": "p15",
+      "paper_keys": [
+        "rag_survey_2312.10997"
+      ],
+      "question": "RAG 面临哪些主要挑战？",
+      "strategy": "single",
+      "language": "zh",
+      "pages": [],
+      "keywords": [
+        "检索",
+        "幻觉",
+        "冗余"
+      ],
+      "paper_ids": [
+        18
+      ],
+      "route_reason": "默认单篇/多篇内容问答",
+      "latency_s": 20.68,
+      "citations": [
+        {
+          "chunk_id": "p18_c0019",
+          "paper_id": 18,
+          "title": "rag_survey_2312.10997",
+          "page": 3,
+          "section": "Body",
+          "snippet": "in multi-turn dialogue interactions effectively. \n\nHowever, Naive RAG encounters notable drawbacks: \n\n_Retrieval Challenges_ . The retrieval phase often struggles with precision and recall, leading to the selection of misaligned or irrelevant chunks, and the missing of crucial information. \n\n_Genera",
+          "support": "partial",
+          "support_reason": "证据明确支持检索挑战（精确率/召回率、不匹配/不相关块、遗漏关键信息），但生成困难、增强障碍、工程挑战部分证据仅开头或未提供，故为部分支持。"
+        }
+      ],
+      "answer_preview": "证据不足，暂不展示生成答案。\n\n引用支持率：0.25；要求阈值：0.35。\n建议缩小问题范围，或换一篇论文/补充更具体的章节。",
+      "checks": {
+        "strategy": true,
+        "page": true,
+        "keyword": false,
+        "paper_coverage": true
+      },
+      "citation_support": [
+        {
+          "index": 1,
+          "score": 0.0,
+          "supported": false
+        }
+      ],
+      "citation_support_rate": 0.25,
+      "claim_support_rate": null,
+      "claims": [],
+      "answer_suppressed": true,
+      "citation_support_threshold": 0.35,
+      "passed": false
+    },
+    {
+      "id": "p16",
+      "paper_keys": [
+        "rag_aigc_survey_2402.19473"
+      ],
+      "question": "这篇综述关注 RAG 在什么场景的应用？",
+      "strategy": "single",
+      "language": "zh",
+      "pages": [],
+      "keywords": [
+        "AIGC"
+      ],
+      "paper_ids": [
+        15
+      ],
+      "route_reason": "默认单篇/多篇内容问答",
+      "latency_s": 18.6,
+      "citations": [
+        {
+          "chunk_id": "p15_c0064",
+          "paper_id": 15,
+          "title": "rag_aigc_survey_2402.19473",
+          "page": 9,
+          "section": "Body",
+          "snippet": "9 \n\nTABLE I: Taxonomy of RAG applications across various modalities. \n\n<!-- Start of picture text -->\nRAG for Text<br>Question Answering Human-Machine Conversation Neural Machine Translation Summarization Others<br>REALM ‡§ TKEGEN § RIAG ‡ ConceptFlow ‡§ Skeleton-to-Response ‡§<br>NMT-with-Monolingu",
+          "support": "partial",
+          "support_reason": "证据表格列出文本模态下问答、人机对话、神经机器翻译、摘要等任务，支持文本部分；但未涉及代码任务列举及AIGC场景、通用技术、未充分探索等表述。"
+        },
+        {
+          "chunk_id": "p15_c0068",
+          "paper_id": 15,
+          "title": "rag_aigc_survey_2402.19473",
+          "page": 9,
+          "section": "Body",
+          "snippet": "mpt, then revises each thought step by retrieving knowledge from external knowledge base. \n\n## IV. **APPLICATIONS** \n\nIn this section, we focus on RAG applications spanning various modalities. To echo with the taxonomy of RAG foundations and enhancements, we also demonstrate their utilization across",
+          "support": "partial",
+          "support_reason": "证据说明综述关注跨模态RAG应用，支持按模态梳理应用这一部分；但未给出文本/代码具体任务列举及AIGC、未充分探索等结论。"
+        }
+      ],
+      "answer_preview": "证据不足，暂不展示生成答案。\n\n引用支持率：0.25；要求阈值：0.35。\n建议缩小问题范围，或换一篇论文/补充更具体的章节。",
+      "checks": {
+        "strategy": true,
+        "page": true,
+        "keyword": false,
+        "paper_coverage": true
+      },
+      "citation_support": [
+        {
+          "index": 1,
+          "score": 0.0,
+          "supported": false
+        },
+        {
+          "index": 2,
+          "score": 0.0,
+          "supported": false
+        }
+      ],
+      "citation_support_rate": 0.25,
+      "claim_support_rate": null,
+      "claims": [],
+      "answer_suppressed": true,
+      "citation_support_threshold": 0.35,
+      "passed": false
+    },
+    {
+      "id": "p17",
+      "paper_keys": [
+        "rag_aigc_survey_2402.19473"
+      ],
+      "question": "RAG 如何增强 AIGC？",
+      "strategy": "single",
+      "language": "zh",
+      "pages": [],
+      "keywords": [
+        "检索",
+        "外部知识"
+      ],
+      "paper_ids": [
+        15
+      ],
+      "route_reason": "默认单篇/多篇内容问答",
+      "latency_s": 23.03,
+      "citations": [
+        {
+          "chunk_id": "p15_c0008",
+          "paper_id": 15,
+          "title": "rag_aigc_survey_2402.19473",
+          "page": 1,
+          "section": "Body",
+          "snippet": "augmented input to the generator [33], [34]; they can join at the middle stage of generation as latent representations [35], [36]; they can contribute to the final generation results in the form of logits [37], [38]; they can even influence or omit certain generation steps [32], [39]. Additionally, ",
+          "support": "yes",
+          "support_reason": "证据明确列出检索信息作为增强输入、以潜在表示参与中间阶段、以logits形式贡献、影响或省略生成步骤，与claim第一子句一致。"
+        },
+        {
+          "chunk_id": "p15_c0017",
+          "paper_id": 15,
+          "title": "rag_aigc_survey_2402.19473",
+          "page": 3,
+          "section": "Body",
+          "snippet": "## _A._ **_Overview_** \n\nAs shown in Fig. 1, the entire RAG system consists of two core modules: the retriever and the generator, where the retriever searches for relevant information from the data store and the generator produces the required contents. The RAG process unfolds as follows: (i) the re",
+          "support": "yes",
+          "support_reason": "证据明确说明RAG系统包含检索器和生成器两个核心模块，检索器从数据存储搜索相关信息，生成器产出所需内容，与claim第二子句一致。"
+        },
+        {
+          "chunk_id": "p15_c0138",
+          "paper_id": 15,
+          "title": "rag_aigc_survey_2402.19473",
+          "page": 16,
+          "section": "Body",
+          "snippet": "porating Long-tail and Real-time Knowledge_** _:_ While a key motivation of RAG is to harness real-time and long-tail knowledge, few studies have explored the pipeline for knowledge updating and expansion. Many existing works use merely the generators’ training data as retrieval sources, neglecting ",
+          "support": "partial",
+          "support_reason": "证据提到RAG利用实时和长尾知识及知识更新，但未明确陈述缓解知识过时、长尾知识不足和训练数据泄露风险，也未涉及与微调等正交结合。"
+        }
+      ],
+      "answer_preview": "根据给定证据，RAG 通过引入可检索的外部信息来增强 AIGC：它把检索到的信息作为生成器的增强输入，或在生成中间阶段以潜在表示、logits 等形式参与，甚至影响或省略某些生成步骤 [1]。其流程中，RAG 系统包含检索器和生成器两个核心模块，检索器从数据存储中搜索相关信息，生成器产出所需内容 [2]。RAG 能通过引入信息检索过程来增强生成过程，从而提升准确性和稳健性 [二次检索]。关于 RAG 以可更新的非参数记忆形式缓解 AIGC 的知识过时、长尾知识不足和训练数据泄露风险 ，以及 RAG 可与微调、强化学习、思维链、智能体等技术正交结合以提升 AIGC 效果 [3]，证据不足，需要进一步核实。",
+      "checks": {
+        "strategy": true,
+        "page": true,
+        "keyword": true,
+        "paper_coverage": true
+      },
+      "citation_support": [
+        {
+          "index": 1,
+          "score": 0.027,
+          "supported": false
+        },
+        {
+          "index": 2,
+          "score": 0.057,
+          "supported": false
+        },
+        {
+          "index": 3,
+          "score": 0.027,
+          "supported": false
+        }
+      ],
+      "citation_support_rate": 0.625,
+      "claim_support_rate": 0.625,
+      "claims": [
+        {
+          "claim": "根据给定证据，RAG 通过引入可检索的外部信息来增强 AIGC：它把检索到的信息作为生成器的增强输入，或在生成中间阶段以潜在表示、logits 等形式参与，甚至影响或省略某些生成步骤 [1]。",
+          "citations": [
+            1
+          ],
+          "support": "yes",
+          "reason": "所有引用均支持"
+        },
+        {
+          "claim": "其流程中，RAG 系统包含检索器和生成器两个核心模块，检索器从数据存储中搜索相关信息，生成器产出所需内容 [2]。",
+          "citations": [
+            2
+          ],
+          "support": "yes",
+          "reason": "所有引用均支持"
+        },
+        {
+          "claim": "RAG 能通过引入信息检索过程来增强生成过程，从而提升准确性和稳健性 [二次检索]。",
+          "citations": [],
+          "support": "uncited",
+          "reason": "该句没有引用"
+        },
+        {
+          "claim": "关于 RAG 以可更新的非参数记忆形式缓解 AIGC 的知识过时、长尾知识不足和训练数据泄露风险 ，以及 RAG 可与微调、强化学习、思维链、智能体等技术正交结合以提升 AIGC 效果 [3]，证据不足，需要进一步核实。",
+          "citations": [
+            3
+          ],
+          "support": "partial",
+          "reason": "引用只支持部分内容"
+        }
+      ],
+      "answer_suppressed": false,
+      "citation_support_threshold": 0.35,
+      "passed": true
+    },
+    {
+      "id": "p18",
+      "paper_keys": [
+        "rag_aigc_survey_2402.19473"
+      ],
+      "question": "论文讨论了哪些 RAG 挑战和方向？",
+      "strategy": "single",
+      "language": "zh",
+      "pages": [],
+      "keywords": [
+        "挑战",
+        "方向"
+      ],
+      "paper_ids": [
+        15
+      ],
+      "route_reason": "默认单篇/多篇内容问答",
+      "latency_s": 36.05,
+      "citations": [
+        {
+          "chunk_id": "p15_c0135",
+          "paper_id": 15,
+          "title": "rag_aigc_survey_2402.19473",
+          "page": 16,
+          "section": "Body",
+          "snippet": "slows down the generation process generally. The research advancements in prompt compression [169] and long-context support [349] have partially mitigated these challenges, albeit with a slight trade-off in accuracy or costs. \n\n## _B._ **_Potential Future Directions_** \n\nLastly, we wish to outline s",
+          "support": "partial",
+          "support_reason": "证据[1]支持生成变慢及提示压缩/长上下文缓解的挑战描述，并出现“潜在未来方向”标题，但未给出“增强方法的新设计”第1条内容；其余引用[3][4][5]及二次检索证据不在本条证据中。"
+        },
+        {
+          "chunk_id": "p15_c0001",
+          "paper_id": 15,
+          "title": "rag_aigc_survey_2402.19473",
+          "page": 1,
+          "section": "Body",
+          "snippet": "recently emerged as a paradigm to address such challenges. In particular, RAG introduces the information retrieval process, which enhances the generation process by retrieving relevant objects from available data stores, leading to higher accuracy and better robustness. In this paper, we comprehensi",
+          "support": "partial",
+          "support_reason": "证据支持RAG作为范式应对挑战、引入检索提升准确性和稳健性，但未涉及生成变慢、未来方向条目或讨论有限等其余子句。"
+        },
+        {
+          "chunk_id": "p15_c0016",
+          "paper_id": 15,
+          "title": "rag_aigc_survey_2402.19473",
+          "page": 3,
+          "section": "Body",
+          "snippet": "by presenting a systematic survey of RAG. \n\n## _D._ **_Roadmap_** \n\nThe rest of the paper is organized as follows. Section II elaborates on the preliminary of RAG, introducing retrievers and generators. Section III presents RAG foundations and further enhancements on RAG. Section IV reviews existing",
+          "support": "partial",
+          "support_reason": "证据仅说明论文路线图章节安排，未明确陈述后续章节讨论当前局限与潜在未来方向，也未覆盖挑战细节。"
+        },
+        {
+          "chunk_id": "p15_c0013",
+          "paper_id": 15,
+          "title": "rag_aigc_survey_2402.19473",
+          "page": 2,
+          "section": "Body",
+          "snippet": "ted applications. In summary, we list our contributions as follows: \n\n- We conduct a comprehensive review of RAG, and distill the abstractions of RAG foundations for various retrievers and generators. \n\n- We investigate the enhancements in the literature of RAG, elaborating the techniques leveraged ",
+          "support": "partial",
+          "support_reason": "证据仅列出贡献列表开头，提到综述RAG基础与增强，但未明确提到讨论局限性和有前景研究方向，也未覆盖挑战与未来方向细节。"
+        }
+      ],
+      "answer_preview": "根据给定证据，论文对 RAG 挑战与方向的讨论较为有限。挑战方面，证据提到生成过程通常会被拖慢，而提示压缩和长上下文支持的研究进展部分缓解了这些挑战，但在准确性或成本上有轻微权衡 [1]；证据还指出 RAG 作为一种范式被提出以应对相关挑战，通过引入信息检索过程来提升生成过程的准确性和稳健性 [2]。未来方向方面，证据明确列出“潜在未来方向”并给出第 1 条“增强方法的新设计”，即研究更先进的增强基础以充分释放 RAG 潜力 [1]；论文路线图说明后续章节讨论 RAG 当前局限与潜在未来方向 [3]，贡献列表提到讨论局限性和有前景的研究方向 [4]。二次检索证据补充指出，RAG 的基础在不同模态间大体一致，但增强技术需微调，检索器和生成器的选择因模态和应用而异；同时指出目前缺乏涵盖所有基础、增强和应用的系统综述，阻碍了该领域发展，且对 RAG 基础的讨论缺失削弱了研究的实用价值，使 RAG 潜力未被充分探索。但除上述内容外，证据未给出更完整的挑战清单或后续方向细节，因此无法进一步展开；关于挑战的完整分类和未来方向的具体条目，需要进一步核实。",
+      "checks": {
+        "strategy": true,
+        "page": true,
+        "keyword": true,
+        "paper_coverage": true
+      },
+      "citation_support": [
+        {
+          "index": 1,
+          "score": 0.0,
+          "supported": false
+        },
+        {
+          "index": 2,
+          "score": 0.026,
+          "supported": false
+        },
+        {
+          "index": 3,
+          "score": 0.03,
+          "supported": false
+        },
+        {
+          "index": 4,
+          "score": 0.032,
+          "supported": false
+        }
+      ],
+      "citation_support_rate": 0.4,
+      "claim_support_rate": 0.2,
+      "claims": [
+        {
+          "claim": "根据给定证据，论文对 RAG 挑战与方向的讨论较为有限。",
+          "citations": [],
+          "support": "uncited",
+          "reason": "该句没有引用"
+        },
+        {
+          "claim": "挑战方面，证据提到生成过程通常会被拖慢，而提示压缩和长上下文支持的研究进展部分缓解了这些挑战，但在准确性或成本上有轻微权衡 [1]；证据还指出 RAG 作为一种范式被提出以应对相关挑战，通过引入信息检索过程来提升生成过程的准确性和稳健性 [2]。",
+          "citations": [
+            1,
+            2
+          ],
+          "support": "partial",
+          "reason": "引用只支持部分内容"
+        },
+        {
+          "claim": "未来方向方面，证据明确列出“潜在未来方向”并给出第 1 条“增强方法的新设计”，即研究更先进的增强基础以充分释放 RAG 潜力 [1]；论文路线图说明后续章节讨论 RAG 当前局限与潜在未来方向 [3]，贡献列表提到讨论局限性和有前景的研究方向 [4]。",
+          "citations": [
+            1,
+            3,
+            4
+          ],
+          "support": "partial",
+          "reason": "引用只支持部分内容"
+        },
+        {
+          "claim": "二次检索证据补充指出，RAG 的基础在不同模态间大体一致，但增强技术需微调，检索器和生成器的选择因模态和应用而异；同时指出目前缺乏涵盖所有基础、增强和应用的系统综述，阻碍了该领域发展，且对 RAG 基础的讨论缺失削弱了研究的实用价值，使 RAG 潜力未被充分探索。",
+          "citations": [],
+          "support": "uncited",
+          "reason": "该句没有引用"
+        },
+        {
+          "claim": "但除上述内容外，证据未给出更完整的挑战清单或后续方向细节，因此无法进一步展开；关于挑战的完整分类和未来方向的具体条目，需要进一步核实。",
+          "citations": [],
+          "support": "uncited",
+          "reason": "该句没有引用"
+        }
+      ],
+      "answer_suppressed": false,
+      "citation_support_threshold": 0.35,
+      "passed": true
+    },
+    {
+      "id": "p19",
+      "paper_keys": [
+        "lightrag_2410.05779"
+      ],
+      "question": "LightRAG 的主要目标是什么？",
+      "strategy": "single",
+      "language": "zh",
+      "pages": [],
+      "keywords": [
+        "图增强",
+        "高效"
+      ],
+      "paper_ids": [
+        14
+      ],
+      "route_reason": "默认单篇/多篇内容问答",
+      "latency_s": 23.12,
+      "citations": [
+        {
+          "chunk_id": "p14_c0007",
+          "paper_id": 14,
+          "title": "lightrag_2410.05779",
+          "page": 2,
+          "section": "1 INTRODUCTION",
+          "snippet": "and scalable graph-empowered RAG system that efficiently handles varying query volumes is crucial. In this work, we achieve an effective and efficient RAG system by addressing three key challenges: i) **Comprehensive Information Retrieval** . Ensuring comprehensive information retrieval that capture",
+          "support": "partial",
+          "support_reason": "证据仅明确提到三项挑战中的第一项（全面信息检索），未提及检索效率和新数据适应，也未涉及双层检索等后续内容。"
+        },
+        {
+          "chunk_id": "p14_c0008",
+          "paper_id": 14,
+          "title": "lightrag_2410.05779",
+          "page": 2,
+          "section": "1 INTRODUCTION",
+          "snippet": "hallenges, we propose LightRAG, a model that seamlessly integrates a graph-based text indexing paradigm with a dual-level retrieval framework. This innovative approach enhances the system’s capacity to capture complex inter-dependencies among entities, resulting in more coherent and contextually ric",
+          "support": "partial",
+          "support_reason": "证据支持图结构文本索引与双层检索框架、捕获实体间复杂依赖，但未明确列出三项挑战、低层/高层检索细节及增量更新能力。"
+        }
+      ],
+      "answer_preview": "证据不足，暂不展示生成答案。\n\n引用支持率：0.33；要求阈值：0.35。\n建议缩小问题范围，或换一篇论文/补充更具体的章节。",
+      "checks": {
+        "strategy": true,
+        "page": true,
+        "keyword": false,
+        "paper_coverage": true
+      },
+      "citation_support": [
+        {
+          "index": 1,
+          "score": 0.0,
+          "supported": false
+        },
+        {
+          "index": 2,
+          "score": 0.0,
+          "supported": false
+        }
+      ],
+      "citation_support_rate": 0.333,
+      "claim_support_rate": null,
+      "claims": [],
+      "answer_suppressed": true,
+      "citation_support_threshold": 0.35,
+      "passed": false
+    },
+    {
+      "id": "p20",
+      "paper_keys": [
+        "lightrag_2410.05779"
+      ],
+      "question": "LightRAG 如何表示数据？",
+      "strategy": "single",
+      "language": "zh",
+      "pages": [],
+      "keywords": [
+        "图结构",
+        "键值"
+      ],
+      "paper_ids": [
+        14
+      ],
+      "route_reason": "默认单篇/多篇内容问答",
+      "latency_s": 25.46,
+      "citations": [
+        {
+          "chunk_id": "p14_c0008",
+          "paper_id": 14,
+          "title": "lightrag_2410.05779",
+          "page": 2,
+          "section": "1 INTRODUCTION",
+          "snippet": "hallenges, we propose LightRAG, a model that seamlessly integrates a graph-based text indexing paradigm with a dual-level retrieval framework. This innovative approach enhances the system’s capacity to capture complex inter-dependencies among entities, resulting in more coherent and contextually ric",
+          "support": "partial",
+          "support_reason": "证据仅提到基于图的文本索引范式和双层检索框架，未涉及键值结构、节点/边集合并、低层/高层检索细节及增量更新等具体内容。"
+        },
+        {
+          "chunk_id": "p14_c0021",
+          "paper_id": 14,
+          "title": "lightrag_2410.05779",
+          "page": 4,
+          "section": "1 INTRODUCTION",
+          "snippet": "the raw text _Di_ . This process effectively reduces the overhead associated with graph operations on _D_ ˆ by minimizing the graph’s size, leading to more efficient data processing. \n\nOur LightRAG offers two advantages through its graph-based text indexing paradigm. _First_ , **Comprehensive Inform",
+          "support": "partial",
+          "support_reason": "证据提到基于图的文本索引范式及其优势，但未涉及键值结构、节点/边集合并、双层检索具体内容及增量更新等。"
+        },
+        {
+          "chunk_id": "p14_c0023",
+          "paper_id": 14,
+          "title": "lightrag_2410.05779",
+          "page": 4,
+          "section": "1 INTRODUCTION",
+          "snippet": "up> ). Subsequently, LightRAGcombines the new graph data with the original by taking the union of the node sets _V_<sup>ˆ</sup> and _V_<sup>ˆ</sup><sup>_′_</sup> , as well as the edge sets _E_<sup>ˆ</sup> and _E_<sup>ˆ</sup><sup>_′_</sup> . \n\nTwo key objectives guide our approach to fast adaptation ",
+          "support": "partial",
+          "support_reason": "证据仅支持增量更新时取节点集和边集并集合并这一子句，缺少键值结构、双层检索、低层/高层检索等其余内容。"
+        }
+      ],
+      "answer_preview": "根据给定证据，LightRAG 采用基于图的文本索引范式来表示数据：它从原始文本构建图结构，并从中派生键值（key-value）数据结构用于检索 [1][2]。具体而言，它通过节点集 V̂ 与边集 Ê 表示图数据，并在增量更新时将新图与原有图取节点集和边集的并集来合并 [3]。二次检索证据进一步显示，LightRAG 采用双层检索策略：低层检索聚焦于特定实体及其关系的精确信息，高层检索涵盖更广泛的主题和概念 [1]。此外，LightRAG 利用全面的知识图谱促进快速且相关的文档检索，其无缝增量更新能力确保系统对新信息保持时效性和响应性 [1]。不过，关于节点和边具体对应哪些实体或关系类型，证据不足，需要进一步核实。",
+      "checks": {
+        "strategy": true,
+        "page": true,
+        "keyword": true,
+        "paper_coverage": true
+      },
+      "citation_support": [
+        {
+          "index": 1,
+          "score": 0.024,
+          "supported": false
+        },
+        {
+          "index": 2,
+          "score": 0.026,
+          "supported": false
+        },
+        {
+          "index": 3,
+          "score": 0.065,
+          "supported": false
+        }
+      ],
+      "citation_support_rate": 0.5,
+      "claim_support_rate": 0.4,
+      "claims": [
+        {
+          "claim": "根据给定证据，LightRAG 采用基于图的文本索引范式来表示数据：它从原始文本构建图结构，并从中派生键值（key-value）数据结构用于检索 [1][2]。",
+          "citations": [
+            1,
+            2
+          ],
+          "support": "partial",
+          "reason": "引用只支持部分内容"
+        },
+        {
+          "claim": "具体而言，它通过节点集 V̂ 与边集 Ê 表示图数据，并在增量更新时将新图与原有图取节点集和边集的并集来合并 [3]。",
+          "citations": [
+            3
+          ],
+          "support": "partial",
+          "reason": "引用只支持部分内容"
+        },
+        {
+          "claim": "二次检索证据进一步显示，LightRAG 采用双层检索策略：低层检索聚焦于特定实体及其关系的精确信息，高层检索涵盖更广泛的主题和概念 [1]。",
+          "citations": [
+            1
+          ],
+          "support": "partial",
+          "reason": "引用只支持部分内容"
+        },
+        {
+          "claim": "此外，LightRAG 利用全面的知识图谱促进快速且相关的文档检索，其无缝增量更新能力确保系统对新信息保持时效性和响应性 [1]。",
+          "citations": [
+            1
+          ],
+          "support": "partial",
+          "reason": "引用只支持部分内容"
+        },
+        {
+          "claim": "不过，关于节点和边具体对应哪些实体或关系类型，证据不足，需要进一步核实。",
+          "citations": [],
+          "support": "uncited",
+          "reason": "该句没有引用"
+        }
+      ],
+      "answer_suppressed": false,
+      "citation_support_threshold": 0.35,
+      "passed": true
+    },
+    {
+      "id": "p21",
+      "paper_keys": [
+        "lightrag_2410.05779"
+      ],
+      "question": "LightRAG 解决现有 RAG 的什么问题？",
+      "strategy": "single",
+      "language": "zh",
+      "pages": [],
+      "keywords": [
+        "扁平数据",
+        "上下文"
+      ],
+      "paper_ids": [
+        14
+      ],
+      "route_reason": "默认单篇/多篇内容问答",
+      "latency_s": 26.21,
+      "citations": [
+        {
+          "chunk_id": "p14_c0001",
+          "paper_id": 14,
+          "title": "lightrag_2410.05779",
+          "page": 1,
+          "section": "ABSTRACT",
+          "snippet": "Retrieval-Augmented Generation (RAG) systems enhance large language models (LLMs) by integrating external knowledge sources, enabling more accurate and contextually relevant responses tailored to user needs. However, existing RAG systems have significant limitations, including reliance on flat data ",
+          "support": "partial",
+          "support_reason": "证据仅提到现有RAG依赖扁平数据表示，支持第(1)点的一部分，但未提及答案碎片化，也未涉及第(2)点、双层检索或增量更新。"
+        },
+        {
+          "chunk_id": "p14_c0068",
+          "paper_id": 14,
+          "title": "lightrag_2410.05779",
+          "page": 10,
+          "section": "5 RELATED WORK",
+          "snippet": "h structures for knowledge representation, two key limitations persist. First, these approaches often lack the capability for dynamic updates and expansions of the knowledge graph, making it difficult to incorporate new information effectively. In contrast, our proposed model, LightRAG, addresses th",
+          "support": "partial",
+          "support_reason": "证据明确支持第(2)点（图结构方法缺乏动态更新与扩展能力），但未涉及第(1)点、双层检索或增量更新算法。"
+        },
+        {
+          "chunk_id": "p14_c0010",
+          "paper_id": 14,
+          "title": "lightrag_2410.05779",
+          "page": 2,
+          "section": "1 INTRODUCTION",
+          "snippet": "a nuanced understanding of relationships and enabling coherent, contextually rich responses. \n\n- **Methodologies** . To enable an efficient and adaptive RAG system, we propose LightRAG, which integrates a dual-level retrieval paradigm with graph-enhanced text indexing. This approach captures both lo",
+          "support": "partial",
+          "support_reason": "证据提到LightRAG整合双层检索范式与图增强文本索引，支持方法部分，但未涉及扁平数据表示、动态更新或增量更新算法。"
+        }
+      ],
+      "answer_preview": "根据论文证据，LightRAG 主要针对现有 RAG 系统的以下问题：(1) 依赖扁平数据表示（flat data representations），导致答案碎片化 [1]；(2) 现有基于图结构的方法往往缺乏知识图谱的动态更新与扩展能力，难以有效纳入新信息 [2]。LightRAG 通过将图结构引入文本索引与检索、采用双层检索范式（dual-level retrieval）、以及增量更新算法来应对这些问题 [1][3][2]。关于“上下文感知不足”以及“对每个生成的社区进行暴力搜索导致大规模查询下效率低下”这两点，现有证据不足，需要进一步核实。",
+      "checks": {
+        "strategy": true,
+        "page": true,
+        "keyword": true,
+        "paper_coverage": true
+      },
+      "citation_support": [
+        {
+          "index": 1,
+          "score": 0.111,
+          "supported": false
+        },
+        {
+          "index": 2,
+          "score": 0.026,
+          "supported": false
+        },
+        {
+          "index": 3,
+          "score": 0.105,
+          "supported": false
+        }
+      ],
+      "citation_support_rate": 0.5,
+      "claim_support_rate": 0.333,
+      "claims": [
+        {
+          "claim": "根据论文证据，LightRAG 主要针对现有 RAG 系统的以下问题：(1) 依赖扁平数据表示（flat data representations），导致答案碎片化 [1]；(2) 现有基于图结构的方法往往缺乏知识图谱的动态更新与扩展能力，难以有效纳入新信息 [2]。",
+          "citations": [
+            1,
+            2
+          ],
+          "support": "partial",
+          "reason": "引用只支持部分内容"
+        },
+        {
+          "claim": "LightRAG 通过将图结构引入文本索引与检索、采用双层检索范式（dual-level retrieval）、以及增量更新算法来应对这些问题 [1][3][2]。",
+          "citations": [
+            1,
+            3,
+            2
+          ],
+          "support": "partial",
+          "reason": "引用只支持部分内容"
+        },
+        {
+          "claim": "关于“上下文感知不足”以及“对每个生成的社区进行暴力搜索导致大规模查询下效率低下”这两点，现有证据不足，需要进一步核实。",
+          "citations": [],
+          "support": "uncited",
+          "reason": "该句没有引用"
+        }
+      ],
+      "answer_suppressed": false,
+      "citation_support_threshold": 0.35,
+      "passed": true
+    },
+    {
+      "id": "p22",
+      "paper_keys": [
+        "agentic_rag_2501.09136"
+      ],
+      "question": "Agentic RAG 的核心特点有哪些？",
+      "strategy": "single",
+      "language": "zh",
+      "pages": [],
+      "keywords": [
+        "自主",
+        "推理"
+      ],
+      "paper_ids": [
+        11
+      ],
+      "route_reason": "默认单篇/多篇内容问答",
+      "latency_s": 17.73,
+      "citations": [
+        {
+          "chunk_id": "p11_c0028",
+          "paper_id": 11,
+          "title": "Agentic Retrieval-Augmented Generation: A Survey on Agentic RAG",
+          "page": 7,
+          "section": "Body",
+          "snippet": "<!-- Start of picture text -->\nUser Question Graph<br>Extraction<br>Retrieval<br>Prompt<br>Augmentation Knowledge<br>Answer Graph<br>Question +<br>Vector<br>Context<br>Database<br>Retrieved<br>Content<br><!-- End of picture text -->\n\nFigure 6: Overview of Graph RAG \n\nKey characteristics of Agentic R",
+          "support": "partial",
+          "support_reason": "证据仅含Graph RAG图注和'Key characteristics of Agentic R'片段，未明确陈述自主决策、迭代优化、工作流优化等核心特点，也未支持超越传统RAG或降低延迟的结论。"
+        },
+        {
+          "chunk_id": "p11_c0037",
+          "paper_id": 11,
+          "title": "Agentic Retrieval-Augmented Generation: A Survey on Agentic RAG",
+          "page": 9,
+          "section": "Body",
+          "snippet": "particular, Agentic RAG systems reduce latency through optimized workflows and refine outputs iteratively, tackling the very challenges that have historically hindered traditional RAG’s scalability and effectiveness. \n\n## **3 Core Principles and Background of Agentic Intelligence** \n\nAgentic Intelli",
+          "support": "partial",
+          "support_reason": "证据明确支持'通过优化工作流降低延迟、迭代改进输出'，但未涵盖自主决策、迭代优化反馈循环、动态编排任务及超越传统RAG等其余子句。"
+        }
+      ],
+      "answer_preview": "根据论文证据，Agentic RAG 的核心特点包括：1）自主决策：智能体根据查询复杂度独立评估和管理检索策略；2）迭代优化：引入反馈循环以提升检索准确性和回答相关性；3）工作流优化：动态编排任务，从而在实时应用中提升效率 [1]。此外，论文指出 Agentic RAG 通过引入具备动态决策、迭代推理和协作工作流的自主智能体，超越传统 RAG 静态、被动的特性，表现出更强的适应性和精确性 [2]；并通过优化工作流降低延迟、迭代改进输出 [2]。二次检索证据显示，智能体具备感知、推理和自主任务执行能力，并利用反思、规划、工具使用和多智能体协作等设计模式动态分解任务、调整策略；这些能力与 RAG 直接相关，因为检索和推理决策本身可以被视为智能体任务，且这些模式通过提示链、路由、并行化、编排者—工作者模型和评估者—优化者循环等工作流模式在系统层面进行协调。关于 Agentic RAG 在实时应用中提升效率的具体程度，证据不足，需要进一步核实。",
+      "checks": {
+        "strategy": true,
+        "page": true,
+        "keyword": true,
+        "paper_coverage": true
+      },
+      "citation_support": [
+        {
+          "index": 1,
+          "score": 0.071,
+          "supported": false
+        },
+        {
+          "index": 2,
+          "score": 0.094,
+          "supported": false
+        }
+      ],
+      "citation_support_rate": 0.5,
+      "claim_support_rate": 0.25,
+      "claims": [
+        {
+          "claim": "根据论文证据，Agentic RAG 的核心特点包括：1）自主决策：智能体根据查询复杂度独立评估和管理检索策略；2）迭代优化：引入反馈循环以提升检索准确性和回答相关性；3）工作流优化：动态编排任务，从而在实时应用中提升效率 [1]。",
+          "citations": [
+            1
+          ],
+          "support": "partial",
+          "reason": "引用只支持部分内容"
+        },
+        {
+          "claim": "此外，论文指出 Agentic RAG 通过引入具备动态决策、迭代推理和协作工作流的自主智能体，超越传统 RAG 静态、被动的特性，表现出更强的适应性和精确性 [2]；并通过优化工作流降低延迟、迭代改进输出 [2]。",
+          "citations": [
+            2
+          ],
+          "support": "partial",
+          "reason": "引用只支持部分内容"
+        },
+        {
+          "claim": "二次检索证据显示，智能体具备感知、推理和自主任务执行能力，并利用反思、规划、工具使用和多智能体协作等设计模式动态分解任务、调整策略；这些能力与 RAG 直接相关，因为检索和推理决策本身可以被视为智能体任务，且这些模式通过提示链、路由、并行化、编排者—工作者模型和评估者—优化者循环等工作流模式在系统层面进行协调。",
+          "citations": [],
+          "support": "uncited",
+          "reason": "该句没有引用"
+        },
+        {
+          "claim": "关于 Agentic RAG 在实时应用中提升效率的具体程度，证据不足，需要进一步核实。",
+          "citations": [],
+          "support": "uncited",
+          "reason": "该句没有引用"
+        }
+      ],
+      "answer_suppressed": false,
+      "citation_support_threshold": 0.35,
+      "passed": true
+    },
+    {
+      "id": "p23",
+      "paper_keys": [
+        "agentic_rag_2501.09136"
+      ],
+      "question": "Agentic RAG 使用哪些设计模式？",
+      "strategy": "single",
+      "language": "zh",
+      "pages": [],
+      "keywords": [
+        "reflection",
+        "planning",
+        "tool use"
+      ],
+      "paper_ids": [
+        11
+      ],
+      "route_reason": "默认单篇/多篇内容问答",
+      "latency_s": 17.96,
+      "citations": [
+        {
+          "chunk_id": "p11_c0002",
+          "paper_id": 11,
+          "title": "Agentic Retrieval-Augmented Generation: A Survey on Agentic RAG",
+          "page": 1,
+          "section": "Body",
+          "snippet": "these limitations by embedding autonomous AI agents into the RAG pipeline. These agents leverage agentic design patterns reflection, planning, tool use, and multi-agent collaboration to dynamically manage retrieval strategies, iteratively refine contextual understanding, and adapt workflows through ",
+          "support": "partial",
+          "support_reason": "证据明确支持反思、规划、工具使用和多智能体协作四种设计模式，但未提及提示链、路由、并行化、编排者-工作者和评估者-优化者等工作流模式。"
+        },
+        {
+          "chunk_id": "p11_c0014",
+          "paper_id": 11,
+          "title": "Agentic Retrieval-Augmented Generation: A Survey on Agentic RAG",
+          "page": 3,
+          "section": "Body",
+          "snippet": "d RAG Corrective<br>Agentic Workflow Pattern<br>Modular RAG Adaptive<br>Prompt Chaining Routing AgenticRAGTaxonomy<br>Agent-G<br>Graph RAG Orchestrator-workers Parallelization GeAR<br>Evaluator-Optimizer Agentic DocumentWorflow<br><!-- End of picture text -->\n\nFigure 1: An Overview of Agentic RAG \n\n",
+          "support": "partial",
+          "support_reason": "证据以图示文字列出提示链、路由、并行化、编排者-工作者和评估者-优化者等工作流模式，但未陈述反思、规划、工具使用和多智能体协作等设计模式。"
+        }
+      ],
+      "answer_preview": "根据证据，Agentic RAG 使用的设计模式包括反思（reflection）、规划（planning）、工具使用（tool use）和多智能体协作（multi-agent collaboration）[1]。这些模式还通过工作流模式进行组织，包括提示链（Prompt Chaining）、路由（Routing）、并行化（Parallelization）、编排者-工作者（Orchestrator-workers）和评估者-优化者（Evaluator-Optimizer）[2]。",
+      "checks": {
+        "strategy": true,
+        "page": true,
+        "keyword": true,
+        "paper_coverage": true
+      },
+      "citation_support": [
+        {
+          "index": 1,
+          "score": 0.257,
+          "supported": true
+        },
+        {
+          "index": 2,
+          "score": 0.323,
+          "supported": true
+        }
+      ],
+      "citation_support_rate": 0.5,
+      "claim_support_rate": 0.5,
+      "claims": [
+        {
+          "claim": "根据证据，Agentic RAG 使用的设计模式包括反思（reflection）、规划（planning）、工具使用（tool use）和多智能体协作（multi-agent collaboration）[1]。",
+          "citations": [
+            1
+          ],
+          "support": "partial",
+          "reason": "引用只支持部分内容"
+        },
+        {
+          "claim": "这些模式还通过工作流模式进行组织，包括提示链（Prompt Chaining）、路由（Routing）、并行化（Parallelization）、编排者-工作者（Orchestrator-workers）和评估者-优化者（Evaluator-Optimizer）[2]。",
+          "citations": [
+            2
+          ],
+          "support": "partial",
+          "reason": "引用只支持部分内容"
+        }
+      ],
+      "answer_suppressed": false,
+      "citation_support_threshold": 0.35,
+      "passed": true
+    },
+    {
+      "id": "p24",
+      "paper_keys": [
+        "agentic_rag_2501.09136"
+      ],
+      "question": "Agentic RAG 的主要优势是什么？",
+      "strategy": "single",
+      "language": "zh",
+      "pages": [],
+      "keywords": [
+        "自主决策",
+        "多步推理"
+      ],
+      "paper_ids": [
+        11
+      ],
+      "route_reason": "默认单篇/多篇内容问答",
+      "latency_s": 30.25,
+      "citations": [
+        {
+          "chunk_id": "p11_c0154",
+          "paper_id": 11,
+          "title": "Agentic Retrieval-Augmented Generation: A Survey on Agentic RAG",
+          "page": 36,
+          "section": "Body",
+          "snippet": "ured view of a fragmented landscape. The analysis demonstrates that no single architecture is universally optimal; effectiveness depends on aligning complexity with task requirements. Agentic RAG offers clear advantages for complex, knowledgeintensive tasks in healthcare, finance, education, and ent",
+          "support": "partial",
+          "support_reason": "证据仅支持复杂知识密集型任务（医疗、金融、教育）有明显优势，未提及企业流程、前提条件及优势列表。"
+        },
+        {
+          "chunk_id": "p11_c0013",
+          "paper_id": 11,
+          "title": "Agentic Retrieval-Augmented Generation: A Survey on Agentic RAG",
+          "page": 3,
+          "section": "Body",
+          "snippet": "<!-- Start of picture text -->\nFramework and Stack<br>Langraph Llamalndex AG2 (AutoGen) Semantic Kernel Crew AI Amazon Bedrock Open AI Swarm<br>RAG Challenges & Limitations Agentic RAG Agentic RAG Benefits & Advantages<br>Enhanced Decision-Making<br>Hallucinations & Inaccuracies Agent Multi-Step Rea",
+          "support": "partial",
+          "support_reason": "证据仅列出增强决策、多步推理等优势标题，未涉及前提条件、应用层面及自主决策等特征。"
+        },
+        {
+          "chunk_id": "p11_c0119",
+          "paper_id": 11,
+          "title": "Agentic Retrieval-Augmented Generation: A Survey on Agentic RAG",
+          "page": 30,
+          "section": "Body",
+          "snippet": "dynamically retrieved advertiser data, historical campaign performance, and audience demographics to generate detailed ad proposals, significantly boosting operational efficiency. \n\n### **Key Benefits:** \n\n- **Improved Response Quality** : Personalized and context-aware replies enhance user engageme",
+          "support": "partial",
+          "support_reason": "证据仅支持提升响应质量和运营效率，未涉及实时适应性、多模态等其余内容。"
+        },
+        {
+          "chunk_id": "p11_c0126",
+          "paper_id": 11,
+          "title": "Agentic Retrieval-Augmented Generation: A Survey on Agentic RAG",
+          "page": 31,
+          "section": "Body",
+          "snippet": "rends in eco-friendly products?” generates a detailed report enriched with customer preferences, competitor analysis, and multimedia content. \n\n### **Key Benefits:** \n\n- **Multi-Modal Capabilities** : Integrates text, image, and video data for comprehensive outputs. \n\n- **Enhanced Creativity** : Gen",
+          "support": "partial",
+          "support_reason": "证据仅支持多模态能力和增强创造力，未涉及动态适应性及claim其余部分。"
+        }
+      ],
+      "answer_preview": "根据论文证据，Agentic RAG 对复杂、知识密集型任务（如医疗、金融、教育、企业流程）具有明显优势，但需以高质量检索基础、受约束的自主性和谨慎编排为前提 [1]；其优势包括增强决策、多步推理与迭代优化、实时数据集成、自适应学习与上下文感知，以及提高准确性并减少幻觉 [2]；在应用层面体现为提升响应质量、运营效率和实时适应性 [3]，以及多模态能力、增强创造力和动态适应性 [4]。关于“自主决策（按查询复杂度独立评估和管理检索策略）、迭代优化（通过反馈循环提升检索准确性和回答相关性）和工作流优化（动态编排任务以提升实时效率）”作为关键特征的表述 ，证据不足，需要进一步核实。二次检索补充证据显示，Agentic RAG 在医疗场景中可提升准确性（基于最新证据和患者特定参数）[二次检索]，在法律合同审查中可识别风险并提升效率 [二次检索]，但上述补充证据未使用原有 [n] 标记，相关结论仍需进一步核实。",
+      "checks": {
+        "strategy": true,
+        "page": true,
+        "keyword": true,
+        "paper_coverage": true
+      },
+      "citation_support": [
+        {
+          "index": 1,
+          "score": 0.051,
+          "supported": false
+        },
+        {
+          "index": 2,
+          "score": 0.057,
+          "supported": false
+        },
+        {
+          "index": 3,
+          "score": 0.0,
+          "supported": false
+        },
+        {
+          "index": 4,
+          "score": 0.0,
+          "supported": false
+        }
+      ],
+      "citation_support_rate": 0.4,
+      "claim_support_rate": 0.167,
+      "claims": [
+        {
+          "claim": "根据论文证据，Agentic RAG 对复杂、知识密集型任务（如医疗、金融、教育、企业流程）具有明显优势，但需以高质量检索基础、受约束的自主性和谨慎编排为前提 [1]；其优势包括增强决策、多步推理与迭代优化、实时数据集成、自适应学习与上下文感知，以及提高准确性并减少幻觉 [2]；在应用层面体现为提升响应质量、运营效率和实时适应性 [3]，以及多模态能力、增强创造力和动态适应性 [4]。",
+          "citations": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "support": "partial",
+          "reason": "引用只支持部分内容"
+        },
+        {
+          "claim": "关于“自主决策（按查询复杂度独立评估和管理检索策略）、迭代优化（通过反馈循环提升检索准确性和回答相关性）和工作流优化（动态编排任务以提升实时效率）”作为关键特征的表述 ，证据不足，需要进一步核实。",
+          "citations": [],
+          "support": "uncited",
+          "reason": "该句没有引用"
+        },
+        {
+          "claim": "二次检索补充证据显示，Agentic RAG 在医疗场景中可提升准确性（基于最新证据和患者特定参数）[二次检索]，在法律合同审查中可识别风险并提升效率 [二次检索]，但上述补充证据未使用原有 [n] 标记，相关结论仍需进一步核实。",
+          "citations": [],
+          "support": "uncited",
+          "reason": "该句没有引用"
+        }
+      ],
+      "answer_suppressed": false,
+      "citation_support_threshold": 0.35,
+      "passed": true
+    },
+    {
+      "id": "p25",
+      "paper_keys": [
+        "replug_2212.10496"
+      ],
+      "question": "描述 HyDE 的核心流程",
+      "strategy": "single",
+      "language": "zh",
+      "pages": [],
+      "keywords": [
+        "假设文档",
+        "编码"
+      ],
+      "paper_ids": [
+        20
+      ],
+      "route_reason": "默认单篇/多篇内容问答",
+      "latency_s": 21.27,
+      "citations": [
+        {
+          "chunk_id": "p20_c0001",
+          "paper_id": 20,
+          "title": "replug_2212.10496",
+          "page": 1,
+          "section": "Body",
+          "snippet": "stead, we propose to pivot through Hypothetical Document <u>Embeddings (HyDE). Given a query, HyDE first</u> zero-shot instructs an instruction-following language model (e.g. InstructGPT) to generate a _hypothetical_ document. The document captures relevance patterns but is unreal and may contain fa",
+          "support": "partial",
+          "support_reason": "证据仅支持“给定查询后零样本生成假设文档，捕捉相关性模式但非真实、可能含虚假细节”这一子句，缺少编码器编码、邻域检索、稠密瓶颈过滤等其余步骤。"
+        },
+        {
+          "chunk_id": "p20_c0023",
+          "paper_id": 20,
+          "title": "replug_2212.10496",
+          "page": 4,
+          "section": "Body",
+          "snippet": "esis, \n\n<!-- Start of picture text -->\nN<br>1<br>v ˆ qij = N + 1 [ � f ( d ˆ k ) + f ( qij )] (8)<br>k =1<br><!-- End of picture text -->\n\nInner product is computed between **v** ˆ _qij_ and the set of all document vectors _{f_ ( _d_ ) _|d ∈ Di}_ . The most similar documents are retrieved. Here the ",
+          "support": "partial",
+          "support_reason": "证据仅说明内积在假设向量与文档向量间计算并检索最相似文档，支持检索子句，但缺少生成假设文档、编码器过滤细节等部分。"
+        }
+      ],
+      "answer_preview": "证据不足，暂不展示生成答案。\n\n引用支持率：0.33；要求阈值：0.35。\n建议缩小问题范围，或换一篇论文/补充更具体的章节。",
+      "checks": {
+        "strategy": true,
+        "page": true,
+        "keyword": false,
+        "paper_coverage": true
+      },
+      "citation_support": [
+        {
+          "index": 1,
+          "score": 0.0,
+          "supported": false
+        },
+        {
+          "index": 2,
+          "score": 0.0,
+          "supported": false
+        }
+      ],
+      "citation_support_rate": 0.333,
+      "claim_support_rate": null,
+      "claims": [],
+      "answer_suppressed": true,
+      "citation_support_threshold": 0.35,
+      "passed": false
+    },
+    {
+      "id": "p26",
+      "paper_keys": [
+        "replug_2212.10496"
+      ],
+      "question": "HyDE 如何生成检索向量？",
+      "strategy": "single",
+      "language": "zh",
+      "pages": [],
+      "keywords": [
+        "假设文档",
+        "编码"
+      ],
+      "paper_ids": [
+        20
+      ],
+      "route_reason": "默认单篇/多篇内容问答",
+      "latency_s": 25.57,
+      "citations": [
+        {
+          "chunk_id": "p20_c0001",
+          "paper_id": 20,
+          "title": "replug_2212.10496",
+          "page": 1,
+          "section": "Body",
+          "snippet": "stead, we propose to pivot through Hypothetical Document <u>Embeddings (HyDE). Given a query, HyDE first</u> zero-shot instructs an instruction-following language model (e.g. InstructGPT) to generate a _hypothetical_ document. The document captures relevance patterns but is unreal and may contain fa",
+          "support": "partial",
+          "support_reason": "证据支持 HyDE 首先用指令跟随语言模型生成假设文档，但未提及无监督对比学习编码器编码及平均公式，缺少其他子句。"
+        },
+        {
+          "chunk_id": "p20_c0023",
+          "paper_id": 20,
+          "title": "replug_2212.10496",
+          "page": 4,
+          "section": "Body",
+          "snippet": "esis, \n\n<!-- Start of picture text -->\nN<br>1<br>v ˆ qij = N + 1 [ � f ( d ˆ k ) + f ( qij )] (8)<br>k =1<br><!-- End of picture text -->\n\nInner product is computed between **v** ˆ _qij_ and the set of all document vectors _{f_ ( _d_ ) _|d ∈ Di}_ . The most similar documents are retrieved. Here the ",
+          "support": "partial",
+          "support_reason": "证据给出查询向量平均公式，支持公式部分，但未涉及 HyDE 首先生成假设文档及编码器描述，缺少其他子句。"
+        }
+      ],
+      "answer_preview": "证据不足，暂不展示生成答案。\n\n引用支持率：0.33；要求阈值：0.35。\n建议缩小问题范围，或换一篇论文/补充更具体的章节。",
+      "checks": {
+        "strategy": true,
+        "page": true,
+        "keyword": false,
+        "paper_coverage": true
+      },
+      "citation_support": [
+        {
+          "index": 1,
+          "score": 0.0,
+          "supported": false
+        },
+        {
+          "index": 2,
+          "score": 0.0,
+          "supported": false
+        }
+      ],
+      "citation_support_rate": 0.333,
+      "claim_support_rate": null,
+      "claims": [],
+      "answer_suppressed": true,
+      "citation_support_threshold": 0.35,
+      "passed": false
+    },
+    {
+      "id": "p27",
+      "paper_keys": [
+        "replug_2212.10496"
+      ],
+      "question": "HyDE 在哪些任务上评估？",
+      "strategy": "single",
+      "language": "zh",
+      "pages": [],
+      "keywords": [
+        "web search",
+        "QA"
+      ],
+      "paper_ids": [
+        20
+      ],
+      "route_reason": "默认单篇/多篇内容问答",
+      "latency_s": 5.76,
+      "citations": [],
+      "answer_preview": "证据不足，暂不展示生成答案。\n\n引用支持率：0.00；要求阈值：0.35。\n建议缩小问题范围，或换一篇论文/补充更具体的章节。",
+      "checks": {
+        "strategy": true,
+        "page": true,
+        "keyword": false,
+        "paper_coverage": true
+      },
+      "citation_support": [],
+      "citation_support_rate": 0.0,
+      "claim_support_rate": null,
+      "claims": [],
+      "answer_suppressed": true,
+      "citation_support_threshold": 0.35,
+      "passed": false
+    },
+    {
+      "id": "p28",
+      "paper_keys": [
+        "rag_long_context_2407.01219"
+      ],
+      "question": "这篇论文研究什么？",
+      "strategy": "single",
+      "language": "zh",
+      "pages": [],
+      "keywords": [
+        "检索",
+        "RAG"
+      ],
+      "paper_ids": [
+        17
+      ],
+      "route_reason": "默认单篇/多篇内容问答",
+      "latency_s": 5.85,
+      "citations": [],
+      "answer_preview": "证据不足，暂不展示生成答案。\n\n引用支持率：0.00；要求阈值：0.35。\n建议缩小问题范围，或换一篇论文/补充更具体的章节。",
+      "checks": {
+        "strategy": true,
+        "page": true,
+        "keyword": false,
+        "paper_coverage": true
+      },
+      "citation_support": [],
+      "citation_support_rate": 0.0,
+      "claim_support_rate": null,
+      "claims": [],
+      "answer_suppressed": true,
+      "citation_support_threshold": 0.35,
+      "passed": false
+    },
+    {
+      "id": "p29",
+      "paper_keys": [
+        "rag_long_context_2407.01219"
+      ],
+      "question": "论文建议如何部署 RAG？",
+      "strategy": "single",
+      "language": "zh",
+      "pages": [],
+      "keywords": [
+        "性能",
+        "效率"
+      ],
+      "paper_ids": [
+        17
+      ],
+      "route_reason": "默认单篇/多篇内容问答",
+      "latency_s": 6.39,
+      "citations": [],
+      "answer_preview": "证据不足，暂不展示生成答案。\n\n引用支持率：0.00；要求阈值：0.35。\n建议缩小问题范围，或换一篇论文/补充更具体的章节。",
+      "checks": {
+        "strategy": true,
+        "page": true,
+        "keyword": false,
+        "paper_coverage": true
+      },
+      "citation_support": [],
+      "citation_support_rate": 0.0,
+      "claim_support_rate": null,
+      "claims": [],
+      "answer_suppressed": true,
+      "citation_support_threshold": 0.35,
+      "passed": false
+    },
+    {
+      "id": "p30",
+      "paper_keys": [
+        "rag_long_context_2407.01219"
+      ],
+      "question": "多模态检索有什么作用？",
+      "strategy": "single",
+      "language": "zh",
+      "pages": [],
+      "keywords": [
+        "多模态",
+        "视觉"
+      ],
+      "paper_ids": [
+        17
+      ],
+      "route_reason": "默认单篇/多篇内容问答",
+      "latency_s": 13.18,
+      "citations": [
+        {
+          "chunk_id": "p17_c0074",
+          "paper_id": 17,
+          "title": "rag_long_context_2407.01219",
+          "page": 13,
+          "section": "Body",
+          "snippet": "<!-- Start of picture text -->\nText2image Retrieval<br>Retrieval<br>A dog is sleeping<br>Retrieval<br>A dog is sleeping<br>Image2text Retrieval<br>Retrieval<br>A dog is sleeping.<br>A dog is drinking water<br>Retrieval User Query<br>Low Similarity<br>High Similarity<br>Image Generation Model<br>A do",
+          "support": "partial",
+          "support_reason": "证据列出Text2image Retrieval、Image2text Retrieval、Low/High Similarity、Image Generation Model等要素，支持部分流程要素，但缺少完整条件分支描述。"
+        }
+      ],
+      "answer_preview": "证据不足，暂不展示生成答案。\n\n引用支持率：0.17；要求阈值：0.35。\n建议缩小问题范围，或换一篇论文/补充更具体的章节。",
+      "checks": {
+        "strategy": true,
+        "page": true,
+        "keyword": false,
+        "paper_coverage": true
+      },
+      "citation_support": [
+        {
+          "index": 1,
+          "score": 0.0,
+          "supported": false
+        }
+      ],
+      "citation_support_rate": 0.167,
+      "claim_support_rate": null,
+      "claims": [],
+      "answer_suppressed": true,
+      "citation_support_threshold": 0.35,
+      "passed": false
+    }
+  ]
+}

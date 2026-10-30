@@ -1,0 +1,241 @@
+{
+  "threshold": 0.35,
+  "total_cases": 30,
+  "passed": 15,
+  "citation_support_rate": 0.37,
+  "claim_support_rate": 0.387,
+  "suppressed": 14,
+  "suppression_rate": 0.467,
+  "matched_human_rows": 25,
+  "exact_agreement": 0.64,
+  "weighted_agreement": 0.82,
+  "false_suppression_candidates": [],
+  "note": "误杀是代理指标：只检查被抑制且该 case 的已有人工引用标签是否全为 yes；不是完整答案级人工评估。",
+  "matches": [
+    {
+      "case_id": "p01",
+      "citation_index": 1,
+      "llm": "yes",
+      "human": "yes",
+      "match": true,
+      "llm_score": 1.0,
+      "human_score": 1.0
+    },
+    {
+      "case_id": "p01",
+      "citation_index": 2,
+      "llm": "yes",
+      "human": "yes",
+      "match": true,
+      "llm_score": 1.0,
+      "human_score": 1.0
+    },
+    {
+      "case_id": "p02",
+      "citation_index": 1,
+      "llm": "partial",
+      "human": "no",
+      "match": false,
+      "llm_score": 0.5,
+      "human_score": 0.0
+    },
+    {
+      "case_id": "p02",
+      "citation_index": 2,
+      "llm": "partial",
+      "human": "partial",
+      "match": true,
+      "llm_score": 0.5,
+      "human_score": 0.5
+    },
+    {
+      "case_id": "p03",
+      "citation_index": 1,
+      "llm": "partial",
+      "human": "partial",
+      "match": true,
+      "llm_score": 0.5,
+      "human_score": 0.5
+    },
+    {
+      "case_id": "p03",
+      "citation_index": 2,
+      "llm": "yes",
+      "human": "yes",
+      "match": true,
+      "llm_score": 1.0,
+      "human_score": 1.0
+    },
+    {
+      "case_id": "p03",
+      "citation_index": 3,
+      "llm": "partial",
+      "human": "partial",
+      "match": true,
+      "llm_score": 0.5,
+      "human_score": 0.5
+    },
+    {
+      "case_id": "p03",
+      "citation_index": 4,
+      "llm": "yes",
+      "human": "yes",
+      "match": true,
+      "llm_score": 1.0,
+      "human_score": 1.0
+    },
+    {
+      "case_id": "p04",
+      "citation_index": 1,
+      "llm": "partial",
+      "human": "no",
+      "match": false,
+      "llm_score": 0.5,
+      "human_score": 0.0
+    },
+    {
+      "case_id": "p04",
+      "citation_index": 2,
+      "llm": "partial",
+      "human": "partial",
+      "match": true,
+      "llm_score": 0.5,
+      "human_score": 0.5
+    },
+    {
+      "case_id": "p04",
+      "citation_index": 3,
+      "llm": "partial",
+      "human": "partial",
+      "match": true,
+      "llm_score": 0.5,
+      "human_score": 0.5
+    },
+    {
+      "case_id": "p06",
+      "citation_index": 1,
+      "llm": "partial",
+      "human": "no",
+      "match": false,
+      "llm_score": 0.5,
+      "human_score": 0.0
+    },
+    {
+      "case_id": "p06",
+      "citation_index": 2,
+      "llm": "partial",
+      "human": "yes",
+      "match": false,
+      "llm_score": 0.5,
+      "human_score": 1.0
+    },
+    {
+      "case_id": "p06",
+      "citation_index": 3,
+      "llm": "partial",
+      "human": "partial",
+      "match": true,
+      "llm_score": 0.5,
+      "human_score": 0.5
+    },
+    {
+      "case_id": "p07",
+      "citation_index": 1,
+      "llm": "partial",
+      "human": "partial",
+      "match": true,
+      "llm_score": 0.5,
+      "human_score": 0.5
+    },
+    {
+      "case_id": "p09",
+      "citation_index": 1,
+      "llm": "partial",
+      "human": "partial",
+      "match": true,
+      "llm_score": 0.5,
+      "human_score": 0.5
+    },
+    {
+      "case_id": "p10",
+      "citation_index": 1,
+      "llm": "partial",
+      "human": "partial",
+      "match": true,
+      "llm_score": 0.5,
+      "human_score": 0.5
+    },
+    {
+      "case_id": "p10",
+      "citation_index": 2,
+      "llm": "partial",
+      "human": "yes",
+      "match": false,
+      "llm_score": 0.5,
+      "human_score": 1.0
+    },
+    {
+      "case_id": "p10",
+      "citation_index": 3,
+      "llm": "partial",
+      "human": "yes",
+      "match": false,
+      "llm_score": 0.5,
+      "human_score": 1.0
+    },
+    {
+      "case_id": "p11",
+      "citation_index": 1,
+      "llm": "partial",
+      "human": "partial",
+      "match": true,
+      "llm_score": 0.5,
+      "human_score": 0.5
+    },
+    {
+      "case_id": "p11",
+      "citation_index": 2,
+      "llm": "partial",
+      "human": "yes",
+      "match": false,
+      "llm_score": 0.5,
+      "human_score": 1.0
+    },
+    {
+      "case_id": "p11",
+      "citation_index": 3,
+      "llm": "partial",
+      "human": "yes",
+      "match": false,
+      "llm_score": 0.5,
+      "human_score": 1.0
+    },
+    {
+      "case_id": "p11",
+      "citation_index": 4,
+      "llm": "partial",
+      "human": "no",
+      "match": false,
+      "llm_score": 0.5,
+      "human_score": 0.0
+    },
+    {
+      "case_id": "p12",
+      "citation_index": 1,
+      "llm": "partial",
+      "human": "partial",
+      "match": true,
+      "llm_score": 0.5,
+      "human_score": 0.5
+    },
+    {
+      "case_id": "p12",
+      "citation_index": 2,
+      "llm": "partial",
+      "human": "partial",
+      "match": true,
+      "llm_score": 0.5,
+      "human_score": 0.5
+    }
+  ]
+}

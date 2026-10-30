@@ -1,0 +1,41 @@
+{
+  "dataset_cases": 60,
+  "retrieval_gold_cases": 49,
+  "annotation_cases": 60,
+  "annotation_rows": 120,
+  "answer_accuracy": 0.75,
+  "citation_precision": 0.55,
+  "false_suppression": 0,
+  "false_suppression_rate": 0.0,
+  "suppressed": 14,
+  "suppressed_answerable": 14,
+  "cohen_kappa": 1.0,
+  "recall": {
+    "baseline": {
+      "total": 49,
+      "recall@1": 0.531,
+      "recall@5": 0.898,
+      "recall@10": 0.918,
+      "mrr": 0.662
+    },
+    "rewrite_only": {
+      "total": 49,
+      "recall@1": 0.531,
+      "recall@5": 0.898,
+      "recall@10": 0.918,
+      "mrr": 0.662
+    },
+    "rewrite_section": {
+      "total": 49,
+      "recall@1": 0.49,
+      "recall@5": 0.776,
+      "recall@10": 0.816,
+      "mrr": 0.597
+    }
+  },
+  "settings": {
+    "query_rewrite": false,
+    "section_filter": false,
+    "citation_threshold": 0.35
+  }
+}

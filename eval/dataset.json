@@ -1,0 +1,879 @@
+[
+  {
+    "id": "s01",
+    "paper_keys": [
+      "sample_paper"
+    ],
+    "question": "What is the main goal of the paper?",
+    "strategy": "single",
+    "language": "en",
+    "pages": [
+      1
+    ],
+    "keywords": [
+      "adaptive retrieval",
+      "scientific"
+    ]
+  },
+  {
+    "id": "s02",
+    "paper_keys": [
+      "sample_paper"
+    ],
+    "question": "Which retrieval methods are combined?",
+    "strategy": "single",
+    "language": "en",
+    "pages": [
+      1
+    ],
+    "keywords": [
+      "BM25",
+      "dense"
+    ]
+  },
+  {
+    "id": "s03",
+    "paper_keys": [
+      "sample_paper"
+    ],
+    "question": "What does RRF do?",
+    "strategy": "single",
+    "language": "en",
+    "pages": [
+      1
+    ],
+    "keywords": [
+      "rank",
+      "fusion"
+    ]
+  },
+  {
+    "id": "s04",
+    "paper_keys": [
+      "sample_paper"
+    ],
+    "question": "What were the results on ten papers?",
+    "strategy": "single",
+    "language": "en",
+    "pages": [
+      2
+    ],
+    "keywords": [
+      "top three",
+      "ten papers"
+    ]
+  },
+  {
+    "id": "s05",
+    "paper_keys": [
+      "bilingual"
+    ],
+    "question": "这篇论文提到的主要失败模式是什么？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [
+      1
+    ],
+    "keywords": [
+      "双栏",
+      "公式"
+    ]
+  },
+  {
+    "id": "s06",
+    "paper_keys": [
+      "sample_paper"
+    ],
+    "question": "What does the cross-encoder do?",
+    "strategy": "single",
+    "language": "en",
+    "pages": [
+      1
+    ],
+    "keywords": [
+      "rerank"
+    ]
+  },
+  {
+    "id": "s07",
+    "paper_keys": [
+      "bilingual"
+    ],
+    "question": "这篇论文研究什么问题？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [
+      1
+    ],
+    "keywords": [
+      "检索增强",
+      "RAG"
+    ]
+  },
+  {
+    "id": "s08",
+    "paper_keys": [
+      "bilingual"
+    ],
+    "question": "系统的方法分为哪几个阶段？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [
+      1
+    ],
+    "keywords": [
+      "三",
+      "BM25"
+    ]
+  },
+  {
+    "id": "s09",
+    "paper_keys": [
+      "bilingual"
+    ],
+    "question": "主要失败模式是什么？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [
+      1
+    ],
+    "keywords": [
+      "双栏",
+      "公式"
+    ]
+  },
+  {
+    "id": "s10",
+    "paper_keys": [
+      "sample_paper"
+    ],
+    "question": "What is the paper title?",
+    "strategy": "single",
+    "language": "en",
+    "pages": [
+      1
+    ],
+    "keywords": [
+      "A Small Paper"
+    ]
+  },
+  {
+    "id": "c01",
+    "paper_keys": [
+      "sample_paper",
+      "bilingual"
+    ],
+    "question": "比较这两篇论文的方法和结果",
+    "strategy": "compare",
+    "language": "zh",
+    "keywords": [
+      "BM25",
+      "RRF"
+    ]
+  },
+  {
+    "id": "c02",
+    "paper_keys": [
+      "sample_paper",
+      "bilingual"
+    ],
+    "question": "这两篇论文有什么共同点？",
+    "strategy": "compare",
+    "language": "zh",
+    "keywords": [
+      "共同",
+      "检索"
+    ]
+  },
+  {
+    "id": "c03",
+    "paper_keys": [
+      "sample_paper",
+      "bilingual"
+    ],
+    "question": "Compare the conclusions of the two papers.",
+    "strategy": "compare",
+    "language": "en",
+    "keywords": [
+      "comparison",
+      "method"
+    ]
+  },
+  {
+    "id": "c04",
+    "paper_keys": [
+      "sample_paper"
+    ],
+    "question": "比较这篇论文和另一篇论文",
+    "strategy": "clarify",
+    "language": "zh",
+    "keywords": [
+      "两篇"
+    ]
+  },
+  {
+    "id": "i01",
+    "paper_keys": [
+      "sample_paper",
+      "bilingual"
+    ],
+    "question": "基于这两篇论文，提出几个创新点",
+    "strategy": "innovate",
+    "language": "zh",
+    "keywords": [
+      "研究空白",
+      "验证"
+    ]
+  },
+  {
+    "id": "i02",
+    "paper_keys": [
+      "sample_paper",
+      "bilingual"
+    ],
+    "question": "这两篇论文还有哪些研究空白？",
+    "strategy": "innovate",
+    "language": "zh",
+    "keywords": [
+      "空白",
+      "风险"
+    ]
+  },
+  {
+    "id": "i03",
+    "paper_keys": [
+      "sample_paper",
+      "bilingual"
+    ],
+    "question": "Propose future work based on these papers.",
+    "strategy": "innovate",
+    "language": "en",
+    "keywords": [
+      "future",
+      "gap"
+    ]
+  },
+  {
+    "id": "m01",
+    "paper_keys": [
+      "sample_paper"
+    ],
+    "question": "总结一下这篇论文",
+    "strategy": "summary",
+    "language": "zh",
+    "keywords": [
+      "研究问题",
+      "方法"
+    ]
+  },
+  {
+    "id": "m02",
+    "paper_keys": [
+      "sample_paper",
+      "bilingual"
+    ],
+    "question": "总结这两篇论文",
+    "strategy": "summary",
+    "language": "zh",
+    "keywords": [
+      "共同点",
+      "差异"
+    ]
+  },
+  {
+    "id": "e01",
+    "paper_keys": [
+      "2026统计建模"
+    ],
+    "question": "LASSO 是什么？",
+    "strategy": "explain",
+    "language": "zh",
+    "keywords": [
+      "L1",
+      "变量选择"
+    ]
+  },
+  {
+    "id": "r01",
+    "paper_keys": [
+      "2026统计建模"
+    ],
+    "question": "这篇论文的题目是什么？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [
+      1
+    ],
+    "keywords": [
+      "空气污染",
+      "健康"
+    ]
+  },
+  {
+    "id": "r02",
+    "paper_keys": [
+      "2026统计建模"
+    ],
+    "question": "这篇论文要解决的核心问题是什么？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [
+      9,
+      10
+    ],
+    "keywords": [
+      "行为响应",
+      "因果"
+    ]
+  },
+  {
+    "id": "r03",
+    "paper_keys": [
+      "2026统计建模"
+    ],
+    "question": "论文使用了哪些主要建模方法？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [
+      2,
+      10
+    ],
+    "keywords": [
+      "LASSO",
+      "中介效应"
+    ]
+  },
+  {
+    "id": "r04",
+    "paper_keys": [
+      "2026统计建模"
+    ],
+    "question": "论文的数据来源包括哪些？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [
+      11,
+      12
+    ],
+    "keywords": [
+      "空气质量",
+      "出行"
+    ]
+  },
+  {
+    "id": "r05",
+    "paper_keys": [
+      "2026统计建模"
+    ],
+    "question": "LASSO 模型的 R² 是多少？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [
+      20,
+      21
+    ],
+    "keywords": [
+      "0.9127"
+    ]
+  },
+  {
+    "id": "r06",
+    "paper_keys": [
+      "2026统计建模"
+    ],
+    "question": "中介效应分析中，总效应和间接效应分别是多少？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [
+      18,
+      19,
+      29,
+      30
+    ],
+    "keywords": [
+      "0.4690",
+      "-0.2806"
+    ]
+  },
+  {
+    "id": "r07",
+    "paper_keys": [
+      "2026统计建模"
+    ],
+    "question": "论文建议的最优减排强度是多少？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [
+      27,
+      28
+    ],
+    "keywords": [
+      "13.33",
+      "13%"
+    ]
+  },
+  {
+    "id": "r08",
+    "paper_keys": [
+      "2026统计建模"
+    ],
+    "question": "论文提到的研究局限有哪些？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [
+      31
+    ],
+    "keywords": [
+      "北京",
+      "参数"
+    ]
+  },
+  {
+    "id": "r09",
+    "paper_keys": [
+      "2026统计建模",
+      "bilingual"
+    ],
+    "question": "比较这两篇论文的方法和适用场景",
+    "strategy": "compare",
+    "language": "zh",
+    "keywords": [
+      "LASSO",
+      "检索"
+    ]
+  },
+  {
+    "id": "r10",
+    "paper_keys": [
+      "2026统计建模"
+    ],
+    "question": "基于这篇论文提出两个可验证的创新点",
+    "strategy": "innovate",
+    "language": "zh",
+    "keywords": [
+      "研究空白",
+      "验证"
+    ]
+  },
+  {
+    "id": "p01",
+    "paper_keys": [
+      "rag_lewis_2005.11401"
+    ],
+    "question": "RAG 模型由哪两部分记忆组成？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [],
+    "keywords": [
+      "parametric",
+      "non-parametric"
+    ]
+  },
+  {
+    "id": "p02",
+    "paper_keys": [
+      "rag_lewis_2005.11401"
+    ],
+    "question": "RAG 在哪些任务上取得了 state-of-the-art？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [],
+    "keywords": [
+      "open domain",
+      "QA"
+    ]
+  },
+  {
+    "id": "p03",
+    "paper_keys": [
+      "rag_lewis_2005.11401"
+    ],
+    "question": "RAG 的两种 formulation 分别怎么工作？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [],
+    "keywords": [
+      "passages",
+      "token"
+    ]
+  },
+  {
+    "id": "p04",
+    "paper_keys": [
+      "ragas_2309.15217"
+    ],
+    "question": "Ragas 是什么框架？",
+    "strategy": "explain",
+    "language": "zh",
+    "pages": [],
+    "keywords": [
+      "reference-free",
+      "evaluation"
+    ]
+  },
+  {
+    "id": "p05",
+    "paper_keys": [
+      "ragas_2309.15217"
+    ],
+    "question": "Ragas 评估 RAG 的哪两个模块？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [],
+    "keywords": [
+      "retrieval",
+      "generation"
+    ]
+  },
+  {
+    "id": "p06",
+    "paper_keys": [
+      "ragas_2309.15217"
+    ],
+    "question": "Ragas 的主要特点是什么？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [],
+    "keywords": [
+      "reference-free"
+    ]
+  },
+  {
+    "id": "p07",
+    "paper_keys": [
+      "corrective_rag_2401.15884"
+    ],
+    "question": "CRAG 如何判断检索质量？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [],
+    "keywords": [
+      "retrieval evaluator",
+      "confidence"
+    ]
+  },
+  {
+    "id": "p08",
+    "paper_keys": [
+      "corrective_rag_2401.15884"
+    ],
+    "question": "CRAG 在检索质量差时会采取什么动作？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [],
+    "keywords": [
+      "web search",
+      "decompose"
+    ]
+  },
+  {
+    "id": "p09",
+    "paper_keys": [
+      "corrective_rag_2401.15884"
+    ],
+    "question": "CRAG 的实验覆盖哪些任务？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [],
+    "keywords": [
+      "short-form",
+      "long-form"
+    ]
+  },
+  {
+    "id": "p10",
+    "paper_keys": [
+      "graphrag_2404.16130"
+    ],
+    "question": "GraphRAG 如何构建图索引？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [],
+    "keywords": [
+      "知识图谱",
+      "社区摘要"
+    ]
+  },
+  {
+    "id": "p11",
+    "paper_keys": [
+      "graphrag_2404.16130"
+    ],
+    "question": "GraphRAG 主要解决 RAG 的什么问题？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [],
+    "keywords": [
+      "global questions",
+      "query-focused summarization"
+    ]
+  },
+  {
+    "id": "p12",
+    "paper_keys": [
+      "graphrag_2404.16130"
+    ],
+    "question": "GraphRAG 在什么规模的数据上评估？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [],
+    "keywords": [
+      "100 万 token"
+    ]
+  },
+  {
+    "id": "p13",
+    "paper_keys": [
+      "rag_survey_2312.10997"
+    ],
+    "question": "列出 RAG 的三种范式",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [],
+    "keywords": [
+      "Naive",
+      "Advanced",
+      "Modular"
+    ]
+  },
+  {
+    "id": "p14",
+    "paper_keys": [
+      "rag_survey_2312.10997"
+    ],
+    "question": "列出 RAG 框架的三个基础组件",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [],
+    "keywords": [
+      "retrieval",
+      "generation",
+      "augmentation"
+    ]
+  },
+  {
+    "id": "p15",
+    "paper_keys": [
+      "rag_survey_2312.10997"
+    ],
+    "question": "RAG 面临哪些主要挑战？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [],
+    "keywords": [
+      "检索",
+      "幻觉",
+      "冗余"
+    ]
+  },
+  {
+    "id": "p16",
+    "paper_keys": [
+      "rag_aigc_survey_2402.19473"
+    ],
+    "question": "这篇综述关注 RAG 在什么场景的应用？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [],
+    "keywords": [
+      "AIGC"
+    ]
+  },
+  {
+    "id": "p17",
+    "paper_keys": [
+      "rag_aigc_survey_2402.19473"
+    ],
+    "question": "RAG 如何增强 AIGC？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [],
+    "keywords": [
+      "检索",
+      "外部知识"
+    ]
+  },
+  {
+    "id": "p18",
+    "paper_keys": [
+      "rag_aigc_survey_2402.19473"
+    ],
+    "question": "论文讨论了哪些 RAG 挑战和方向？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [],
+    "keywords": [
+      "挑战",
+      "方向"
+    ]
+  },
+  {
+    "id": "p19",
+    "paper_keys": [
+      "lightrag_2410.05779"
+    ],
+    "question": "LightRAG 的主要目标是什么？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [],
+    "keywords": [
+      "图增强",
+      "高效"
+    ]
+  },
+  {
+    "id": "p20",
+    "paper_keys": [
+      "lightrag_2410.05779"
+    ],
+    "question": "LightRAG 如何表示数据？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [],
+    "keywords": [
+      "图结构",
+      "键值"
+    ]
+  },
+  {
+    "id": "p21",
+    "paper_keys": [
+      "lightrag_2410.05779"
+    ],
+    "question": "LightRAG 解决现有 RAG 的什么问题？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [],
+    "keywords": [
+      "扁平数据",
+      "上下文"
+    ]
+  },
+  {
+    "id": "p22",
+    "paper_keys": [
+      "agentic_rag_2501.09136"
+    ],
+    "question": "Agentic RAG 的核心特点有哪些？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [],
+    "keywords": [
+      "自主",
+      "推理"
+    ]
+  },
+  {
+    "id": "p23",
+    "paper_keys": [
+      "agentic_rag_2501.09136"
+    ],
+    "question": "Agentic RAG 使用哪些设计模式？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [],
+    "keywords": [
+      "reflection",
+      "planning",
+      "tool use"
+    ]
+  },
+  {
+    "id": "p24",
+    "paper_keys": [
+      "agentic_rag_2501.09136"
+    ],
+    "question": "Agentic RAG 的主要优势是什么？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [],
+    "keywords": [
+      "自主决策",
+      "多步推理"
+    ]
+  },
+  {
+    "id": "p25",
+    "paper_keys": [
+      "replug_2212.10496"
+    ],
+    "question": "描述 HyDE 的核心流程",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [],
+    "keywords": [
+      "假设文档",
+      "编码"
+    ]
+  },
+  {
+    "id": "p26",
+    "paper_keys": [
+      "replug_2212.10496"
+    ],
+    "question": "HyDE 如何生成检索向量？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [],
+    "keywords": [
+      "假设文档",
+      "编码"
+    ]
+  },
+  {
+    "id": "p27",
+    "paper_keys": [
+      "replug_2212.10496"
+    ],
+    "question": "HyDE 在哪些任务上评估？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [],
+    "keywords": [
+      "web search",
+      "QA"
+    ]
+  },
+  {
+    "id": "p28",
+    "paper_keys": [
+      "rag_long_context_2407.01219"
+    ],
+    "question": "这篇论文研究什么？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [],
+    "keywords": [
+      "检索",
+      "RAG"
+    ]
+  },
+  {
+    "id": "p29",
+    "paper_keys": [
+      "rag_long_context_2407.01219"
+    ],
+    "question": "论文建议如何部署 RAG？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [],
+    "keywords": [
+      "性能",
+      "效率"
+    ]
+  },
+  {
+    "id": "p30",
+    "paper_keys": [
+      "rag_long_context_2407.01219"
+    ],
+    "question": "多模态检索有什么作用？",
+    "strategy": "single",
+    "language": "zh",
+    "pages": [],
+    "keywords": [
+      "多模态",
+      "视觉"
+    ]
+  }
+]

@@ -1,0 +1,770 @@
+{
+  "summary": {
+    "mode": "section-only",
+    "total": 18,
+    "recall@1": 0.667,
+    "recall@5": 0.778,
+    "recall@10": 0.778,
+    "mrr": 0.713
+  },
+  "results": [
+    {
+      "id": "s01",
+      "question": "What is the main goal of the paper?",
+      "intent": "definition",
+      "retrieved": [
+        {
+          "chunk_id": "p3_c0003",
+          "page": 1,
+          "section": "2 Method"
+        },
+        {
+          "chunk_id": "p3_c0002",
+          "page": 1,
+          "section": "1 Introduction"
+        },
+        {
+          "chunk_id": "p3_c0001",
+          "page": 1,
+          "section": "Abstract"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "s02",
+      "question": "Which retrieval methods are combined?",
+      "intent": "method",
+      "retrieved": [
+        {
+          "chunk_id": "p3_c0003",
+          "page": 1,
+          "section": "2 Method"
+        },
+        {
+          "chunk_id": "p3_c0002",
+          "page": 1,
+          "section": "1 Introduction"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "s03",
+      "question": "What does RRF do?",
+      "intent": "general",
+      "retrieved": [
+        {
+          "chunk_id": "p3_c0003",
+          "page": 1,
+          "section": "2 Method"
+        },
+        {
+          "chunk_id": "p3_c0005",
+          "page": 2,
+          "section": "4 Conclusion"
+        },
+        {
+          "chunk_id": "p3_c0000",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p3_c0001",
+          "page": 1,
+          "section": "Abstract"
+        },
+        {
+          "chunk_id": "p3_c0002",
+          "page": 1,
+          "section": "1 Introduction"
+        },
+        {
+          "chunk_id": "p3_c0004",
+          "page": 2,
+          "section": "3 Results"
+        },
+        {
+          "chunk_id": "p3_c0006",
+          "page": 2,
+          "section": "References"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "s04",
+      "question": "What were the results on ten papers?",
+      "intent": "result",
+      "retrieved": [
+        {
+          "chunk_id": "p3_c0005",
+          "page": 2,
+          "section": "4 Conclusion"
+        },
+        {
+          "chunk_id": "p3_c0004",
+          "page": 2,
+          "section": "3 Results"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "s05",
+      "question": "这篇论文提到的主要失败模式是什么？",
+      "intent": "definition",
+      "retrieved": [
+        {
+          "chunk_id": "p2_c0003",
+          "page": 1,
+          "section": "2 Method"
+        },
+        {
+          "chunk_id": "p2_c0002",
+          "page": 1,
+          "section": "1 Introduction"
+        },
+        {
+          "chunk_id": "p2_c0001",
+          "page": 1,
+          "section": "Abstract"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "s06",
+      "question": "What does the cross-encoder do?",
+      "intent": "general",
+      "retrieved": [
+        {
+          "chunk_id": "p3_c0003",
+          "page": 1,
+          "section": "2 Method"
+        },
+        {
+          "chunk_id": "p3_c0005",
+          "page": 2,
+          "section": "4 Conclusion"
+        },
+        {
+          "chunk_id": "p3_c0000",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p3_c0002",
+          "page": 1,
+          "section": "1 Introduction"
+        },
+        {
+          "chunk_id": "p3_c0006",
+          "page": 2,
+          "section": "References"
+        },
+        {
+          "chunk_id": "p3_c0004",
+          "page": 2,
+          "section": "3 Results"
+        },
+        {
+          "chunk_id": "p3_c0001",
+          "page": 1,
+          "section": "Abstract"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "s07",
+      "question": "这篇论文研究什么问题？",
+      "intent": "general",
+      "retrieved": [
+        {
+          "chunk_id": "p2_c0002",
+          "page": 1,
+          "section": "1 Introduction"
+        },
+        {
+          "chunk_id": "p2_c0001",
+          "page": 1,
+          "section": "Abstract"
+        },
+        {
+          "chunk_id": "p2_c0000",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p2_c0005",
+          "page": 1,
+          "section": "4 Conclusion"
+        },
+        {
+          "chunk_id": "p2_c0004",
+          "page": 1,
+          "section": "3 Results"
+        },
+        {
+          "chunk_id": "p2_c0006",
+          "page": 1,
+          "section": "References"
+        },
+        {
+          "chunk_id": "p2_c0003",
+          "page": 1,
+          "section": "2 Method"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "s08",
+      "question": "系统的方法分为哪几个阶段？",
+      "intent": "numeric",
+      "retrieved": [
+        {
+          "chunk_id": "p2_c0005",
+          "page": 1,
+          "section": "4 Conclusion"
+        },
+        {
+          "chunk_id": "p2_c0004",
+          "page": 1,
+          "section": "3 Results"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "s09",
+      "question": "主要失败模式是什么？",
+      "intent": "definition",
+      "retrieved": [
+        {
+          "chunk_id": "p2_c0001",
+          "page": 1,
+          "section": "Abstract"
+        },
+        {
+          "chunk_id": "p2_c0003",
+          "page": 1,
+          "section": "2 Method"
+        },
+        {
+          "chunk_id": "p2_c0002",
+          "page": 1,
+          "section": "1 Introduction"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "s10",
+      "question": "What is the paper title?",
+      "intent": "definition",
+      "retrieved": [
+        {
+          "chunk_id": "p3_c0003",
+          "page": 1,
+          "section": "2 Method"
+        },
+        {
+          "chunk_id": "p3_c0001",
+          "page": 1,
+          "section": "Abstract"
+        },
+        {
+          "chunk_id": "p3_c0002",
+          "page": 1,
+          "section": "1 Introduction"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "r01",
+      "question": "这篇论文的题目是什么？",
+      "intent": "definition",
+      "retrieved": [
+        {
+          "chunk_id": "p4_c0003",
+          "page": 3,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0004",
+          "page": 3,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0002",
+          "page": 2,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0005",
+          "page": 3,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0007",
+          "page": 4,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0009",
+          "page": 6,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0006",
+          "page": 3,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0008",
+          "page": 5,
+          "section": "摘要"
+        }
+      ],
+      "hit@1": 0,
+      "hit@5": 0,
+      "hit@10": 0,
+      "mrr": 0.0
+    },
+    {
+      "id": "r02",
+      "question": "这篇论文要解决的核心问题是什么？",
+      "intent": "definition",
+      "retrieved": [
+        {
+          "chunk_id": "p4_c0003",
+          "page": 3,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0004",
+          "page": 3,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0005",
+          "page": 3,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0002",
+          "page": 2,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0007",
+          "page": 4,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0009",
+          "page": 6,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0006",
+          "page": 3,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0008",
+          "page": 5,
+          "section": "摘要"
+        }
+      ],
+      "hit@1": 0,
+      "hit@5": 0,
+      "hit@10": 0,
+      "mrr": 0.0
+    },
+    {
+      "id": "r03",
+      "question": "论文使用了哪些主要建模方法？",
+      "intent": "method",
+      "retrieved": [
+        {
+          "chunk_id": "p4_c0004",
+          "page": 3,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0013",
+          "page": 8,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0017",
+          "page": 10,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0003",
+          "page": 3,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0005",
+          "page": 3,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0026",
+          "page": 15,
+          "section": "二、数据选择与多模态数据体系构建"
+        },
+        {
+          "chunk_id": "p4_c0018",
+          "page": 10,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0015",
+          "page": 9,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0021",
+          "page": 12,
+          "section": "二、数据选择与多模态数据体系构建"
+        },
+        {
+          "chunk_id": "p4_c0009",
+          "page": 6,
+          "section": "摘要"
+        }
+      ],
+      "hit@1": 0,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 0.3333
+    },
+    {
+      "id": "r04",
+      "question": "论文的数据来源包括哪些？",
+      "intent": "general",
+      "retrieved": [
+        {
+          "chunk_id": "p4_c0003",
+          "page": 3,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0020",
+          "page": 11,
+          "section": "二、数据选择与多模态数据体系构建"
+        },
+        {
+          "chunk_id": "p4_c0021",
+          "page": 12,
+          "section": "二、数据选择与多模态数据体系构建"
+        },
+        {
+          "chunk_id": "p4_c0017",
+          "page": 10,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0004",
+          "page": 3,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0026",
+          "page": 15,
+          "section": "二、数据选择与多模态数据体系构建"
+        },
+        {
+          "chunk_id": "p4_c0015",
+          "page": 9,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0013",
+          "page": 8,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0018",
+          "page": 10,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0011",
+          "page": 7,
+          "section": "一、绪论"
+        }
+      ],
+      "hit@1": 0,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 0.5
+    },
+    {
+      "id": "r05",
+      "question": "LASSO 模型的 R² 是多少？",
+      "intent": "numeric",
+      "retrieved": [
+        {
+          "chunk_id": "p4_c0047",
+          "page": 30,
+          "section": "五、结论与政策建议"
+        },
+        {
+          "chunk_id": "p4_c0049",
+          "page": 31,
+          "section": "五、结论与政策建议"
+        },
+        {
+          "chunk_id": "p4_c0048",
+          "page": 30,
+          "section": "五、结论与政策建议"
+        },
+        {
+          "chunk_id": "p4_c0046",
+          "page": 29,
+          "section": "五、结论与政策建议"
+        },
+        {
+          "chunk_id": "p4_c0054",
+          "page": 32,
+          "section": "五、结论与政策建议"
+        },
+        {
+          "chunk_id": "p4_c0051",
+          "page": 31,
+          "section": "五、结论与政策建议"
+        },
+        {
+          "chunk_id": "p4_c0050",
+          "page": 31,
+          "section": "五、结论与政策建议"
+        },
+        {
+          "chunk_id": "p4_c0052",
+          "page": 32,
+          "section": "五、结论与政策建议"
+        },
+        {
+          "chunk_id": "p4_c0053",
+          "page": 32,
+          "section": "五、结论与政策建议"
+        }
+      ],
+      "hit@1": 0,
+      "hit@5": 0,
+      "hit@10": 0,
+      "mrr": 0.0
+    },
+    {
+      "id": "r06",
+      "question": "中介效应分析中，总效应和间接效应分别是多少？",
+      "intent": "numeric",
+      "retrieved": [
+        {
+          "chunk_id": "p4_c0046",
+          "page": 29,
+          "section": "五、结论与政策建议"
+        },
+        {
+          "chunk_id": "p4_c0047",
+          "page": 30,
+          "section": "五、结论与政策建议"
+        },
+        {
+          "chunk_id": "p4_c0049",
+          "page": 31,
+          "section": "五、结论与政策建议"
+        },
+        {
+          "chunk_id": "p4_c0048",
+          "page": 30,
+          "section": "五、结论与政策建议"
+        },
+        {
+          "chunk_id": "p4_c0053",
+          "page": 32,
+          "section": "五、结论与政策建议"
+        },
+        {
+          "chunk_id": "p4_c0052",
+          "page": 32,
+          "section": "五、结论与政策建议"
+        },
+        {
+          "chunk_id": "p4_c0050",
+          "page": 31,
+          "section": "五、结论与政策建议"
+        },
+        {
+          "chunk_id": "p4_c0054",
+          "page": 32,
+          "section": "五、结论与政策建议"
+        },
+        {
+          "chunk_id": "p4_c0051",
+          "page": 31,
+          "section": "五、结论与政策建议"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "r07",
+      "question": "论文建议的最优减排强度是多少？",
+      "intent": "numeric",
+      "retrieved": [
+        {
+          "chunk_id": "p4_c0047",
+          "page": 30,
+          "section": "五、结论与政策建议"
+        },
+        {
+          "chunk_id": "p4_c0048",
+          "page": 30,
+          "section": "五、结论与政策建议"
+        },
+        {
+          "chunk_id": "p4_c0046",
+          "page": 29,
+          "section": "五、结论与政策建议"
+        },
+        {
+          "chunk_id": "p4_c0049",
+          "page": 31,
+          "section": "五、结论与政策建议"
+        },
+        {
+          "chunk_id": "p4_c0054",
+          "page": 32,
+          "section": "五、结论与政策建议"
+        },
+        {
+          "chunk_id": "p4_c0053",
+          "page": 32,
+          "section": "五、结论与政策建议"
+        },
+        {
+          "chunk_id": "p4_c0051",
+          "page": 31,
+          "section": "五、结论与政策建议"
+        },
+        {
+          "chunk_id": "p4_c0052",
+          "page": 32,
+          "section": "五、结论与政策建议"
+        },
+        {
+          "chunk_id": "p4_c0050",
+          "page": 31,
+          "section": "五、结论与政策建议"
+        }
+      ],
+      "hit@1": 0,
+      "hit@5": 0,
+      "hit@10": 0,
+      "mrr": 0.0
+    },
+    {
+      "id": "r08",
+      "question": "论文提到的研究局限有哪些？",
+      "intent": "general",
+      "retrieved": [
+        {
+          "chunk_id": "p4_c0049",
+          "page": 31,
+          "section": "五、结论与政策建议"
+        },
+        {
+          "chunk_id": "p4_c0013",
+          "page": 8,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0007",
+          "page": 4,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0009",
+          "page": 6,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0003",
+          "page": 3,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0015",
+          "page": 9,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0001",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p4_c0017",
+          "page": 10,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0011",
+          "page": 7,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0018",
+          "page": 10,
+          "section": "一、绪论"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    }
+  ]
+}

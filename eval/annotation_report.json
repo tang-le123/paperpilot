@@ -1,0 +1,17 @@
+{
+  "rows": 120,
+  "cases": 60,
+  "answer_accuracy": 0.75,
+  "citation_precision": 0.55,
+  "false_suppression": 0,
+  "false_suppression_rate": 0.0,
+  "suppressed": 14,
+  "suppressed_answerable": 14,
+  "suppressed_answerable_rate": 0.233,
+  "annotators": [
+    "A",
+    "B"
+  ],
+  "cohen_kappa": 1.0,
+  "kappa_pairs": 60
+}
