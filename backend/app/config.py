@@ -39,6 +39,13 @@ RERANK_MODEL = os.getenv(
     r"E:\all-in-rag\models\bge-reranker-base",
 )
 RERANK_DEVICE = os.getenv("RERANK_DEVICE", "cpu")
+RERANK_WINDOW_ENABLED = os.getenv("RERANK_WINDOW_ENABLED", "false").lower() == "true"
+RERANK_SECTION_PREFIX = os.getenv("RERANK_SECTION_PREFIX", "false").lower() == "true"
+RERANK_WINDOW_CHARS = int(os.getenv("RERANK_WINDOW_CHARS", "600"))
+RERANK_WINDOW_OVERLAP = int(os.getenv("RERANK_WINDOW_OVERLAP", "80"))
+RERANK_MAX_WINDOWS = int(os.getenv("RERANK_MAX_WINDOWS", "2"))
+RRF_DENSE_WEIGHT = float(os.getenv("RRF_DENSE_WEIGHT", "0.5"))
+RRF_LEXICAL_WEIGHT = float(os.getenv("RRF_LEXICAL_WEIGHT", "0.5"))
 
 # If citation support falls below this, do not show the generated answer.
 CITATION_SUPPORT_THRESHOLD = float(os.getenv("CITATION_SUPPORT_THRESHOLD", "0.35"))

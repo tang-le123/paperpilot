@@ -184,6 +184,25 @@ SECTION_FILTER_ENABLED=false
 
 这不是“没做”，而是测过之后没有把负优化留在默认链路里。
 
+reranker 窗口化和 RRF 权重也测过：
+
+```text
+baseline：                recall@1 0.531 / recall@5 0.898 / MRR 0.662
+window + RRF 0.5：        0.531 / 0.878 / 0.686
+window + RRF 0.7：        0.531 / 0.878 / 0.686
+window off + prefix：     0.510 / 0.878 / 0.656
+window off + no prefix：  0.531 / 0.898 / 0.662
+```
+
+`recall@1` 没提升，`recall@5` 反而下降，所以最终回退：
+
+```text
+RERANK_WINDOW_ENABLED=false
+RERANK_SECTION_PREFIX=false
+RRF_DENSE_WEIGHT=0.5
+RRF_LEXICAL_WEIGHT=0.5
+```
+
 ## 自适应路由
 
 参考 Adaptive-RAG 的分流思路：

@@ -17,7 +17,14 @@ from app.config import (
     EMBEDDING_MODEL,
     RERANK_DEVICE,
     RERANK_ENABLED,
+    RERANK_MAX_WINDOWS,
     RERANK_MODEL,
+    RERANK_SECTION_PREFIX,
+    RERANK_WINDOW_CHARS,
+    RERANK_WINDOW_ENABLED,
+    RERANK_WINDOW_OVERLAP,
+    RRF_DENSE_WEIGHT,
+    RRF_LEXICAL_WEIGHT,
 )
 from app.db import get_chunks
 
@@ -176,13 +183,22 @@ def _bm25_query(
     return results
 
 
-def _rrf(lists: list[list[dict]], *, k: int = 60) -> list[dict]:
+def _rrf(
+    lists: list[list[dict]],
+    *,
+    k: int = 60,
+    weights: list[float] | None = None,
+) -> list[dict]:
+    if weights is None:
+        weights = [1.0] * len(lists)
+    if len(weights) != len(lists):
+        raise ValueError("RRF weights must match input lists")
     scores: dict[str, float] = {}
     canonical: dict[str, dict] = {}
-    for ranked in lists:
+    for weight, ranked in zip(weights, lists, strict=False):
         for rank, chunk in enumerate(ranked, start=1):
             chunk_id = chunk["chunk_id"]
-            scores[chunk_id] = scores.get(chunk_id, 0.0) + 1.0 / (k + rank)
+            scores[chunk_id] = scores.get(chunk_id, 0.0) + weight / (k + rank)
             if chunk_id not in canonical:
                 canonical[chunk_id] = dict(chunk)
     fused = []
@@ -224,9 +240,35 @@ class Reranker:
         if model is None or len(chunks) <= 1:
             return chunks[:top_k]
         try:
-            pairs = [(query, chunk["content"]) for chunk in chunks]
+            pairs = []
+            owners = []
+            for index, chunk in enumerate(chunks):
+                section = (chunk.get("section") or "").strip()
+                content = chunk.get("content") or ""
+                prefix = f"{section}\n" if section and RERANK_SECTION_PREFIX else ""
+                # Long chunks can exceed the cross-encoder's 512-token limit.
+                # Score overlapping windows and keep the best window per chunk.
+                windows = []
+                if not RERANK_WINDOW_ENABLED or len(content) <= RERANK_WINDOW_CHARS:
+                    windows = [content]
+                else:
+                    step = max(1, RERANK_WINDOW_CHARS - RERANK_WINDOW_OVERLAP)
+                    for start in range(0, len(content), step):
+                        windows.append(content[start : start + RERANK_WINDOW_CHARS])
+                        if len(windows) >= RERANK_MAX_WINDOWS:
+                            break
+                for window in windows:
+                    pairs.append((query, prefix + window))
+                    owners.append(index)
             scores = model.predict(pairs, batch_size=8, show_progress_bar=False)
-            ordered = sorted(zip(chunks, scores, strict=False), key=lambda item: float(item[1]), reverse=True)
+            best: dict[int, float] = {}
+            for owner, score in zip(owners, scores, strict=False):
+                best[owner] = max(best.get(owner, float("-inf")), float(score))
+            ordered = sorted(
+                ((chunk, best.get(index, float("-inf"))) for index, chunk in enumerate(chunks)),
+                key=lambda item: item[1],
+                reverse=True,
+            )
             results = []
             for chunk, score in ordered[:top_k]:
                 item = dict(chunk)
@@ -268,7 +310,10 @@ class HybridRetriever:
         lexical = _bm25_query(
             paper_ids, search_query, per_paper=candidates, sections=sections
         )
-        fused = _rrf([dense, lexical])
+        fused = _rrf(
+            [dense, lexical],
+            weights=[RRF_DENSE_WEIGHT, RRF_LEXICAL_WEIGHT],
+        )
         return self.reranker.rerank(query, fused, top_k=top_k)
 
     def retrieve_balanced(
@@ -295,7 +340,10 @@ class HybridRetriever:
             per_paper=max(per_paper * 3, 6),
             sections=sections,
         )
-        fused = _rrf([dense, lexical])
+        fused = _rrf(
+            [dense, lexical],
+            weights=[RRF_DENSE_WEIGHT, RRF_LEXICAL_WEIGHT],
+        )
 
         grouped: dict[int, list[dict]] = {paper_id: [] for paper_id in paper_ids}
         for chunk in fused:

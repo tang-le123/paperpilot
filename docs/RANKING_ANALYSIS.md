@@ -164,3 +164,42 @@ baseline
 ```
 
 如果某一项没有提升，就回退，不要叠加。
+
+---
+
+## 6. 本轮实验结果（49 条 gold）
+
+| 方案 | recall@1 | recall@5 | recall@10 | MRR |
+|---|---:|---:|---:|---:|
+| baseline（原 reranker + RRF 0.5） | 0.531 | 0.898 | 0.918 | 0.662 |
+| window reranker + RRF 0.5 | 0.531 | 0.878 | 0.918 | 0.686 |
+| window reranker + RRF 0.7 | 0.531 | 0.878 | 0.918 | 0.686 |
+| window off + section prefix | 0.510 | 0.878 | 0.918 | 0.656 |
+| window off + no prefix（最终） | 0.531 | 0.898 | 0.918 | 0.662 |
+
+结论：
+
+```text
+window：MRR 升但 recall@5 下降，不采用
+section prefix：recall@1/@5 都下降，不采用
+RRF 0.5/0.7：完全一样，说明 reranker 主导
+```
+
+最终默认：
+
+```text
+RERANK_WINDOW_ENABLED=false
+RERANK_SECTION_PREFIX=false
+RRF_DENSE_WEIGHT=0.5
+RRF_LEXICAL_WEIGHT=0.5
+```
+
+RRF 权重在 0.5 和 0.7 下结果完全一样，说明当前 reranker 对最终顺序影响更大。
+
+下一步不要继续在这两个开关上堆参数，转向：
+
+```text
+1. parent-child chunk
+2. 更强的 reranker / 领域微调
+3. 用 chunk-level gold 复核 page-level gold
+```
