@@ -4,7 +4,7 @@
 
 > GitHub：<https://github.com/tang-le123/paperpilot>
 
-> 求职/面试材料：[一页纸](docs/ONE_PAGER.md) · [完整项目故事](docs/PORTFOLIO.md) · [深度设计与 all-in-rag 对应](docs/PROJECT_DEEP_DIVE.md) · [性能评估](docs/PERFORMANCE.md) · [解析/分块对比](docs/PARSING.md)
+> 求职/面试材料：[一页纸](docs/ONE_PAGER.md) · [完整项目故事](docs/PORTFOLIO.md) · [深度设计与 all-in-rag 对应](docs/PROJECT_DEEP_DIVE.md) · [排序质量分析](docs/RANKING_ANALYSIS.md) · [性能评估](docs/PERFORMANCE.md) · [解析/分块对比](docs/PARSING.md)
 
 > 人工评测：[填表指南](docs/HUMAN_EVAL_GUIDE.md) · [评测结果](docs/EVAL_RESULTS.md)
 ## 当前能做什么
