@@ -203,3 +203,38 @@ RRF 权重在 0.5 和 0.7 下结果完全一样，说明当前 reranker 对最�
 2. 更强的 reranker / 领域微调
 3. 用 chunk-level gold 复核 page-level gold
 ```
+
+---
+
+## 7. Chunk 大小对比
+
+同一批 49 条 gold，固定 reranker 默认配置：
+
+| chunk | overlap | recall@1 | recall@5 | recall@10 | MRR |
+|---|---:|---:|---:|---:|---:|
+| 800 | 100 | 0.531 | 0.898 | 0.918 | 0.662 |
+| 1200 | 150 | 0.490 | 0.898 | 0.939 | 0.663 |
+| 1200 + RRF 0.7 | 150 | 0.490 | 0.898 | 0.939 | 0.663 |
+
+结论：
+
+```text
+chunk 调大：
+  recall@10 +2.1pp
+  recall@5 持平
+  recall@1 -4.1pp
+→ 不采用 1200，恢复 800
+```
+
+原因：
+
+- 大 chunk 覆盖更多内容，@10 变好；
+- 但单个 chunk 主题更杂，reranker 更难把“精确证据”排第一；
+- RRF 权重在 1200 上仍然没有影响，说明排序主要由 reranker 决定。
+
+最终恢复：
+
+```text
+CHUNK_SIZE=800
+CHUNK_OVERLAP=100
+```

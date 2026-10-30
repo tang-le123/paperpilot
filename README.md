@@ -203,6 +203,15 @@ RRF_DENSE_WEIGHT=0.5
 RRF_LEXICAL_WEIGHT=0.5
 ```
 
+chunk 大小也测过：
+
+```text
+800：  recall@1 0.531 / recall@5 0.898 / recall@10 0.918
+1200： recall@1 0.490 / recall@5 0.898 / recall@10 0.939
+```
+
+1200 字只提升 @10，降低 @1，已恢复 800。
+
 ## 自适应路由
 
 参考 Adaptive-RAG 的分流思路：

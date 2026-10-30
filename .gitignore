@@ -11,3 +11,4 @@ frontend_react/dist/
 data/samples/papers/
 data/samples/*.pdf
 data/samples/*.png
+data/_chunk_experiment_800/

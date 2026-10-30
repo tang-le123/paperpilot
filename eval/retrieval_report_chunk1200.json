@@ -1,0 +1,2851 @@
+{
+  "summary": {
+    "mode": "baseline",
+    "total": 49,
+    "recall@1": 0.49,
+    "recall@5": 0.898,
+    "recall@10": 0.939,
+    "mrr": 0.663
+  },
+  "results": [
+    {
+      "id": "s01",
+      "question": "What is the main goal of the paper?",
+      "intent": "definition",
+      "retrieved": [
+        {
+          "chunk_id": "p3_c0005",
+          "page": 2,
+          "section": "4 Conclusion"
+        },
+        {
+          "chunk_id": "p3_c0000",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p3_c0003",
+          "page": 1,
+          "section": "2 Method"
+        },
+        {
+          "chunk_id": "p3_c0002",
+          "page": 1,
+          "section": "1 Introduction"
+        },
+        {
+          "chunk_id": "p3_c0001",
+          "page": 1,
+          "section": "Abstract"
+        },
+        {
+          "chunk_id": "p3_c0006",
+          "page": 2,
+          "section": "References"
+        },
+        {
+          "chunk_id": "p3_c0004",
+          "page": 2,
+          "section": "3 Results"
+        }
+      ],
+      "hit@1": 0,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 0.5
+    },
+    {
+      "id": "s02",
+      "question": "Which retrieval methods are combined?",
+      "intent": "method",
+      "retrieved": [
+        {
+          "chunk_id": "p3_c0003",
+          "page": 1,
+          "section": "2 Method"
+        },
+        {
+          "chunk_id": "p3_c0001",
+          "page": 1,
+          "section": "Abstract"
+        },
+        {
+          "chunk_id": "p3_c0004",
+          "page": 2,
+          "section": "3 Results"
+        },
+        {
+          "chunk_id": "p3_c0005",
+          "page": 2,
+          "section": "4 Conclusion"
+        },
+        {
+          "chunk_id": "p3_c0000",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p3_c0002",
+          "page": 1,
+          "section": "1 Introduction"
+        },
+        {
+          "chunk_id": "p3_c0006",
+          "page": 2,
+          "section": "References"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "s03",
+      "question": "What does RRF do?",
+      "intent": "general",
+      "retrieved": [
+        {
+          "chunk_id": "p3_c0003",
+          "page": 1,
+          "section": "2 Method"
+        },
+        {
+          "chunk_id": "p3_c0005",
+          "page": 2,
+          "section": "4 Conclusion"
+        },
+        {
+          "chunk_id": "p3_c0000",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p3_c0001",
+          "page": 1,
+          "section": "Abstract"
+        },
+        {
+          "chunk_id": "p3_c0002",
+          "page": 1,
+          "section": "1 Introduction"
+        },
+        {
+          "chunk_id": "p3_c0004",
+          "page": 2,
+          "section": "3 Results"
+        },
+        {
+          "chunk_id": "p3_c0006",
+          "page": 2,
+          "section": "References"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "s04",
+      "question": "What were the results on ten papers?",
+      "intent": "result",
+      "retrieved": [
+        {
+          "chunk_id": "p3_c0005",
+          "page": 2,
+          "section": "4 Conclusion"
+        },
+        {
+          "chunk_id": "p3_c0003",
+          "page": 1,
+          "section": "2 Method"
+        },
+        {
+          "chunk_id": "p3_c0001",
+          "page": 1,
+          "section": "Abstract"
+        },
+        {
+          "chunk_id": "p3_c0000",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p3_c0006",
+          "page": 2,
+          "section": "References"
+        },
+        {
+          "chunk_id": "p3_c0004",
+          "page": 2,
+          "section": "3 Results"
+        },
+        {
+          "chunk_id": "p3_c0002",
+          "page": 1,
+          "section": "1 Introduction"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "s05",
+      "question": "这篇论文提到的主要失败模式是什么？",
+      "intent": "definition",
+      "retrieved": [
+        {
+          "chunk_id": "p2_c0004",
+          "page": 1,
+          "section": "3 Results"
+        },
+        {
+          "chunk_id": "p2_c0003",
+          "page": 1,
+          "section": "2 Method"
+        },
+        {
+          "chunk_id": "p2_c0006",
+          "page": 1,
+          "section": "References"
+        },
+        {
+          "chunk_id": "p2_c0002",
+          "page": 1,
+          "section": "1 Introduction"
+        },
+        {
+          "chunk_id": "p2_c0005",
+          "page": 1,
+          "section": "4 Conclusion"
+        },
+        {
+          "chunk_id": "p2_c0000",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p2_c0001",
+          "page": 1,
+          "section": "Abstract"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "s06",
+      "question": "What does the cross-encoder do?",
+      "intent": "general",
+      "retrieved": [
+        {
+          "chunk_id": "p3_c0003",
+          "page": 1,
+          "section": "2 Method"
+        },
+        {
+          "chunk_id": "p3_c0005",
+          "page": 2,
+          "section": "4 Conclusion"
+        },
+        {
+          "chunk_id": "p3_c0000",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p3_c0002",
+          "page": 1,
+          "section": "1 Introduction"
+        },
+        {
+          "chunk_id": "p3_c0006",
+          "page": 2,
+          "section": "References"
+        },
+        {
+          "chunk_id": "p3_c0004",
+          "page": 2,
+          "section": "3 Results"
+        },
+        {
+          "chunk_id": "p3_c0001",
+          "page": 1,
+          "section": "Abstract"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "s07",
+      "question": "这篇论文研究什么问题？",
+      "intent": "general",
+      "retrieved": [
+        {
+          "chunk_id": "p2_c0002",
+          "page": 1,
+          "section": "1 Introduction"
+        },
+        {
+          "chunk_id": "p2_c0001",
+          "page": 1,
+          "section": "Abstract"
+        },
+        {
+          "chunk_id": "p2_c0000",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p2_c0005",
+          "page": 1,
+          "section": "4 Conclusion"
+        },
+        {
+          "chunk_id": "p2_c0004",
+          "page": 1,
+          "section": "3 Results"
+        },
+        {
+          "chunk_id": "p2_c0006",
+          "page": 1,
+          "section": "References"
+        },
+        {
+          "chunk_id": "p2_c0003",
+          "page": 1,
+          "section": "2 Method"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "s08",
+      "question": "系统的方法分为哪几个阶段？",
+      "intent": "numeric",
+      "retrieved": [
+        {
+          "chunk_id": "p2_c0003",
+          "page": 1,
+          "section": "2 Method"
+        },
+        {
+          "chunk_id": "p2_c0001",
+          "page": 1,
+          "section": "Abstract"
+        },
+        {
+          "chunk_id": "p2_c0005",
+          "page": 1,
+          "section": "4 Conclusion"
+        },
+        {
+          "chunk_id": "p2_c0002",
+          "page": 1,
+          "section": "1 Introduction"
+        },
+        {
+          "chunk_id": "p2_c0004",
+          "page": 1,
+          "section": "3 Results"
+        },
+        {
+          "chunk_id": "p2_c0000",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p2_c0006",
+          "page": 1,
+          "section": "References"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "s09",
+      "question": "主要失败模式是什么？",
+      "intent": "definition",
+      "retrieved": [
+        {
+          "chunk_id": "p2_c0004",
+          "page": 1,
+          "section": "3 Results"
+        },
+        {
+          "chunk_id": "p2_c0000",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p2_c0001",
+          "page": 1,
+          "section": "Abstract"
+        },
+        {
+          "chunk_id": "p2_c0006",
+          "page": 1,
+          "section": "References"
+        },
+        {
+          "chunk_id": "p2_c0005",
+          "page": 1,
+          "section": "4 Conclusion"
+        },
+        {
+          "chunk_id": "p2_c0003",
+          "page": 1,
+          "section": "2 Method"
+        },
+        {
+          "chunk_id": "p2_c0002",
+          "page": 1,
+          "section": "1 Introduction"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "s10",
+      "question": "What is the paper title?",
+      "intent": "definition",
+      "retrieved": [
+        {
+          "chunk_id": "p3_c0005",
+          "page": 2,
+          "section": "4 Conclusion"
+        },
+        {
+          "chunk_id": "p3_c0006",
+          "page": 2,
+          "section": "References"
+        },
+        {
+          "chunk_id": "p3_c0003",
+          "page": 1,
+          "section": "2 Method"
+        },
+        {
+          "chunk_id": "p3_c0000",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p3_c0001",
+          "page": 1,
+          "section": "Abstract"
+        },
+        {
+          "chunk_id": "p3_c0002",
+          "page": 1,
+          "section": "1 Introduction"
+        },
+        {
+          "chunk_id": "p3_c0004",
+          "page": 2,
+          "section": "3 Results"
+        }
+      ],
+      "hit@1": 0,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 0.3333
+    },
+    {
+      "id": "e01",
+      "question": "LASSO 是什么？",
+      "intent": "definition",
+      "retrieved": [
+        {
+          "chunk_id": "p4_c0013",
+          "page": 10,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0002",
+          "page": 2,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0031",
+          "page": 22,
+          "section": "三、基于多模态数据融合的环境行为健康建模与分析"
+        },
+        {
+          "chunk_id": "p4_c0030",
+          "page": 21,
+          "section": "三、基于多模态数据融合的环境行为健康建模与分析"
+        },
+        {
+          "chunk_id": "p4_c0032",
+          "page": 23,
+          "section": "三、基于多模态数据融合的环境行为健康建模与分析"
+        },
+        {
+          "chunk_id": "p4_c0029",
+          "page": 20,
+          "section": "三、基于多模态数据融合的环境行为健康建模与分析"
+        },
+        {
+          "chunk_id": "p4_c0014",
+          "page": 11,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0041",
+          "page": 30,
+          "section": "五、结论与政策建议"
+        },
+        {
+          "chunk_id": "p4_c0037",
+          "page": 27,
+          "section": "四、基于因果一致性的健康风险预测与政策模拟模型"
+        },
+        {
+          "chunk_id": "p4_c0007",
+          "page": 5,
+          "section": "摘要"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "r01",
+      "question": "这篇论文的题目是什么？",
+      "intent": "definition",
+      "retrieved": [
+        {
+          "chunk_id": "p4_c0000",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p4_c0003",
+          "page": 3,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0002",
+          "page": 2,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0013",
+          "page": 10,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0024",
+          "page": 16,
+          "section": "三、基于多模态数据融合的环境行为健康建模与分析"
+        },
+        {
+          "chunk_id": "p4_c0004",
+          "page": 3,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0016",
+          "page": 12,
+          "section": "二、数据选择与多模态数据体系构建"
+        },
+        {
+          "chunk_id": "p4_c0012",
+          "page": 9,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0009",
+          "page": 6,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0006",
+          "page": 4,
+          "section": "摘要"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "r02",
+      "question": "这篇论文要解决的核心问题是什么？",
+      "intent": "definition",
+      "retrieved": [
+        {
+          "chunk_id": "p4_c0012",
+          "page": 9,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0013",
+          "page": 10,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0024",
+          "page": 16,
+          "section": "三、基于多模态数据融合的环境行为健康建模与分析"
+        },
+        {
+          "chunk_id": "p4_c0009",
+          "page": 6,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0011",
+          "page": 8,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0016",
+          "page": 12,
+          "section": "二、数据选择与多模态数据体系构建"
+        },
+        {
+          "chunk_id": "p4_c0026",
+          "page": 17,
+          "section": "三、基于多模态数据融合的环境行为健康建模与分析"
+        },
+        {
+          "chunk_id": "p4_c0003",
+          "page": 3,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0004",
+          "page": 3,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0010",
+          "page": 7,
+          "section": "一、绪论"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "r03",
+      "question": "论文使用了哪些主要建模方法？",
+      "intent": "method",
+      "retrieved": [
+        {
+          "chunk_id": "p4_c0013",
+          "page": 10,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0011",
+          "page": 8,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0016",
+          "page": 12,
+          "section": "二、数据选择与多模态数据体系构建"
+        },
+        {
+          "chunk_id": "p4_c0023",
+          "page": 16,
+          "section": "二、数据选择与多模态数据体系构建"
+        },
+        {
+          "chunk_id": "p4_c0021",
+          "page": 15,
+          "section": "二、数据选择与多模态数据体系构建"
+        },
+        {
+          "chunk_id": "p4_c0004",
+          "page": 3,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0012",
+          "page": 9,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0024",
+          "page": 16,
+          "section": "三、基于多模态数据融合的环境行为健康建模与分析"
+        },
+        {
+          "chunk_id": "p4_c0010",
+          "page": 7,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0002",
+          "page": 2,
+          "section": "摘要"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "r04",
+      "question": "论文的数据来源包括哪些？",
+      "intent": "general",
+      "retrieved": [
+        {
+          "chunk_id": "p4_c0003",
+          "page": 3,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0016",
+          "page": 12,
+          "section": "二、数据选择与多模态数据体系构建"
+        },
+        {
+          "chunk_id": "p4_c0015",
+          "page": 11,
+          "section": "二、数据选择与多模态数据体系构建"
+        },
+        {
+          "chunk_id": "p4_c0013",
+          "page": 10,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0024",
+          "page": 16,
+          "section": "三、基于多模态数据融合的环境行为健康建模与分析"
+        },
+        {
+          "chunk_id": "p4_c0017",
+          "page": 13,
+          "section": "二、数据选择与多模态数据体系构建"
+        },
+        {
+          "chunk_id": "p4_c0012",
+          "page": 9,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0021",
+          "page": 15,
+          "section": "二、数据选择与多模态数据体系构建"
+        },
+        {
+          "chunk_id": "p4_c0011",
+          "page": 8,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0009",
+          "page": 6,
+          "section": "一、绪论"
+        }
+      ],
+      "hit@1": 0,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 0.5
+    },
+    {
+      "id": "r05",
+      "question": "LASSO 模型的 R² 是多少？",
+      "intent": "numeric",
+      "retrieved": [
+        {
+          "chunk_id": "p4_c0036",
+          "page": 26,
+          "section": "四、基于因果一致性的健康风险预测与政策模拟模型"
+        },
+        {
+          "chunk_id": "p4_c0030",
+          "page": 21,
+          "section": "三、基于多模态数据融合的环境行为健康建模与分析"
+        },
+        {
+          "chunk_id": "p4_c0002",
+          "page": 2,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0032",
+          "page": 23,
+          "section": "三、基于多模态数据融合的环境行为健康建模与分析"
+        },
+        {
+          "chunk_id": "p4_c0031",
+          "page": 22,
+          "section": "三、基于多模态数据融合的环境行为健康建模与分析"
+        },
+        {
+          "chunk_id": "p4_c0037",
+          "page": 27,
+          "section": "四、基于因果一致性的健康风险预测与政策模拟模型"
+        },
+        {
+          "chunk_id": "p4_c0014",
+          "page": 11,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0041",
+          "page": 30,
+          "section": "五、结论与政策建议"
+        },
+        {
+          "chunk_id": "p4_c0035",
+          "page": 26,
+          "section": "三、基于多模态数据融合的环境行为健康建模与分析"
+        },
+        {
+          "chunk_id": "p4_c0029",
+          "page": 20,
+          "section": "三、基于多模态数据融合的环境行为健康建模与分析"
+        }
+      ],
+      "hit@1": 0,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 0.5
+    },
+    {
+      "id": "r06",
+      "question": "中介效应分析中，总效应和间接效应分别是多少？",
+      "intent": "numeric",
+      "retrieved": [
+        {
+          "chunk_id": "p4_c0027",
+          "page": 18,
+          "section": "三、基于多模态数据融合的环境行为健康建模与分析"
+        },
+        {
+          "chunk_id": "p4_c0028",
+          "page": 19,
+          "section": "三、基于多模态数据融合的环境行为健康建模与分析"
+        },
+        {
+          "chunk_id": "p4_c0013",
+          "page": 10,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0040",
+          "page": 29,
+          "section": "五、结论与政策建议"
+        },
+        {
+          "chunk_id": "p4_c0002",
+          "page": 2,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0011",
+          "page": 8,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0026",
+          "page": 17,
+          "section": "三、基于多模态数据融合的环境行为健康建模与分析"
+        },
+        {
+          "chunk_id": "p4_c0014",
+          "page": 11,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0004",
+          "page": 3,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0012",
+          "page": 9,
+          "section": "一、绪论"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "r07",
+      "question": "论文建议的最优减排强度是多少？",
+      "intent": "numeric",
+      "retrieved": [
+        {
+          "chunk_id": "p4_c0038",
+          "page": 28,
+          "section": "四、基于因果一致性的健康风险预测与政策模拟模型"
+        },
+        {
+          "chunk_id": "p4_c0037",
+          "page": 27,
+          "section": "四、基于因果一致性的健康风险预测与政策模拟模型"
+        },
+        {
+          "chunk_id": "p4_c0002",
+          "page": 2,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0014",
+          "page": 11,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0041",
+          "page": 30,
+          "section": "五、结论与政策建议"
+        },
+        {
+          "chunk_id": "p4_c0040",
+          "page": 29,
+          "section": "五、结论与政策建议"
+        },
+        {
+          "chunk_id": "p4_c0013",
+          "page": 10,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0039",
+          "page": 29,
+          "section": "四、基于因果一致性的健康风险预测与政策模拟模型"
+        },
+        {
+          "chunk_id": "p4_c0012",
+          "page": 9,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0005",
+          "page": 3,
+          "section": "摘要"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "r08",
+      "question": "论文提到的研究局限有哪些？",
+      "intent": "general",
+      "retrieved": [
+        {
+          "chunk_id": "p4_c0042",
+          "page": 31,
+          "section": "五、结论与政策建议"
+        },
+        {
+          "chunk_id": "p4_c0011",
+          "page": 8,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0006",
+          "page": 4,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0009",
+          "page": 6,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0012",
+          "page": 9,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0013",
+          "page": 10,
+          "section": "一、绪论"
+        },
+        {
+          "chunk_id": "p4_c0029",
+          "page": 20,
+          "section": "三、基于多模态数据融合的环境行为健康建模与分析"
+        },
+        {
+          "chunk_id": "p4_c0024",
+          "page": 16,
+          "section": "三、基于多模态数据融合的环境行为健康建模与分析"
+        },
+        {
+          "chunk_id": "p4_c0002",
+          "page": 2,
+          "section": "摘要"
+        },
+        {
+          "chunk_id": "p4_c0003",
+          "page": 3,
+          "section": "摘要"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "p01",
+      "question": "RAG 模型由哪两部分记忆组成？",
+      "intent": "method",
+      "retrieved": [
+        {
+          "chunk_id": "p16_c0001",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p16_c0039",
+          "page": 9,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p16_c0004",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p16_c0005",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p16_c0006",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p16_c0002",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p16_c0027",
+          "page": 7,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p16_c0033",
+          "page": 8,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p16_c0030",
+          "page": 7,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p16_c0026",
+          "page": 6,
+          "section": "Body"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "p02",
+      "question": "RAG 在哪些任务上取得了 state-of-the-art？",
+      "intent": "general",
+      "retrieved": [
+        {
+          "chunk_id": "p16_c0039",
+          "page": 9,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p16_c0005",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p16_c0020",
+          "page": 5,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p16_c0001",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p16_c0006",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p16_c0026",
+          "page": 6,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p16_c0023",
+          "page": 6,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p16_c0028",
+          "page": 7,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p16_c0024",
+          "page": 6,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p16_c0017",
+          "page": 5,
+          "section": "Body"
+        }
+      ],
+      "hit@1": 0,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 0.25
+    },
+    {
+      "id": "p03",
+      "question": "RAG 的两种 formulation 分别怎么工作？",
+      "intent": "general",
+      "retrieved": [
+        {
+          "chunk_id": "p16_c0001",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p16_c0009",
+          "page": 3,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p16_c0020",
+          "page": 5,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p16_c0004",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p16_c0008",
+          "page": 3,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p16_c0038",
+          "page": 9,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p16_c0028",
+          "page": 7,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p16_c0010",
+          "page": 3,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p16_c0012",
+          "page": 4,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p16_c0013",
+          "page": 4,
+          "section": "Body"
+        }
+      ],
+      "hit@1": 0,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 0.5
+    },
+    {
+      "id": "p04",
+      "question": "Ragas 是什么框架？",
+      "intent": "definition",
+      "retrieved": [
+        {
+          "chunk_id": "p19_c0021",
+          "page": 5,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p19_c0000",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p19_c0004",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p19_c0003",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p19_c0001",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p19_c0020",
+          "page": 5,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p19_c0018",
+          "page": 5,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p19_c0019",
+          "page": 5,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p19_c0008",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p19_c0009",
+          "page": 3,
+          "section": "Body"
+        }
+      ],
+      "hit@1": 0,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 0.5
+    },
+    {
+      "id": "p05",
+      "question": "Ragas 评估 RAG 的哪两个模块？",
+      "intent": "general",
+      "retrieved": [
+        {
+          "chunk_id": "p19_c0000",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p19_c0003",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p19_c0004",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p19_c0020",
+          "page": 5,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p19_c0021",
+          "page": 5,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p19_c0001",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p19_c0018",
+          "page": 5,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p19_c0019",
+          "page": 5,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p19_c0008",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p19_c0002",
+          "page": 1,
+          "section": "Body"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "p06",
+      "question": "Ragas 的主要特点是什么？",
+      "intent": "definition",
+      "retrieved": [
+        {
+          "chunk_id": "p19_c0021",
+          "page": 5,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p19_c0001",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p19_c0000",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p19_c0004",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p19_c0020",
+          "page": 5,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p19_c0003",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p19_c0009",
+          "page": 3,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p19_c0018",
+          "page": 5,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p19_c0019",
+          "page": 5,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p19_c0008",
+          "page": 2,
+          "section": "Body"
+        }
+      ],
+      "hit@1": 0,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 0.5
+    },
+    {
+      "id": "p07",
+      "question": "CRAG 如何判断检索质量？",
+      "intent": "general",
+      "retrieved": [
+        {
+          "chunk_id": "p12_c0001",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p12_c0012",
+          "page": 3,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p12_c0014",
+          "page": 4,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p12_c0016",
+          "page": 4,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p12_c0004",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p12_c0024",
+          "page": 6,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p12_c0020",
+          "page": 5,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p12_c0000",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p12_c0061",
+          "page": 15,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p12_c0017",
+          "page": 5,
+          "section": "Body"
+        }
+      ],
+      "hit@1": 0,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 0.5
+    },
+    {
+      "id": "p08",
+      "question": "CRAG 在检索质量差时会采取什么动作？",
+      "intent": "general",
+      "retrieved": [
+        {
+          "chunk_id": "p12_c0039",
+          "page": 10,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p12_c0020",
+          "page": 5,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p12_c0001",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p12_c0012",
+          "page": 3,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p12_c0000",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p12_c0024",
+          "page": 6,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p12_c0002",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p12_c0016",
+          "page": 4,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p12_c0014",
+          "page": 4,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p12_c0004",
+          "page": 2,
+          "section": "Body"
+        }
+      ],
+      "hit@1": 0,
+      "hit@5": 0,
+      "hit@10": 1,
+      "mrr": 0.1667
+    },
+    {
+      "id": "p09",
+      "question": "CRAG 的实验覆盖哪些任务？",
+      "intent": "result",
+      "retrieved": [
+        {
+          "chunk_id": "p12_c0001",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p12_c0058",
+          "page": 15,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p12_c0023",
+          "page": 6,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p12_c0007",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p12_c0006",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p12_c0039",
+          "page": 10,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p12_c0030",
+          "page": 8,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p12_c0011",
+          "page": 3,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p12_c0012",
+          "page": 3,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p12_c0022",
+          "page": 6,
+          "section": "Body"
+        }
+      ],
+      "hit@1": 0,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 0.3333
+    },
+    {
+      "id": "p10",
+      "question": "GraphRAG 如何构建图索引？",
+      "intent": "general",
+      "retrieved": [
+        {
+          "chunk_id": "p13_c0001",
+          "page": 1,
+          "section": "Abstract"
+        },
+        {
+          "chunk_id": "p13_c0005",
+          "page": 2,
+          "section": "1  Introduction"
+        },
+        {
+          "chunk_id": "p13_c0011",
+          "page": 3,
+          "section": "2  Background"
+        },
+        {
+          "chunk_id": "p13_c0016",
+          "page": 4,
+          "section": "2  Background"
+        },
+        {
+          "chunk_id": "p13_c0010",
+          "page": 3,
+          "section": "2  Background"
+        },
+        {
+          "chunk_id": "p13_c0006",
+          "page": 2,
+          "section": "1  Introduction"
+        },
+        {
+          "chunk_id": "p13_c0012",
+          "page": 3,
+          "section": "2  Background"
+        },
+        {
+          "chunk_id": "p13_c0030",
+          "page": 8,
+          "section": "2  Background"
+        },
+        {
+          "chunk_id": "p13_c0015",
+          "page": 4,
+          "section": "2  Background"
+        },
+        {
+          "chunk_id": "p13_c0047",
+          "page": 12,
+          "section": "7  Conclusion"
+        }
+      ],
+      "hit@1": 0,
+      "hit@5": 0,
+      "hit@10": 1,
+      "mrr": 0.125
+    },
+    {
+      "id": "p11",
+      "question": "GraphRAG 主要解决 RAG 的什么问题？",
+      "intent": "general",
+      "retrieved": [
+        {
+          "chunk_id": "p13_c0001",
+          "page": 1,
+          "section": "Abstract"
+        },
+        {
+          "chunk_id": "p13_c0005",
+          "page": 2,
+          "section": "1  Introduction"
+        },
+        {
+          "chunk_id": "p13_c0002",
+          "page": 1,
+          "section": "Abstract"
+        },
+        {
+          "chunk_id": "p13_c0006",
+          "page": 2,
+          "section": "1  Introduction"
+        },
+        {
+          "chunk_id": "p13_c0009",
+          "page": 2,
+          "section": "2  Background"
+        },
+        {
+          "chunk_id": "p13_c0047",
+          "page": 12,
+          "section": "7  Conclusion"
+        },
+        {
+          "chunk_id": "p13_c0010",
+          "page": 3,
+          "section": "2  Background"
+        },
+        {
+          "chunk_id": "p13_c0046",
+          "page": 12,
+          "section": "6  Discussion"
+        },
+        {
+          "chunk_id": "p13_c0011",
+          "page": 3,
+          "section": "2  Background"
+        },
+        {
+          "chunk_id": "p13_c0008",
+          "page": 2,
+          "section": "2  Background"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "p12",
+      "question": "GraphRAG 在什么规模的数据上评估？",
+      "intent": "general",
+      "retrieved": [
+        {
+          "chunk_id": "p13_c0030",
+          "page": 8,
+          "section": "2  Background"
+        },
+        {
+          "chunk_id": "p13_c0016",
+          "page": 4,
+          "section": "2  Background"
+        },
+        {
+          "chunk_id": "p13_c0002",
+          "page": 1,
+          "section": "Abstract"
+        },
+        {
+          "chunk_id": "p13_c0001",
+          "page": 1,
+          "section": "Abstract"
+        },
+        {
+          "chunk_id": "p13_c0047",
+          "page": 12,
+          "section": "7  Conclusion"
+        },
+        {
+          "chunk_id": "p13_c0039",
+          "page": 10,
+          "section": "5  Results"
+        },
+        {
+          "chunk_id": "p13_c0012",
+          "page": 3,
+          "section": "2  Background"
+        },
+        {
+          "chunk_id": "p13_c0022",
+          "page": 6,
+          "section": "2  Background"
+        },
+        {
+          "chunk_id": "p13_c0036",
+          "page": 9,
+          "section": "5  Results"
+        },
+        {
+          "chunk_id": "p13_c0005",
+          "page": 2,
+          "section": "1  Introduction"
+        }
+      ],
+      "hit@1": 0,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 0.3333
+    },
+    {
+      "id": "p13",
+      "question": "列出 RAG 的三种范式",
+      "intent": "general",
+      "retrieved": [
+        {
+          "chunk_id": "p18_c0009",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p18_c0015",
+          "page": 4,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p18_c0025",
+          "page": 6,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p18_c0053",
+          "page": 11,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p18_c0008",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p18_c0027",
+          "page": 6,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p18_c0011",
+          "page": 3,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p18_c0067",
+          "page": 14,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p18_c0006",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p18_c0030",
+          "page": 7,
+          "section": "Body"
+        }
+      ],
+      "hit@1": 0,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 0.5
+    },
+    {
+      "id": "p14",
+      "question": "列出 RAG 框架的三个基础组件",
+      "intent": "method",
+      "retrieved": [
+        {
+          "chunk_id": "p18_c0007",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p18_c0001",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p18_c0015",
+          "page": 4,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p18_c0079",
+          "page": 16,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p18_c0026",
+          "page": 6,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p18_c0009",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p18_c0011",
+          "page": 3,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p18_c0027",
+          "page": 6,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p18_c0018",
+          "page": 4,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p18_c0017",
+          "page": 4,
+          "section": "Body"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "p15",
+      "question": "RAG 面临哪些主要挑战？",
+      "intent": "general",
+      "retrieved": [
+        {
+          "chunk_id": "p18_c0074",
+          "page": 15,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p18_c0008",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p18_c0000",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p18_c0013",
+          "page": 3,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p18_c0023",
+          "page": 5,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p18_c0001",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p18_c0017",
+          "page": 4,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p18_c0076",
+          "page": 16,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p18_c0002",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p18_c0068",
+          "page": 14,
+          "section": "Body"
+        }
+      ],
+      "hit@1": 0,
+      "hit@5": 0,
+      "hit@10": 0,
+      "mrr": 0.0
+    },
+    {
+      "id": "p16",
+      "question": "这篇综述关注 RAG 在什么场景的应用？",
+      "intent": "general",
+      "retrieved": [
+        {
+          "chunk_id": "p15_c0001",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p15_c0004",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p15_c0047",
+          "page": 9,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p15_c0000",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p15_c0045",
+          "page": 9,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p15_c0012",
+          "page": 3,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p15_c0010",
+          "page": 3,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p15_c0008",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p15_c0095",
+          "page": 16,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p15_c0098",
+          "page": 17,
+          "section": "Body"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "p17",
+      "question": "RAG 如何增强 AIGC？",
+      "intent": "general",
+      "retrieved": [
+        {
+          "chunk_id": "p15_c0096",
+          "page": 16,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p15_c0000",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p15_c0098",
+          "page": 17,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p15_c0001",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p15_c0004",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p15_c0012",
+          "page": 3,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p15_c0005",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p15_c0011",
+          "page": 3,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p15_c0008",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p15_c0057",
+          "page": 10,
+          "section": "Body"
+        }
+      ],
+      "hit@1": 0,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 0.5
+    },
+    {
+      "id": "p18",
+      "question": "论文讨论了哪些 RAG 挑战和方向？",
+      "intent": "general",
+      "retrieved": [
+        {
+          "chunk_id": "p15_c0000",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p15_c0094",
+          "page": 16,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p15_c0011",
+          "page": 3,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p15_c0004",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p15_c0098",
+          "page": 17,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p15_c0093",
+          "page": 16,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p15_c0008",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p15_c0009",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p15_c0001",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p15_c0046",
+          "page": 9,
+          "section": "Body"
+        }
+      ],
+      "hit@1": 0,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 0.5
+    },
+    {
+      "id": "p19",
+      "question": "LightRAG 的主要目标是什么？",
+      "intent": "definition",
+      "retrieved": [
+        {
+          "chunk_id": "p14_c0011",
+          "page": 3,
+          "section": "1 INTRODUCTION"
+        },
+        {
+          "chunk_id": "p14_c0012",
+          "page": 3,
+          "section": "1 INTRODUCTION"
+        },
+        {
+          "chunk_id": "p14_c0017",
+          "page": 4,
+          "section": "1 INTRODUCTION"
+        },
+        {
+          "chunk_id": "p14_c0006",
+          "page": 2,
+          "section": "1 INTRODUCTION"
+        },
+        {
+          "chunk_id": "p14_c0001",
+          "page": 1,
+          "section": "ABSTRACT"
+        },
+        {
+          "chunk_id": "p14_c0049",
+          "page": 10,
+          "section": "5 RELATED WORK"
+        },
+        {
+          "chunk_id": "p14_c0007",
+          "page": 2,
+          "section": "1 INTRODUCTION"
+        },
+        {
+          "chunk_id": "p14_c0034",
+          "page": 7,
+          "section": "4 EVALUATION"
+        },
+        {
+          "chunk_id": "p14_c0052",
+          "page": 10,
+          "section": "6 CONCLUSION"
+        },
+        {
+          "chunk_id": "p14_c0016",
+          "page": 4,
+          "section": "1 INTRODUCTION"
+        }
+      ],
+      "hit@1": 0,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 0.2
+    },
+    {
+      "id": "p20",
+      "question": "LightRAG 如何表示数据？",
+      "intent": "general",
+      "retrieved": [
+        {
+          "chunk_id": "p14_c0034",
+          "page": 7,
+          "section": "4 EVALUATION"
+        },
+        {
+          "chunk_id": "p14_c0039",
+          "page": 8,
+          "section": "4 EVALUATION"
+        },
+        {
+          "chunk_id": "p14_c0021",
+          "page": 5,
+          "section": "1 INTRODUCTION"
+        },
+        {
+          "chunk_id": "p14_c0011",
+          "page": 3,
+          "section": "1 INTRODUCTION"
+        },
+        {
+          "chunk_id": "p14_c0006",
+          "page": 2,
+          "section": "1 INTRODUCTION"
+        },
+        {
+          "chunk_id": "p14_c0016",
+          "page": 4,
+          "section": "1 INTRODUCTION"
+        },
+        {
+          "chunk_id": "p14_c0001",
+          "page": 1,
+          "section": "ABSTRACT"
+        },
+        {
+          "chunk_id": "p14_c0049",
+          "page": 10,
+          "section": "5 RELATED WORK"
+        },
+        {
+          "chunk_id": "p14_c0059",
+          "page": 13,
+          "section": "REFERENCES"
+        },
+        {
+          "chunk_id": "p14_c0012",
+          "page": 3,
+          "section": "1 INTRODUCTION"
+        }
+      ],
+      "hit@1": 0,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 0.2
+    },
+    {
+      "id": "p21",
+      "question": "LightRAG 解决现有 RAG 的什么问题？",
+      "intent": "general",
+      "retrieved": [
+        {
+          "chunk_id": "p14_c0001",
+          "page": 1,
+          "section": "ABSTRACT"
+        },
+        {
+          "chunk_id": "p14_c0049",
+          "page": 10,
+          "section": "5 RELATED WORK"
+        },
+        {
+          "chunk_id": "p14_c0007",
+          "page": 2,
+          "section": "1 INTRODUCTION"
+        },
+        {
+          "chunk_id": "p14_c0002",
+          "page": 1,
+          "section": "ABSTRACT"
+        },
+        {
+          "chunk_id": "p14_c0008",
+          "page": 2,
+          "section": "1 INTRODUCTION"
+        },
+        {
+          "chunk_id": "p14_c0016",
+          "page": 4,
+          "section": "1 INTRODUCTION"
+        },
+        {
+          "chunk_id": "p14_c0052",
+          "page": 10,
+          "section": "6 CONCLUSION"
+        },
+        {
+          "chunk_id": "p14_c0006",
+          "page": 2,
+          "section": "1 INTRODUCTION"
+        },
+        {
+          "chunk_id": "p14_c0018",
+          "page": 4,
+          "section": "1 INTRODUCTION"
+        },
+        {
+          "chunk_id": "p14_c0027",
+          "page": 6,
+          "section": "4 EVALUATION"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "p22",
+      "question": "Agentic RAG 的核心特点有哪些？",
+      "intent": "general",
+      "retrieved": [
+        {
+          "chunk_id": "p11_c0019",
+          "page": 7,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p11_c0025",
+          "page": 9,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p11_c0082",
+          "page": 30,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p11_c0001",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p11_c0081",
+          "page": 30,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p11_c0093",
+          "page": 33,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p11_c0005",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p11_c0077",
+          "page": 29,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p11_c0084",
+          "page": 31,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p11_c0009",
+          "page": 3,
+          "section": "Body"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "p23",
+      "question": "Agentic RAG 使用哪些设计模式？",
+      "intent": "general",
+      "retrieved": [
+        {
+          "chunk_id": "p11_c0005",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p11_c0001",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p11_c0018",
+          "page": 6,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p11_c0090",
+          "page": 32,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p11_c0002",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p11_c0102",
+          "page": 36,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p11_c0091",
+          "page": 33,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p11_c0084",
+          "page": 31,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p11_c0094",
+          "page": 34,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p11_c0089",
+          "page": 32,
+          "section": "Body"
+        }
+      ],
+      "hit@1": 0,
+      "hit@5": 0,
+      "hit@10": 0,
+      "mrr": 0.0
+    },
+    {
+      "id": "p24",
+      "question": "Agentic RAG 的主要优势是什么？",
+      "intent": "definition",
+      "retrieved": [
+        {
+          "chunk_id": "p11_c0009",
+          "page": 3,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p11_c0102",
+          "page": 36,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p11_c0093",
+          "page": 33,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p11_c0019",
+          "page": 7,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p11_c0080",
+          "page": 30,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p11_c0081",
+          "page": 30,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p11_c0084",
+          "page": 31,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p11_c0077",
+          "page": 29,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p11_c0082",
+          "page": 30,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p11_c0078",
+          "page": 29,
+          "section": "Body"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "p25",
+      "question": "描述 HyDE 的核心流程",
+      "intent": "method",
+      "retrieved": [
+        {
+          "chunk_id": "p20_c0017",
+          "page": 4,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p20_c0005",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p20_c0000",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p20_c0011",
+          "page": 3,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p20_c0015",
+          "page": 4,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p20_c0004",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p20_c0027",
+          "page": 7,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p20_c0001",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p20_c0026",
+          "page": 7,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p20_c0012",
+          "page": 3,
+          "section": "Body"
+        }
+      ],
+      "hit@1": 0,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 0.5
+    },
+    {
+      "id": "p26",
+      "question": "HyDE 如何生成检索向量？",
+      "intent": "general",
+      "retrieved": [
+        {
+          "chunk_id": "p20_c0017",
+          "page": 4,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p20_c0000",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p20_c0006",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p20_c0015",
+          "page": 4,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p20_c0012",
+          "page": 3,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p20_c0001",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p20_c0005",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p20_c0011",
+          "page": 3,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p20_c0026",
+          "page": 7,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p20_c0013",
+          "page": 3,
+          "section": "Body"
+        }
+      ],
+      "hit@1": 1,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 1.0
+    },
+    {
+      "id": "p27",
+      "question": "HyDE 在哪些任务上评估？",
+      "intent": "general",
+      "retrieved": [
+        {
+          "chunk_id": "p20_c0006",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p20_c0001",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p20_c0020",
+          "page": 5,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p20_c0021",
+          "page": 5,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p20_c0005",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p20_c0000",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p20_c0011",
+          "page": 3,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p20_c0026",
+          "page": 7,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p20_c0027",
+          "page": 7,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p20_c0017",
+          "page": 4,
+          "section": "Body"
+        }
+      ],
+      "hit@1": 0,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 0.3333
+    },
+    {
+      "id": "p28",
+      "question": "这篇论文研究什么？",
+      "intent": "general",
+      "retrieved": [
+        {
+          "chunk_id": "p17_c0012",
+          "page": 4,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p17_c0080",
+          "page": 21,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p17_c0051",
+          "page": 13,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p17_c0068",
+          "page": 17,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p17_c0071",
+          "page": 18,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p17_c0069",
+          "page": 18,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p17_c0077",
+          "page": 20,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p17_c0029",
+          "page": 8,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p17_c0070",
+          "page": 18,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p17_c0067",
+          "page": 17,
+          "section": "Body"
+        }
+      ],
+      "hit@1": 0,
+      "hit@5": 0,
+      "hit@10": 0,
+      "mrr": 0.0
+    },
+    {
+      "id": "p29",
+      "question": "论文建议如何部署 RAG？",
+      "intent": "general",
+      "retrieved": [
+        {
+          "chunk_id": "p17_c0006",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p17_c0048",
+          "page": 12,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p17_c0013",
+          "page": 4,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p17_c0035",
+          "page": 9,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p17_c0002",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p17_c0003",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p17_c0047",
+          "page": 12,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p17_c0051",
+          "page": 13,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p17_c0046",
+          "page": 12,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p17_c0001",
+          "page": 1,
+          "section": "Body"
+        }
+      ],
+      "hit@1": 0,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 0.2
+    },
+    {
+      "id": "p30",
+      "question": "多模态检索有什么作用？",
+      "intent": "general",
+      "retrieved": [
+        {
+          "chunk_id": "p17_c0001",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p17_c0049",
+          "page": 12,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p17_c0007",
+          "page": 3,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p17_c0050",
+          "page": 13,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p17_c0002",
+          "page": 1,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p17_c0051",
+          "page": 13,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p17_c0058",
+          "page": 15,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p17_c0003",
+          "page": 2,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p17_c0026",
+          "page": 7,
+          "section": "Body"
+        },
+        {
+          "chunk_id": "p17_c0052",
+          "page": 13,
+          "section": "Body"
+        }
+      ],
+      "hit@1": 0,
+      "hit@5": 1,
+      "hit@10": 1,
+      "mrr": 0.5
+    }
+  ]
+}
