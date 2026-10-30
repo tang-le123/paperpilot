@@ -2,6 +2,8 @@
 
 一个面向中英文论文的阅读助手：上传论文，选择一篇或多篇，用中文或英文提问，回答带页码和章节引用。
 
+> GitHub：<https://github.com/tang-le123/paperpilot>
+
 > 求职/面试材料：[一页纸](docs/ONE_PAGER.md) · [完整项目故事](docs/PORTFOLIO.md) · [深度设计与 all-in-rag 对应](docs/PROJECT_DEEP_DIVE.md) · [性能评估](docs/PERFORMANCE.md) · [解析/分块对比](docs/PARSING.md)
 
 > 人工评测：[填表指南](docs/HUMAN_EVAL_GUIDE.md) · [评测结果](docs/EVAL_RESULTS.md)
